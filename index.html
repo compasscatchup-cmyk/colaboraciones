@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Escaleta colaborativa: emular, comprar el relanzamiento oficial o jugar en el fierro original. ¿En qué momento un juego retro deja de ser el mismo?">
+<meta name="theme-color" content="#0B1030">
+<link rel="canonical" href="https://compasscatchup-cmyk.github.io/colaboraciones/chilangamer/ep181/">
+
+<!-- Previsualización al compartir (WhatsApp, X, Facebook, Telegram, Discord) -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Compass Catchup">
+<meta property="og:locale" content="es_MX">
+<meta property="og:url" content="https://compasscatchup-cmyk.github.io/colaboraciones/chilangamer/ep181/">
+<meta property="og:title" content="Ep. 181 «Retro-Rotura» — Chilangamer Podcast × Compass Catchup">
+<meta property="og:description" content="Escaleta colaborativa: emular, comprar el relanzamiento oficial o jugar en el fierro original. ¿En qué momento un juego retro deja de ser el mismo?">
+<meta property="og:image" content="https://compasscatchup-cmyk.github.io/colaboraciones/chilangamer/ep181/og-ep181.jpg">
+<meta property="og:image:secure_url" content="https://compasscatchup-cmyk.github.io/colaboraciones/chilangamer/ep181/og-ep181.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Retro-Rotura, episodio 181 de Chilangamer Podcast en colaboración con Compass Catchup">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@compasscatchup">
+<meta name="twitter:creator" content="@chilangamer">
+<meta name="twitter:title" content="Ep. 181 «Retro-Rotura» — Chilangamer Podcast × Compass Catchup">
+<meta name="twitter:description" content="Escaleta colaborativa: emular, comprar el relanzamiento oficial o jugar en el fierro original. ¿En qué momento un juego retro deja de ser el mismo?">
+<meta name="twitter:image" content="https://compasscatchup-cmyk.github.io/colaboraciones/chilangamer/ep181/og-ep181.jpg">
+<meta name="twitter:image:alt" content="Retro-Rotura, episodio 181 de Chilangamer Podcast en colaboración con Compass Catchup">
+
+<title>Ep. 181 "Retro-Rotura" · Chilangamer Podcast — Escaleta Borrador</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --noche:#070B22;
+  --noche-2:#0B1030;
+  --asfalto:#131A45;
+  --asfalto-2:#1B2358;
+  --neon:#FF2D8E;
+  --neon-suave:#FF7FC0;
+  --farola:#7FD8FF;
+  --tiza:#EAF0FF;
+  --tiza-mute:#A3AECD;
+  --bolillo:#E8C48A;
+  --corteza:#C0864A;
+  --verde-ok:#5CE0A8;
+  --ambar:#FFC86B;
+  --linea:rgba(234,240,255,.14);
+  --radio:14px;
+  --display:'Archivo Black', system-ui, sans-serif;
+  --texto:'Archivo', system-ui, -apple-system, sans-serif;
+  --mono:'JetBrains Mono', ui-monospace, monospace;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    radial-gradient(1100px 620px at 12% -8%, #1C2566 0%, transparent 62%),
+    radial-gradient(900px 520px at 92% 4%, #2A1350 0%, transparent 58%),
+    linear-gradient(180deg, var(--noche-2) 0%, var(--noche) 55%, #04061A 100%);
+  background-attachment:fixed;
+  color:var(--tiza);
+  font-family:var(--texto);
+  font-size:16px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+
+#bolillos{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.72}
+.envoltura{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:0 22px 96px}
+
+/* ---------- HERO ---------- */
+.hero{padding:40px 0 10px}
+
+/* --- Banner de colaboración --- */
+.banner{
+  position:relative;overflow:hidden;border-radius:20px;
+  border:1px solid rgba(234,240,255,.13);
+  background:
+    radial-gradient(86% 155% at 100% 52%, #B8111E 0%, #7C0A16 26%, rgba(20,26,80,0) 58%),
+    linear-gradient(100deg,#0A0F36 0%,#131B54 50%,#1A215F 74%,#341034 90%,#56101C 100%);
+  padding:44px 46px;
+  display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:center;
+}
+.banner::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(130% 130% at 50% 125%, rgba(0,0,0,.4), transparent 62%);
+}
+.bn-tile{
+  width:136px;height:auto;display:block;border-radius:12px;position:relative;z-index:1;
+  border:1px solid rgba(234,240,255,.18);
+}
+.bn-centro{position:relative;z-index:1;min-width:0}
+.bn-eyebrow{
+  font-family:var(--mono);font-size:11px;letter-spacing:.26em;text-transform:uppercase;
+  color:rgba(234,240,255,.7);margin:0 0 13px;
+}
+h1.titulo{
+  font-family:var(--display);color:#fff;
+  font-size:clamp(2.45rem,6.6vw,4.7rem);
+  line-height:.86;letter-spacing:-.042em;margin:0;text-transform:uppercase;
+}
+h1.titulo .guion{color:var(--neon)}
+h1.titulo .quiebre{position:relative;display:inline-block}
+h1.titulo .quiebre::after{
+  content:"";position:absolute;left:-5%;right:-5%;top:48%;height:16px;
+  background-repeat:no-repeat;background-size:100% 100%;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 16' preserveAspectRatio='none'%3E%3Cpath d='M0 11 L17 7 L33 12 L51 6 L69 10 L87 5 L107 9 L125 4 L145 8 L165 3 L182 7 L200 4' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linejoin='round'/%3E%3C/svg%3E");
+  filter:drop-shadow(0 0 7px rgba(255,45,142,.95)) drop-shadow(0 0 16px rgba(255,45,142,.6));
+}
+.bn-sub{margin:17px 0 0;font-weight:700;font-size:1.05rem;color:#fff;letter-spacing:-.005em}
+.bn-colab{position:relative;z-index:1;text-align:center}
+.bn-colab p{margin:0 0 11px;font-size:.86rem;font-weight:600;color:rgba(255,255,255,.92)}
+.bn-colab img{width:116px;height:116px;display:block;margin:0 auto;filter:drop-shadow(0 6px 18px rgba(0,0,0,.5))}
+
+.borrador{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:var(--mono);font-size:11px;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--neon-suave);border:1px solid rgba(255,45,142,.4);
+  background:rgba(255,45,142,.09);
+  padding:6px 16px;border-radius:999px;margin:28px 0 0;
+}
+.borrador::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--neon);animation:latir 2.6s ease-in-out infinite}
+@keyframes latir{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.75)}}
+
+.bajada{max-width:66ch;color:var(--tiza-mute);font-size:1.06rem;margin:20px 0 0}
+.bajada strong{color:var(--tiza);font-weight:700}
+
+/* ---------- SKYLINE / TIMELINE ---------- */
+.skyline{margin:38px 0 6px;position:relative}
+.skyline svg{width:100%;height:auto;display:block;overflow:visible}
+.sk-linea{fill:none;stroke:var(--tiza);stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round;opacity:.5}
+.sk-piso{stroke:var(--linea);stroke-width:1.2}
+.sk-pin circle{fill:var(--noche-2);stroke:var(--neon);stroke-width:1.8;transition:fill .2s ease, transform .2s ease}
+.sk-pin text{font-family:var(--mono);font-size:9.5px;fill:var(--neon-suave);text-anchor:middle;font-weight:700}
+.sk-pin{cursor:pointer}
+.sk-pin:hover circle{fill:var(--neon)}
+.sk-pin:hover text{fill:var(--noche)}
+.sk-leyenda{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--tiza-mute);text-align:center;margin-top:2px}
+
+/* ---------- FICHA ---------- */
+.ficha{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));
+  gap:1px;background:var(--linea);border:1px solid var(--linea);
+  border-radius:var(--radio);overflow:hidden;margin:34px 0 0;
+}
+.ficha div{background:rgba(11,16,48,.86);padding:15px 17px}
+.ficha dt{font-family:var(--mono);font-size:10px;letter-spacing:.19em;text-transform:uppercase;color:var(--tiza-mute);margin:0 0 5px}
+.ficha dd{margin:0;font-weight:700;font-size:.98rem;color:var(--tiza)}
+.ficha dd small{display:block;font-weight:400;font-size:.78rem;color:var(--tiza-mute);letter-spacing:0}
+
+/* ---------- SECCIONES ---------- */
+section{margin-top:76px;scroll-margin-top:24px}
+.rotulo{display:flex;align-items:baseline;gap:14px;margin-bottom:8px;flex-wrap:wrap}
+.rotulo .num{font-family:var(--mono);font-size:11px;letter-spacing:.24em;color:var(--neon);text-transform:uppercase}
+h2{font-family:var(--display);font-size:clamp(1.5rem,3.6vw,2.3rem);letter-spacing:-.025em;margin:0 0 10px;text-transform:uppercase;line-height:1.06}
+h3{font-family:var(--display);font-size:1.08rem;letter-spacing:-.01em;margin:0 0 8px;text-transform:uppercase}
+.intro-sec{color:var(--tiza-mute);max-width:74ch;margin:0 0 26px}
+
+/* ---------- MESA ---------- */
+.mesa{display:grid;grid-template-columns:repeat(auto-fill,minmax(196px,1fr));gap:14px}
+.silla{
+  background:linear-gradient(165deg, rgba(27,35,88,.7), rgba(11,16,48,.9));
+  border:1px solid var(--linea);border-radius:var(--radio);
+  padding:18px 16px;transition:border-color .2s ease, transform .2s ease;
+}
+.silla:hover{border-color:rgba(255,45,142,.5);transform:translateY(-2px)}
+.silla.host{border-color:rgba(255,45,142,.45);background:linear-gradient(165deg, rgba(70,18,64,.62), rgba(11,16,48,.92))}
+.avatar-caja{width:64px;height:64px;border-radius:50%;overflow:hidden;position:relative;border:2px solid rgba(234,240,255,.2);margin-bottom:12px;background:var(--asfalto-2)}
+.silla.host .avatar-caja{border-color:var(--neon)}
+.avatar-caja img{width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:2}
+.avatar-caja .iniciales{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:1.35rem;color:var(--neon-suave);z-index:1}
+.silla .rol{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--tiza-mute);margin-bottom:3px}
+.silla.host .rol{color:var(--neon)}
+.silla .nom{font-family:var(--display);font-size:1.06rem;letter-spacing:-.01em;margin-bottom:5px}
+.silla a.arroba{font-family:var(--mono);font-size:.79rem;color:var(--farola);text-decoration:none;border-bottom:1px solid rgba(127,216,255,.28);word-break:break-all}
+.silla a.arroba:hover{color:var(--tiza);border-bottom-color:var(--tiza)}
+.silla .postura{margin-top:11px;padding-top:11px;border-top:1px solid var(--linea);font-size:.83rem;color:var(--tiza-mute);line-height:1.5}
+.silla .postura b{color:var(--neon-suave);font-weight:700;display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:3px;font-family:var(--mono)}
+
+/* ---------- BLOQUES ---------- */
+.bloque{
+  border:1px solid var(--linea);border-radius:var(--radio);
+  background:rgba(11,16,48,.6);margin-bottom:16px;overflow:hidden;
+  transition:border-color .2s ease;
+}
+.bloque:hover{border-color:rgba(127,216,255,.3)}
+.bloque > summary{
+  list-style:none;cursor:pointer;padding:19px 22px;
+  display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;
+}
+.bloque > summary::-webkit-details-marker{display:none}
+.tc{font-family:var(--mono);font-size:.86rem;font-weight:700;color:var(--farola);white-space:nowrap}
+.tc small{display:block;font-weight:400;font-size:.7rem;color:var(--tiza-mute)}
+.bl-tit{font-family:var(--display);font-size:1.02rem;letter-spacing:-.01em;text-transform:uppercase;line-height:1.2}
+.bl-tit span{display:block;font-family:var(--texto);font-weight:400;text-transform:none;letter-spacing:0;font-size:.85rem;color:var(--tiza-mute);margin-top:3px}
+.flecha{width:11px;height:11px;border-right:2px solid var(--tiza-mute);border-bottom:2px solid var(--tiza-mute);transform:rotate(45deg);transition:transform .22s ease;margin-right:4px}
+.bloque[open] .flecha{transform:rotate(-135deg)}
+.bl-cuerpo{padding:0 22px 24px;border-top:1px solid var(--linea);margin-top:2px;padding-top:20px}
+
+.et{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--neon);margin:20px 0 8px;display:block}
+.et:first-child{margin-top:0}
+.bl-cuerpo ul{margin:0 0 4px;padding-left:20px}
+.bl-cuerpo li{margin-bottom:7px}
+.bl-cuerpo p{margin:0 0 10px}
+
+.pregunta{
+  border-left:2px solid var(--neon);padding:2px 0 2px 15px;margin:0 0 12px;
+  font-size:1.02rem;font-weight:600;color:var(--tiza);
+}
+.quien{
+  display:inline-block;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;
+  background:rgba(127,216,255,.12);color:var(--farola);border:1px solid rgba(127,216,255,.3);
+  padding:2px 8px;border-radius:5px;margin-right:6px;white-space:nowrap;
+}
+.quien.rebate{background:rgba(255,45,142,.12);color:var(--neon-suave);border-color:rgba(255,45,142,.34)}
+
+.dato{
+  background:rgba(27,35,88,.55);border:1px solid var(--linea);border-left:3px solid var(--verde-ok);
+  border-radius:9px;padding:13px 16px;margin:0 0 10px;font-size:.92rem;
+}
+.dato b{color:var(--verde-ok)}
+.dato cite{display:block;font-style:normal;font-family:var(--mono);font-size:.7rem;color:var(--tiza-mute);margin-top:6px;letter-spacing:.05em}
+
+.rotura{
+  background:linear-gradient(100deg, rgba(255,45,142,.13), rgba(255,45,142,.03));
+  border:1px dashed rgba(255,45,142,.42);border-radius:9px;
+  padding:13px 16px;margin:18px 0 0;font-size:.93rem;
+}
+.rotura b{font-family:var(--mono);font-size:.7rem;letter-spacing:.19em;text-transform:uppercase;color:var(--neon);display:block;margin-bottom:5px}
+
+.clips{list-style:none;padding:0;margin:0}
+.clips li{margin-bottom:9px;padding-left:26px;position:relative;font-size:.92rem;line-height:1.5}
+.clips li::before{
+  content:"▶";position:absolute;left:0;top:1px;color:var(--neon);font-size:.72rem;
+}
+.clips a{color:var(--tiza);text-decoration:none;border-bottom:1px solid rgba(255,45,142,.4);font-weight:600}
+.clips a:hover{color:var(--neon-suave);border-bottom-color:var(--neon-suave)}
+.clips .meta{display:block;font-family:var(--mono);font-size:.7rem;color:var(--tiza-mute);letter-spacing:.05em;margin-top:2px}
+.bandera{display:inline-block;font-family:var(--mono);font-size:.63rem;letter-spacing:.12em;text-transform:uppercase;padding:1px 6px;border-radius:4px;margin-left:6px;vertical-align:middle;border:1px solid}
+.b-mx{color:var(--verde-ok);border-color:rgba(92,224,168,.45);background:rgba(92,224,168,.09)}
+.b-es{color:var(--ambar);border-color:rgba(255,200,107,.4);background:rgba(255,200,107,.08)}
+.b-en{color:var(--tiza-mute);border-color:var(--linea);background:rgba(234,240,255,.05)}
+
+/* ---------- GLOSARIO ---------- */
+.glosario{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:12px}
+.glosario div{background:rgba(19,26,69,.55);border:1px solid var(--linea);border-radius:11px;padding:15px 17px}
+.glosario dt{font-family:var(--display);font-size:.9rem;text-transform:uppercase;color:var(--farola);margin-bottom:5px;letter-spacing:-.005em}
+.glosario dd{margin:0;font-size:.88rem;color:var(--tiza-mute);line-height:1.55}
+
+/* ---------- LISTAS DE FUENTES ---------- */
+.fuentes{list-style:none;padding:0;margin:0;counter-reset:f}
+.fuentes li{
+  counter-increment:f;position:relative;padding:12px 0 12px 44px;
+  border-bottom:1px solid var(--linea);font-size:.9rem;line-height:1.55;
+}
+.fuentes li::before{
+  content:counter(f,decimal-leading-zero);position:absolute;left:0;top:13px;
+  font-family:var(--mono);font-size:.72rem;color:var(--neon);letter-spacing:.06em;
+}
+.fuentes a{color:var(--tiza);text-decoration:none;border-bottom:1px solid rgba(127,216,255,.32);font-weight:600}
+.fuentes a:hover{color:var(--farola)}
+.fuentes .pub{display:block;font-family:var(--mono);font-size:.7rem;color:var(--tiza-mute);margin-top:3px;letter-spacing:.06em}
+
+.aviso{
+  border:1px solid rgba(255,200,107,.35);background:rgba(255,200,107,.07);
+  border-radius:var(--radio);padding:20px 22px;
+}
+.aviso h3{color:var(--ambar)}
+.aviso ul{margin:0;padding-left:20px;color:var(--tiza-mute)}
+.aviso li{margin-bottom:8px}
+.aviso li b{color:var(--tiza)}
+
+.pie{margin-top:82px;padding-top:26px;border-top:1px solid var(--linea);text-align:center;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--tiza-mute)}
+.pie b{color:var(--neon-suave)}
+
+@media (max-width:900px){
+  .banner{grid-template-columns:auto 1fr;gap:24px;padding:30px 26px}
+  .bn-tile{width:96px}
+  .bn-colab{grid-column:1 / -1;display:flex;align-items:center;gap:15px;text-align:left;
+    border-top:1px solid rgba(234,240,255,.15);padding-top:20px}
+  .bn-colab p{margin:0}
+  .bn-colab img{width:66px;height:66px;margin:0}
+}
+@media (max-width:520px){
+  .banner{grid-template-columns:1fr;padding:26px 22px;gap:20px}
+  .bn-tile{width:84px}
+}
+@media (max-width:640px){
+  .bloque > summary{grid-template-columns:auto 1fr;gap:12px;padding:16px}
+  .flecha{display:none}
+  .bl-cuerpo{padding:18px 16px 20px}
+  .envoltura{padding:0 16px 70px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  #bolillos{display:none}
+  html{scroll-behavior:auto}
+}
+@media print{
+  body{background:#fff;color:#000}
+  #bolillos{display:none}
+  .bloque{break-inside:avoid;border-color:#ccc}
+  .bl-cuerpo{display:block!important}
+}
+</style>
+</head>
+<body>
+
+<canvas id="bolillos" aria-hidden="true"></canvas>
+
+<div class="envoltura">
+
+  <!-- ================= HERO ================= -->
+  <header class="hero">
+    <div class="banner">
+      <img class="bn-tile" src="data:image/jpeg;base64,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" alt="Chilangamer Podcast">
+      <div class="bn-centro">
+        <p class="bn-eyebrow">Podcast · Episodio 181</p>
+        <h1 class="titulo">Retro<span class="guion">-</span><br><span class="quiebre">Rotura</span></h1>
+        <p class="bn-sub">Chilangamer Podcast</p>
+      </div>
+      <div class="bn-colab">
+        <p>Colaboración con:</p>
+        <img src="data:image/png;base64,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" alt="Compass Catchup">
+      </div>
+    </div>
+
+    <span class="borrador">Escaleta</span>
+
+    <p class="bajada">
+      ¿En qué momento un juego retro deja de ser el mismo? Esa es la pregunta de la noche.
+      Emulación, relanzamientos oficiales y ports hechos por la comunidad contra el cartucho, el disco y el
+      fierro original. <strong>No buscamos un ganador: buscamos el punto exacto donde se rompe.</strong>
+    </p>
+
+    <!-- SKYLINE = línea de tiempo del programa -->
+    <div class="skyline">
+      <svg viewBox="0 0 1200 210" role="img" aria-label="Silueta nocturna de la Ciudad de México usada como línea de tiempo del episodio">
+        <g class="sk-linea">
+          <!-- Ángel de la Independencia -->
+          <path d="M60 165 L60 92 M52 92 L68 92 M60 92 L60 76 M60 76 L54 66 M60 76 L66 66 M60 66 L60 58 M54 60 L66 60 M46 165 L74 165 M50 165 L50 155 L70 155 L70 165"/>
+          <!-- Torre baja -->
+          <path d="M110 165 L110 128 L146 128 L146 165 M118 138 L118 148 M130 138 L130 148 M138 138 L138 148"/>
+          <!-- Monumento a la Revolución -->
+          <path d="M180 165 L180 118 M180 118 Q206 84 232 118 M232 118 L232 165 M188 118 L188 100 M224 118 L224 100 M206 92 L206 80 M172 165 L240 165"/>
+          <!-- Palacio de Bellas Artes -->
+          <path d="M290 165 L290 122 L318 122 Q332 96 346 122 L374 122 L374 165 M300 132 L300 165 M364 132 L364 165 M332 122 L332 112 M318 122 L346 122"/>
+          <!-- Edificio medio -->
+          <path d="M420 165 L420 106 L456 106 L456 165 M428 116 L448 116 M428 128 L448 128 M428 140 L448 140"/>
+          <!-- Torre Latinoamericana -->
+          <path d="M510 165 L510 74 L546 74 L546 165 M528 74 L528 44 M520 56 L536 56 M518 88 L538 88 M518 104 L538 104 M518 120 L538 120 M518 136 L538 136"/>
+          <!-- Bloque bajo -->
+          <path d="M600 165 L600 134 L648 134 L648 165 M612 144 L612 158 M628 144 L628 158"/>
+          <!-- Torre Reforma (angular) -->
+          <path d="M700 165 L700 96 L724 58 L748 96 L748 165 M712 110 L736 110 M708 130 L740 130 M706 148 L742 148"/>
+          <!-- Antena / edificio delgado -->
+          <path d="M800 165 L800 88 L822 88 L822 165 M811 88 L811 62 M804 74 L818 74"/>
+          <!-- Conjunto habitacional -->
+          <path d="M876 165 L876 120 L916 120 L916 165 M886 130 L886 142 M902 130 L902 142 M886 150 L902 150"/>
+          <!-- Rascacielos -->
+          <path d="M970 165 L970 68 L1004 68 L1004 165 M978 82 L996 82 M978 98 L996 98 M978 114 L996 114 M978 130 L996 130 M978 146 L996 146"/>
+          <!-- Tanque de agua / azotea -->
+          <path d="M1060 165 L1060 132 L1100 132 L1100 165 M1074 132 L1074 118 L1086 118 L1086 132 M1068 142 L1092 142"/>
+          <!-- Último bloque -->
+          <path d="M1140 165 L1140 110 L1170 110 L1170 165 M1148 122 L1162 122 M1148 138 L1162 138"/>
+        </g>
+        <line class="sk-piso" x1="20" y1="166" x2="1180" y2="166"/>
+        <!-- Pines de bloque -->
+        <g class="sk-pin"><a href="#b1"><circle cx="60" cy="188" r="12"/><text x="60" y="191.5">1</text></a></g>
+        <g class="sk-pin"><a href="#b2"><circle cx="206" cy="188" r="12"/><text x="206" y="191.5">2</text></a></g>
+        <g class="sk-pin"><a href="#b3"><circle cx="332" cy="188" r="12"/><text x="332" y="191.5">3</text></a></g>
+        <g class="sk-pin"><a href="#b4"><circle cx="528" cy="188" r="12"/><text x="528" y="191.5">4</text></a></g>
+        <g class="sk-pin"><a href="#b5"><circle cx="724" cy="188" r="12"/><text x="724" y="191.5">5</text></a></g>
+        <g class="sk-pin"><a href="#b6"><circle cx="896" cy="188" r="12"/><text x="896" y="191.5">6</text></a></g>
+        <g class="sk-pin"><a href="#b7"><circle cx="1080" cy="188" r="12"/><text x="1080" y="191.5">7</text></a></g>
+      </svg>
+      <p class="sk-leyenda">La ciudad como línea de tiempo · toca un monumento para saltar a su bloque</p>
+    </div>
+
+    <dl class="ficha">
+      <div><dt>Formato</dt><dd>ChatCast a 5 voces<small>debate moderado, sin guion cerrado</small></dd></div>
+      <div><dt>Duración meta</dt><dd>86 min<small>7 bloques + corte</small></dd></div>
+      <div><dt>Tema eje</dt><dd>Emular vs. fierro original<small>y todo lo que hay en medio</small></dd></div>
+      <div><dt>Tono</dt><dd>Discusión con datos<small>nada de "cada quien su gusto" a los 3 min</small></dd></div>
+      <div><dt>Regla de oro</dt><dd>Nadie dice "depende"<small>sin decir de qué depende</small></dd></div>
+    </dl>
+  </header>
+
+  <!-- ================= MESA ================= -->
+  <section id="mesa">
+    <div class="rotulo"><span class="num">La mesa</span></div>
+    <h2>Quién se sienta y con qué bandera</h2>
+    <p class="intro-sec">
+      Las posturas asignadas son un andamio, no una camisa de fuerza: sirven para que el debate arranque con
+      tensión real desde el minuto uno. Si alguien quiere cambiar de trinchera a mitad del programa, mejor —
+      ese cambio es contenido. Se pueden intercambiar libremente antes de grabar.
+    </p>
+
+    <div class="mesa">
+      <article class="silla host">
+        <div class="avatar-caja">
+          <span class="iniciales">JW</span>
+          <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAQDAwQDAwQEBAQFBQQFBwsHBwYGBw4KCggLEA4RERAOEA8SFBoWEhMYEw8QFh8XGBsbHR0dERYgIh8cIhocHRz/2wBDAQUFBQcGBw0HBw0cEhASHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBwcHBz/wAARCADwAPADASIAAhEBAxEB/8QAHQAAAQQDAQEAAAAAAAAAAAAABwAFBggBBAkCA//EAFgQAAEDAwEFAwYJBgkICAcAAAECAwQABREGBxIhMUETUWEIFCIycYEVI0JSYpGhscEzcoKSotEWJENTY3OjsuEJFyU1ZYPC8Bg0RFV0k9LxJjZFVGSEpP/EABsBAAIDAQEBAAAAAAAAAAAAAAQFAAIDBgEH/8QANREAAQMDAgIHBwQDAQEAAAAAAQACAwQRIQUSMUETIlFhcYGRBjIzobHR8BRCUsEVI+HxYv/aAAwDAQACEQMRAD8A5/0qVKoolSpUqiiVKlSqKJUqVfePHckutsstLdecIShCElSlE8gAOJNRRfCvq2ytxaUISVLUcJSkZJPcB1qzOzDyNdR6oQzcNXzGtM2pWF9g4UqmLT+YSA3+mc/Rq4GzzZHs22WNoVY4lsTcEjCrjMktvSVH89R9H2JAFDyVDWYGSiI6dz8nCoXobyWNpmuEtPt2M2qA5xEq7K83SR3hBBWr3Jqwmk/IOssbcd1RqmXMWMFUe2Mhhv2doveUfckVZTVu03SWirQ9dr1f4DMZvhht9LzriuiUISSpRP8AyRVTtdeVZqjWDjsXSjK9OWXikSlYXOeH53FLX6OT9KsWPqJjZgsEQY4IsnJRen7JNgWyGKiRfLXZmF4yn4YfXKfc/NaJJV7kVFLl5Tmi9OIUxofQKXtzgh96O1b2faAlJcI9wqvml9OS9Z6j7Dt3Fyn/AIyRMfUXXSN4DJUo5UoqUkAEgZIzgZNFCBp7SCb0xYrGyi73CMp1U+S6yHGm9zdTudu6Oz3t5YyG0Hu45zRjKG/vklBz17IRwt5LRu/lR7TLy6RFn2a0N54NQoIfUPap4qz9QrXh+UvtStq8u363SwPkzLU0PtQUmpRIkOx40pxTos0Vm3XJ9SYSi+G/NXOyJK0FtOSojdKU9cEcM1oXi+v2m2u3JqW/LTHt8CW7DnJcQQZj4SlJIcUAUp48jwOK3/SRjG0IL/Kgnmnu0+V9elpDeodIWm4s/KXBkraJ/QdC0/aKkcXavsJ1z8XqbSkK1vrOCu6Wlstg/wBeyCB7Tiovc9IwZ0tm3z7Hb1TpE5yA3IZdSkKU2fTV6IQ6AEhRHr9M0NtZbP27FBZvFouLU+zPDKXUOpWcFQTlKk4CwFFKTwSpJIyniDWbqBnEYRFPqbZjtBz3qxEzyVtjGvYBnWKOY7Lvqy7Hcu0bB9iitI9nChJq3yCpraXHdKatYk49WNdWCyo/7xG8PrAoQ2e63LTk8XCyXKZap4/7RBdLSj+djgoeCgRR10L5Xt6sshiDr23IuVvUQkXa3Nht9H9Yz6q/0d0noDQz4J48sdcI4Phf74squa72Ja82cKUrUGnJceIk8JjQ7aOfHtEZSPfioApJA6YrrXH24bNJ0ZDqNc6dLT6Adx2ahBII5KQrBB7woZ7xQa2jbOvJ32iB6Q1qrTViuzmT55ariw2lSu9bWdxXuCT41SOpJw9qrJTNHuOXPalRG2k7KxoJ4uQtT6d1HalK3US7VPbcWM8t9ne30n6x40OyMUUDfKFIsvNKlSr1eJUqVKoolSpUqiiVKlSqKJUqVKoolWcUsVI9P6Yl3EtSHIEt6BkgqYCcqx0BJH114TbKsxhebNWrYdMzdQyC3GRhtJ9N5XBCPae/wopWzZ9Z4DCEutrkPp4l4rUg58AkjFbcSc7Ajtx42nJ7TKBhKE9nj+99tfb4al/9w3HP+7/9VBSyvccYCeU1NDGLvyfBeDo+yq9aDvfnOuHP1qpg1FH03YGihu1xXZqk5ShWd1A+crjy8OtON11c9b2kpVaZbMh7KWe3KAknvODnAoddou4znXHXFOhKt5a1c3F9/sHdWtPC9x3OOFlVzxM6kbRfwWzZrUl+UFqbSknKsJTjdH4fhU1QkISEpACQMAd1M9hHB89cgffT0BnlTMNAGEp4Ij7FJbEXVrgeWEktIcTnuQ6havqAKvYk1LdRavc2RWTS7F4QlM7cmw46YiyUY7dk9opXHBKN4k49ZWOlApq8izymZTM5EWWwoONOBYCkKHI4/wCeGc8Kn1+1xp7VLkZyW4uQ32DSw2YzryWst4cZCeAHpBWEglJyklWE7prJMYm3aLlCv04Vk7S9wDbZv52+qm1+uGqbVdZTDL0BhTiT2bFpS2+hxD+7JIS6chX5XBKBjgTxHEN961he7Zp4XB1vzxlSPg1xpx0pWDn0AnO8goySSrGRw9wh0rPi6fukx5UK4PWuPILsCAsnHEAKJOUgKIAHIeBHVt1VdrveLDBtUNuSzbozzjqYQSnKd8qOVOA+meJ4YAG8cDvBLqh0gs7CaMpNOjh2mMFw+vajTZto1r1xfo9tuQk+YM3JyUxdoktcdovKHobzaSFbwdUjdUAOII4hRNbW0i2fAulyu4qiHUM1pmPPdhpLbUp9Lwc7Tc4Df7NIKiACcpzzTQC2ek2S8PG6P3C3QH2VJdcYbUTkcUkAA+lwwnhwUQTwBqS6i1v/AAwuzkyTKQnJIZjKcz2KCc7vHBUc8So8VHJPQA9rnZa71SptEyOVskZsM3HetCvDjSXUKQsBSFDBB5Gvfd3HrSq5yi1HVwEQbi252DDyz6nboCkvDqhX0u5XOppaodiu8UPM2yGkpO642phO82rqk8P/AHplnRUzYq2VEgnilQ5pUORHsNMtjvL7TqpTSczY/wAXJYHDtkg4+vnjx4daFqIN46psUTSziF9ni7SiF/B60f8AdcL/AMhP7qHOq9NR3r3MTEQiOUNtqShAwkkg54dOVFCJLZnxWpEdYWy6neSrvH76ht/GNRyPGM0ftVSyFzg43Tmphje0WGChTJhuxMdqhSd4kAkcFYODg9eI6Vr1eDZNs4sO1HYebXe45KmbnN82ltgdtGWVJO8k93LKTwP2irG0/ZbfNl2oHLbdmgthzK4s1pJ7KSj5ye4jqk8R9RJUc7XuLOYSOamdGA/kVBqVIjFKt0MlSpUqiiVKlSqKJVkDJrFPOnLE5fJ4ZRlLKeLi8eqP391eE2yVZjS9waOJTtovSKr/ACC/IBTBZVhfQrPzR+JoysstsNIabbShtACUpSMADupi0nFahxp7LCNxlExxKUjoAEipDS2d5c63JdJQ07Yo78ysEZrwspQkqUQlIGST08a+lMGsnnWdOzi0DlQShRHyUEgKP1Gs2N3ODUTK/Ywu7EOdSXtU+S/Oyd1XxUdJ+Sjp7zzpvtJSiGgDJcWokJSMqV7qw5DVdZqWUrDbDSN9xw8kD99OrbqIjfYQUFhvkXP5VzxJ6ewU+awNsBwC5Muc9xcea2Yq5MAqU4tmMlY9V303PchP41h6ch0+kmRJ/r3NxH6ifxrRACc4HPn40lKShO8tQSnvJwKuRbJXoC2kTXG/yKGGB/RNAH6zxrw5Mku535LxB5jfI+6nax6M1HqYBVpsk2Syrk+Udm1+uvAqc27yfNVywFS5dqgg80lxbyh+qAPtod9VDH7zkRFRTy5YwlCs5VzKj7VE153R0yPYTR1Y8mp4j4/VIB6hqCPxXWx/0amccNVSc/8AgW//AFVh/lKb+SLGj1hzs+iAyHnW/UedT+as19vP5RG64tLyPmvISsUZ5Hk2S0JJjaoZWroJEEpH1pUajN12E6ytqVKYZg3JKekV/cWf0VgffWjNQp3mwcspNLqmZdGVAWZjbZyGnIx+dFXw96FcKco9ydI+TKQOZZG64n2tn8DTXcrfNssrzW5w5EGT/NyWygn2Z4H3Vrcd4EEhQ4gg4I99FAgi7SgnNLTYqXR5DUtvtGVhac44cwe4joagd0kKtGp33Uj0CoKUO9KgM0+RpTjr6VFYTMPBDx4B36Dg656HpXxukBF8tt1ntIKZMQtLUk+skbpStJ9hGf8A3qkjrC68DS82ClWl7iIs7zTezGmgusnuWBlQ944+0GvlqL/5ic8YrZ/aVULs153IsRoH+NMPoLZ7gFDifDiRU11Lw1ErH/2if76qDnYBJvHMJpRSl8QYeRVqfJbVnZk/9G7zB7PUot3bZ5YNqFvl6c1FF7eFIZWULRwcjuDG662eih9RHA5FB/yWVZ2cT0/NvMr+60asPpE/6bQO9tf4UjncWzktRu0OpyCuXG2XY9fNjWsH7FdkdtHWC7CnNpIbls54LHcRyUnmD4YJHVdjNs2yO0bZNFyrBcglmUnLsCcE5VEfxgKHek8lDqPEDHJDWOkrroXUdy09e4xjXS3PFl5s8RkclJPVJGCD1BBp1TziVvekE0RjPcmKlSpUQsUqVKspHGoonGxWSfqO7QbVbIy5NwnPojsMoHFa1HAFHe+aAa2X6svmlkSTKdt3mzb7/Rx4sIW5u/R3lkDwoueQjseSsztpN0YyGiuFaAoclYw88PYDuA95V3VDttCu1217Qlf7UCfqYaFCyS7nFg5Jlp8dpQ4qEabOY0xXfNeP7WPwp7pk0wAbc4r50l8/2hp7oKT3inkPwwlUf1StLkVuKrPZu7zr39U2kqUPed0e+n81EtVultm8O/zFtDY8C65j7kVrTNDpBdYV79kBtzwh7aifg54lJSXX0rJxzTgge7e4e2tqpmNK+d6WtzLISiaywChR4BW96RSfeefQih9c5D8BS4zrK2piThSFDinx8c9KaQ1DXAhIpYHwgEjBUl0ppm461viLRakJLuN959wHs46PnKxz5jA5k8KnU2dpbZvcvgyxWdvUmomTuPXCeC4hDg5paaT1B545d5ogeS7s6lyNnGq9TOz49qVOcMSHMmK3GwttJytSj8lKl+0lOOHOi7onUuxTYnbkwYOqLU7cikGVcUgyJMlfUlbaVBIzySk4HieNL6mpc57hYkDkEfTxsbG1wIDjzPLwVf8AT/lEy0TRG1JamkxwoJU7DCkuMe1tROR4Ag91Wj0tp6JrGzsXaz3+3zbc/wCq9GClgHqkg4KVDqkgEVAtoO0Pyfdq0Zce+XdKZuMNXNqC83IZPeHNz0h9FWR99AS2O6j2O6hXdtnOrIGobW8Rv+ZHfDyByTIiKwsH6SQfBQoN1K2dtw0tKLbqc0GC/cFdgbNVFPG5jPgz/jWf82ZP/wBTx/uP8aa9h21W57WLFcblcdP/AAP5m+iMkBa1JfVubyyN4AgAkDHHGcE07621Ff8ATcO+SbFbUXadHajzGoK97LjWVIdCN3iVDCVYHeaWOhc12w8UwbXPczeDhMuodKQ9LWmVdrrqCNDt8RO848+0QB3AAHJJ5AAZJ5VVO+bZNTaovfwRoyA+hLiiljso3bS3x84IwQjv5HHU06atk6w2pXJi47QrvD0jp5pRUyi5bzCGx1LEU/GurI4bxGPpAcKJ2gtqmyXZjbFQdIWvUd2ecGJFyj2pS3ZR+k4op4dyUgJHd1pjFTCIXLdxS+TUZZTt37W/NBu+naxpW3eca20tKumn1gF5u6Q0ONpB71tgls+JqPXDZ5btT2FzUmglOrYaH8asjyt51hWMkNnrw4gHmOR6Vax3yp9MwwfhHS+sILKhgreto3SOvNYyKglgvWxeXrZ7UGmtUI04JzK2pttmRlx463chSHEZG4ggg5AOPSJGDzIZLKzIbYj0WH+p52yO3A+oVQELS8nKFZHLuIP4VNdHBMh+5rWlJ85ZYWtJHAkhQOfbio1tA0/KsG0DUcSGpmQyzNcKFxlhxlxtR30FKhwIKVDFPuzztG/hISClLpLQ3c8hunAphUSB8XegqMAVAvwyopqGyosGoTHZyIkpG82CfVB6Z8CKfnJipz1vfXxcVb0hZ+klxST9ora2mxSI9tmBPpNPFsnwIz+FMlsVvFofMbcSP/Mz+NVDt0QJWzW9DVGMcCrg+SwrOz+7p+beX/tbaqxWk+F9Z/MX91Vw8lRWdEX5J+TeXPtZaNWN0pwv0bxSv+7SKoP+8pi34BRHIzVVvLQ2HJ1xpM62s8YHUVhaJkpbT6UuGMkg96m+Kh9HeHQVaqvK0hSSCApJ4EEZBHs61aKUxuDgl8jA9tiuGiuZrxRu8qLZD/mj2mzI0NkosF2BnW49EIJ9Nr2oVkewp76CNdA1wcA4JSRY2KVPmjtMTtZ6otGnrYgrn3SS3GaGMgFRxk+AGSfAUx1cLyBtnvwxrW8aylNZjWJjzaMojh5w8CCR4pbCv1xVZX7GFy9Y3c4NV8NH6WgaJ0tadOWxATAtcZEZrh6wSOKj4qOVHxVXPXak/wCcbW9oDn+3ZCP1d1P/AA10nA4geNcytbO+c7RdcPZ4OahnKz/viPwpTTm+4lO6YWkA7kx6X/1O2r5zjqvrcVT0KZNKj/QEInmUqP7aqeatJ7xTGH4YSJofa87AvTELUPOXGY4bQFHeIDit7gPDvqfJim4TrZbw6tkT5rEVTjZwpKFrwrB6HGRnpmmWdoa12+7XBUi4pjRRKdS23vFx0oDhABUeJOBz40dQw7zuSjVaxod+mtm117ku3Q2C13aMlmLbrg68xHLqSt5QaACl7vqpGTgZJPCh7f0qjXdEmTILjkoJAkLABRjgcADA4YxRj1c03G2d7NG2s9kqJJcSTz9JSTx8eNB7W7W/EiLHyXFD9n/CtaYNdGXW5n5FKm1Uk7bvPNHrYFsjg7UpExq9T5y9PWJLe5ES+olxx0rVhJOQhPolRKQCSeY40Zr/AKVs9nv7ehtmOi7ANQhlD066z4XnaLc0vO5wXvF15YBKU8gBk8OUK8jZcizXC/2OaR2020wbmyR8ts5wf1Xkg+yrZbGtPoi3HXt4faBuM2/vJ7QjiGUNNJaA8NzFCPcX1TgTgcAmFwyma5oyeaDzfkgz70yHr7qe9SZqgMqEhmMgH6LLbZSkeGTUKPk62/Tmp2tM61tjc223hC02fUkHEeQ2+gFRYcLfoFe6CUkp9LdIIyKtntquVws2ynV9xtSSqdFt7jqAM8hje5cfV3uXGq0eSBdLhftP7R0z4LEW0tXFibCgtErYhOrU4ShreJxhAb65xgniqtpQTEXDBCFgfaVrTkFD60bZ9WbDb7fdD39lep4treCIUiRJLTqGlJCkHeKVbyFJUDg8UnIBxwr3fPKxnzobz0HSzUC7tsuNR5on9slkLxvEtlsb5G6CATjeAJ7jt600pa9e+UhfxeN5VhtLNtjyUpPB2Q72bTSD3jKySPo1IdtHk+acg7P7vdtOWxiLcrUwZQDLYQVto4uJ9HGfQ3uBzyobfS7mdIy7jbKYtbPtfsfYDktixbMGbNp3TsmFZo2ptqmrUJcFyveZLcUqQHHX172QG2kqHipRSM8cUSbJ5Mml72uSNSarmapvkVQRMKpytyOsj1Aw0tKWR3J3RwqVeTheWb9s30tcgpCpKrQy12igMgt4bWM/nNgkeAoJeSVZNXNbaNbTb5DMRqLBMGYExSylb4dSUlfDC3ThxZV13t75VbUwJaSTm5QFU+zw0cLBTbUmwDUOz6E/dtmeop7LsdJWq0TJDkiDKA47i2nFK3c8t5BBHd1pvtultFbfdDRrvN05GgXGUlxh1xlsNS4ElCihxG+kAq3VjkrIIxkcatcePLBquumYTGhoGv7m4AzblX253RpJGAlpOPsKmlH31hWGzQ9ps66IosuLHZbZc3J6GYc6OwgNpllakuFA3QpKcgkgd5HCtu1Qo8pl995htwuuq3StIPojCRg93A18dfacXarNpG+udomZqCNJmnuCEvqQgj27pPvp1tbPY26IzjiG0g+3HH76bMIe7cgiSMJ71DoeIvZLBvjTklqQu8rjKQHVKbW3ghPoEkApKTxGOBNRLT1julwkuMQovni2Y7ryg2oJUUAhSjg8yB0B40YrzclWXY7oNTO6pyVcH5W6sZBHxxOf1hXnZ7d4k243WYi3NRn4lqkuOOIAwoEJH4VhTDpIXud/I/VL/wBbJDG6YG5BNvVEryT3Uu6N1EUnKTd94HwLDdWT0scX6L7F/wB01WPyRTjRV/T3XFs/XGbqzOmVf6fie1X900gqsTldhCd1PcomUqwONZqqEQE8rrZcNo+yOe/FY7S9ae3rlEIGVKQkfHNj2oBOO9ArlYpIB513MWkLSUqSFJIwUq5KHUGuPW3nQH+bPaxqbTraCmExJL0PI5x3PTbx7Eqx7UmmtBJdpYeSX1TLHd2ocJAJ411e8krRI0TsO04lxvcmXhKrrI4YOXfUB9jYR9dct9K2V3UmpbRZmAe2uUtqInHe4sJ/Gu2MKEzbYceFGSEx4raWGkjkEIASkfUBXte+zQ0c17SNu4lbDfF1sfSH31y4vT3b6j1JIzntLvPXn/8AZc/dXUds4dQe5QP21ymLvbJuD4/lZEp39Z5w0NTcCmcHxfJbGmU7tht472QfrJNO1NunhixW3/wzf90U5V6/3imUXuBfPzjzO4WeVyDFxiLJ7h2qQfsNM2v43meu9RNHgROcUPYrCh/erdvba3LTMDf5RLZcRj5yfSH2imraFqWPfNSm7NR1souMVl8gqCsq3d0n7BTPTXACy5fWI3CuY/kWkehUn1Q95zs22avA5DSZkRWOikKH4JoYaoa7S3t8OTw+0EVPYkwXXZEQgnes2oUkgjiG5LZx7Bv5qE37d+C395QBTurHHuIq1M3ax7Own7oOnwCOwqyGkpCtFaX2NbVEtrNoZtvwHfFNpyW2C4tCHSO4H7Up7xVxbJqjza3ef2huPdIkoJcQpl9KUPDHrJcwQeGOf1igb5LgYvOwHT8WSw0/G/jcVxp1IWhxHbryCk8CCDyrxI2EachTnJGkb5qjSvau7oas089g45njutLyMDqc4pJJK0Skk2IK6KOEmEAC4IVgVbTULbU09pPUKlKBSptLLDiFZ4Ebwd3SPbiohc9VWLQGkpsiTZrVpLTTKi/5swW0rdWefBACStWAAlJUeWTgYoaMbI9RzVuo/wA8et3I6DulSC0nePUBXXHfW/avJ40jEuTN1vb131RcmDvNvX+aqSlKu8N8E/WDVpKtpbtc7HcFSOiIdua3PeUGrDatRanm6ZLbKo991rqNOsLiVpOIdsiqxHC+oClFW6OuE1buUw1NYkMPo348hC23Gz8pCgQR9RIobWF9+ybXNWRrpHkf/EKI79rnFGWi0y1uqjbwGElJKlgHnvK6857KuL0WfHjptcx9h1OVy2dwttHPAEFQUfaAQOtDVUpe5u3kjKaIMad3NBbYHe1bLLxeNl98loiXC2zFyrK6+oITOiOHPoE8CQeO79JQ6GrBta71JBSW5unWbjg+g9BlpZKh4tO+qfYtQ9lRPWOhNOa+t6YOo7RHuDDZKmysEONK70LSQpJ9hodObDLTa1iPaNW68tsdCd5TMS+LUhpPJICVJPEngB762ZVi+4GxPEWuFhLRkgAi4HDKO6dZXyeUgWdq2x+ai6+H3T4AIG6n2lR9lAHbZrBvVLCdmOl5jU3U+oliPLMdYcECJkF111Q4J4DGDxxnwrI8nq2zwhF81Tre6BeVuMSL2vs0J6J9FIyf8feQdDbOdNbPYLkfT1ljW/tjl1acrec7gtxRKld+M48KpJUNJ3uNyOGF7FTOaNjW2B45yqa+V7CiWbW2jNOwUbsK2afRGZSeYSXFpBPjgA0N3VhhtauSW0k59g/woh+VzLakbeYLalAJiWyKlWemd9f4ihhIlMSW/N0vIKpCks8OPrKCfxp/R4gBPYk1UQJHdyIm04mFYNndlPorh2cSHEjkFObg/wCFVaejFGBonaHdM7pRbRFQfpObw/FNNW13VMe8a8nrtx7SFDYYhMrUkp4IRx4dOKj9VMrd7nN6MXbUvBEa6z0lxtKR6aW8Hnzx6H21amGylAPE5ScwukiYwfuI+t1Y7yUAEac1S0PkXJof/wA6R+FWV03/AK+hfnH+6arN5KCs2fV6f9oMH62f8Ksvp44vsH+s/A1zlV8crt4/gkeP1KJ4rNIUqqgUjxFUO/yg+iks3DSesWWwPOW12uSrvUj4xvP6Klj9Gr40CfLB0wNTbBNRqSjfftKmbk14dmvdX+wtVE0r9soWM7dzCqIeSXY/h3ygdGNqRvNRZC5q8jIHZNKWP2gmusieQrmr5BVv8620TJJ/7HZpCx7VKbR/xGulSeQravN3gKlIOqSvK1hsFZ5IBV9XGuTsV0/weLvVTDi/r3jXVW+veb2S5vZwW4jy892G1H8K5SNHc0ilR4HzDP8AZ/41Wm90+KOh993gpJaE9na4Ke5hsfsit2vhBTuwoyTzDSB+yK2MCo7iUzZhoWOHUZHUd4od3iKU2plB/KWuQuIrPVtXFs/Vu0RKjmoYjbalyHDuw5aBGkq6NnOW3D7FcD4GiaOTY+3alWrU5fGJW8Wm/wB1GLFvyGbxbkkjzuJ2qEg8C40d4cPZmmN749peOO+k/aK3oUtyy3RiU4nC4b3xieeQOCh9RP2V9L1BFtuslhByzvdoyoci2rik/Uce6mjcPI7UhabPxzV3vI0kiTsRjMqz/F7jLaPvKVf8dHwRGUpSEtpG6jsxgYwk8wO6qweRJeEL0nqqxFfxsK4pmJT17N5sDP6zZFWk4Vylc0tqHBdXQkOgavCENxmglKUoaQMADgEgV6PCoJtRj6jnQbBB04xFeekXVoyjLKwwlltC3MubgKinfQjIHrcE8M1mNo/VUwb171/cCpXEs2aGxDbHsUpLjh96qxEbdu4lbGQ7rAKc73TPCvSW1r4pbWod4STUaTo5CWwhOoNThXVz4UUVH6xj7KaZmyHSl1d7a7sXK7P/AM5cLrJdI9gDgSPcBXjWs5lQufyapRfbobM1EKm/jpcxiG0lfDKnF4+xIUfdTiEJySABnjwoUydlkTT2ptH3Cwv3dq2RbqFybUqW5IijLDyUvBLhUWylSsZBwd/iOVFgYAA8KkgaANhupG5xJDhZZNeSO7nXqtG73aNYbXOu0xYRDt7C5Tqj0QhJUfurMAuNgruO0Elc4vKFugvm3jWUhKt5qI6iEgj+jQlBH1g1E9MRkyL7FWvHYxt6S4e5KB+/FNEu7LvVwuF1kuIMq4yXJbvpDgpaioj7acIV2hwbBc+ykIXcZ5EZDaMlSG88VHHLOT9ldlbo4QwLjal5INua0ZT7j0h6Q6lQdfWp4pIIzvHI5+0CnmWsNT4luHK3xd1R73VEFf1cveaL+2u0BM3RsK3RY6XIsZ10pVhKUDLYBI5qAVxx4UKbtCRb7rFjoJVuwyVLV6y1F0lSj4k1k6YOYGhe6Ruq2sqS2zR9eCsZ5J5/iGs090yKf7FX7qszYOF8gf1v4Gqx+SefiNaj/wDJhn+yXVm7CcXmAf6YUhqsTFdPH8I+aKYOazWE1mqIJYPKmPWljTqbR+oLKtO8m42+RGx3lbagPtIp9pePdVmmxBXjhcWXPT/J8MJXr/Vz5HpN2hCR+k+j91dCxyrnx/k9XUjW+sWir0l2ptQHgH05++ug45UVXfFQ9L7ijuvpPmWhdUSf5m1TF/Uws1y1kfF6QI7oKR+wK6cbXnvN9lWuHc43bLNP9iofjXMy7I3NNrR07FtH90Vam93zRkPF57lKmxuNpT3JA+yveaVZBxXjuKaN4LFfGU6wzGdclKQmOhJKyvinHXI61mVJaitdo6ohOQAACSonkkAcST0A517kBnS5YuN/ZS/d8B232LeyGe56QR1HMDp0yeI2ggdKb8kv1DUI6Ru225x4D85Jiuej7LZtPvXO6w3It0uad22Wxl0tKQkD8s8B7QSOgAHMnEGk21fm6VGdKUWGg2gKUFAJHIDI4DiafJtxmXm6TJlyfMi4OKBU4Rgbp4pCR8lI4gDwptuboQ12aT6S+fspwGjFlzcTH5fKbuPoO4KXbCNo3+ajaBFu0t51dmmI8yuIxndZUQQ4AOqFAKx1Ga6SRpTM2OzJjPNvx30Bxt1pQUhxJGQpJHMEcc1yYHdVn/Jn2oXjS2nJjFzS5P0fDlljDSSuRbApIWXEpHFbOVHeSOKeYyMilWqUgeOlHFOdOqCx3RkYVzuVYOAOPId9fCDOjXOFHmwpDMmHIQHGX2VhaHEHkpJHAivq82H2HGiSAtJSSOmRiudIIOU9BByEMJWq9RaqnvM6eUqJbmlFKXm2krefwcb2VgpQjPLIJPh13bVqW/aeuceFqYl+3y1htqcttKFsOHgkOFGEqQo8N4AFJxnIORNbPaI9kgtxIwwhAGVEcVHvNfa4W6NdYbsSYyh6O6ClSFDhj99XD+0KzrEWAW0R0NKsJAQkDjgDHGkTg8aoqr3VZfK92nM2jTCNDwXgq53nddmhB4sRAcgHuLigAB80E9RRd19tEa0w41aLU03cNVS0b7ENSvQYQeHbvkeo0Og9ZZ4J6kc4NR3O5XvUd4uN3mrnXR+W6X5ChulxQUUjh8kYGAOQGBTXTaTe/e7klmoVBazY3nzTYiOy5Jb32ULKlDhu5KvADrRR0Ds7masuCFGMYtmivjzqQ4ns87hCi0lJwSojAPQA5PdU+2Zr0fp6zR32Syi5qiMyH5zwCnHC4nKgg80hKgUlI7uOc1A9o+0BF/vb0KyS3mrfJaCJ6m1Y86UkncBPsJBwckYB5AU56V0hLWhcEdSnqp30kEZb/wDR/PRSPU94tW0DWtyahzUsXWNuMWeW4r+LydzeLrR8FqUcH6II5YIy1A6tWog2+w5GlsRezeYdGFNLDhyk9/gRwI41oyi2xDVlHxaQAlCeHH5IHjnGO6pYzdIup40aDqaUmPdmEBqJft3Ix0akjqnPJfTw63MDbADiE4o3P04BjetGLX7R3j+0ZPJQV6OtR/TQz/ZuVZuyndvED+uTVZ/JrhSNOXzV9nuqW41wfTFfZa7QESG0hYU40floGRkjlnjirLWg4u8H+vR99c9Wgtnyupp5Wywb2G4N0WBWawOtZrNCpUqVKooubPkDXAR9sVziKP8A1yyvpHiUONr+4GukoNcpPI+vfwL5QWkt5W61OU9CV49o0oJH627XVpPSj9QFpAUJSHqkIdeUA8WNiO0BaTg/A0hIPtAH41zkvo/0YpHe40j+0TXQvyl5Hm2wrW6vnw0NfrvNp/Gue98GWmE/OlsD+0Fe03uDxR0X7/D7qSZyo92TXjecdkMxIrC5U6QcMxmvXX3n6KR1UeA+ykwiRcJvwfAQhcrc7R1bqt1qM31cdV0T4cz07w23HUjMGPItmm5Dhaf9GbeVei/N+i3/ADbQ6Y5jl3kiClLzudwWVfqXRHoYMv8AkPH7LemXZjSLy0xHWLlqxOULmAb0W155oaB9dzvJ9+B6NRaBCkXu9w4nnBVNukxplUqQd87zigkrV34GTjwxWohtLaEoQkBKRgAcgK1035dnnwp8QByTb5LUtHUFTawsDxzu499Mi3a0hqTxxbXdJIdzjxP5yVnNpfkt26yabZuWkZ1zlXhobimpjyVomjdKgAAkbijunGOGSBVRlPmUe1JzvgH3V1J08I15tlnusS4OSLS423NgtFKcJCk5RlXNW6FYGe7jnFUH8obQQ2e7Trmyy12VnuubjBI4JSlZPaNj81zeGO4ppZp9W5zjFIcpnWUwYBIwYQsI7udWH8mw5smok905s/2QoAQYUi5OBEVorz/KK4IA9vX3VYPyc2PN7TqZsOh0JuCE9oE4BIaGcDurTU5GmBzQciyK0iCRtQyRzeqb/RFWBLvmz6U7cNKtIlW51ZdmaecXuNPE+s5HV/IunmR6qjzGeNGLQm0awbRLe5Js0lXnEc7suDIT2cmIvqlxs8R7RkHoaGRGaiWp9DN3mczerVcJNj1RGGGLtCUUufmuAeunlwP+Fc+17JOrLg9v3T6ponA74PT7K0mRWeGeNUvuO2/bxoAlu6Wi16gho4JnNwlKCx3ktFJB9qRWrH8q3a7qJYjWbQluTIVw3/M5Cwk953lhI99bfoHnLSCPFKzWgHa5pB7LK7C1oQhalqCUIG8pSjgJHeT0HjQO1Ntyd1BNk2HZwGpshpXZStQvI3oULvDf8+53Aej35FC9OndoO0RsL2l6peNuUd42G2EMsq8HCgAEeHH2iiJbrZFtkRiDb4rceMyAhpllGEpHcAP/AHNUIjh57j8v+oyGnmqOs8bW/M/ZfHTOm0wHuwYW/Nuc98OSpkle+/LdPDfcV18AOCRwFUdlLU5OmrPAqkvH+0VXT/R2lvgrs5cpGJrmAEn+ST3e2uf0TQEbUVredhuLh3dh11LqHclt4lZUhWOY3kkcRw4cqO02oDC58nOywrqR1Y9sFKPdBIHb4Id7ytxTXaOhlRyWwshJPsHCtm2W2XdbjCt1uYU9NlOpZYaRzUs8h4DqT0AJr1Ptc61IbVPiOx0ODKHFDKFexQ4e7nVjfI/2eN3u+XzVc1vei25k2+KR/PPI+MWPFLZA/wB5TiaoZHGZAudZSv6Toi2xKV78le5W/Zz/AAmRfxKvkKObg7bTHCY60JSVFCF53t/c4gngTwwKBaFIebSpOFNrSCMjmCKvttjvkzRuyrUVwlyYrqGIhjRkNNKQp55wBpoKySBgq3iBz3eg4Vz4t81DTTcdzgG0hCVd4AxxofTppJmlz8rasiZE8BoU0sOqnbS3HhTxJkWphYcjuR1lMu2r6OR18+HVH38qs5s02vNCVZmtRz4r8KS+2iHqFnCI753gA2+nkw7nhxwkn5p4VUQHPsres95mafefXEDT0aUNyXBkjeYlp5YUOhx8oce/NFVFOydtn+qXM6WmcX0/PiOR+xXWUKHvr1VMNjG306WhJjPuy7jotgBL0Z3Ls/T48OZejDwypI5ZAxVw7bcol2gRp0CUzLhSmw6zIYWFtuoPJSVDmDSGopnwOseHamVNVMnHVweY7FuUs8cdaxnNMesb0nTuk7/eFq3U263yJO93FDalD7QKxaLkBEONhdcbtB6gXpTW2nb6hWDbJ7Er3IcSo/YDXapt1DyUuNKCmlgKQocik8QfqIrhok8eJ51168nLWX8ONimj7otzflNxBCkKPPtWD2Zz4kJSffTPUG3aHICkdZxam3yq3g3sM1Gj+fdhtfXKb/dVEH7bLvk+HboCmkye2Elxx38mw0gkqcWeiR9p4Vd3yoFydRaQjaIscN25anukhme1DawkJjx3UqcccWogITndSCeajgCqaat09qLSVgat8ux3CMi5PYulwKU9m+8DhMULBw22kEHCyknPLjx8o2NLRvNltPPIxjmQi5cQL9iaL1e4r0E2WylwWML335Lgw7dHerrn0Pmp5Yx0wKYnHkMp3lqxUsgbO7tK3VzZEeC2eaGx2zmPbwSPtqRRdmthZIMll6c71VJdJB/RTgUVJqMMeBlNNO9ka+Vlw3aDm7jk/wBoMy7n2xKEr3E/NB9JVbtt0pfLthUO1ySgng66OyR9asfZR7h2i324AQ4MaOB/NNJSfrAzW4eJyeffQUmru4MaukpvYYXBqJfID+yix5LVzmNaEk6VuS0Kn6dfCEBKioebvAuN4J5gHtE/o1ueUvoZrVOgfhdMVL8/TbhnISU7xWxjDyf1fTHi2KhGyK6/A+1GE2pW6zfITsFQPIutfHNe/AdHvqyipMaU+5BKS+CnDyd3KEpI9VR5cQeXPFLXybZRKOf4Usq6UUkrqcftOL+oXOBT4bhSJTW6oBClNYHDdAO7jw4Z99WC2b6dZ09pqH2SgrzyPGeVgfK7BIJ95JPvoQ610mNE6rvemFhXm0J0iOVfLiuDeaP6qt32pNFnZbeU3bRkBpSh51bh5i+nuU3wB9hRun31vUk9GbcE1cWyGGW3I+vNTWlSpUsW6yDg5GQe8VlSyoYKlEdxNea+0WK9NfQxHbU48s4SlP8Azyr1VJAyV8221vLS22hS1rOEpSMkmiVpbSKbZuzJoC5uPRRzDX7z49K29N6WZsaA87uuzlD0l9EeCf39akNeJbPUl/VbwXpB3XEK+aoH7aqLrfTQ0frG2WpAQM2PeWU/KCJr4bPt7NYHuFW34kjdBOeGKqZrfULertoN+u0dwOW6NuWqI4n1XEslRcWD3F1SwD1CaJhJDXdi00mJz6+It4i/pZQ9cmNDauaJjRXCaWp5e83vo3SkLII9u9061aLYfpJOjtmlkhKjojypSDcJLaUgBDr57Qpx9FJSn9Gq12a0fws1ZA0+Mlu63Npl/HSOygOP+7dTu/pVc9U1lElDCj2bixvISUkJUO4Hlkd3OrSm0Yb2rfXJA6oDB+wH5n7fVVx8rdydfYGndJW0tdq445dZCXF7oKG8NtgnxWtRH5tU6umnrvZSfhC2yGED+VCd9v8AWTkfXVqdqF4duu1fUryGy9Htjce1IKFDKShHaOYHX03sc+nKo81JaeUUoUN/q2RhQ9qTxoyCsfTNDALhZ03s1DqNOJ3vLXm/hbkq3xLgtoAJUHGu7P3U8sSUSE7yDnvHUUXbtoiw3oqXJtzSXj/LMfFL+tOPtqBX3ZlItSRJtVw7YlQQ3GkJPauKPJCCkemo8gnGaZw6lHIdrsFJdQ9la2jaZBZzR2fZNESZKtk5ifb5C409g/FvI4+1JHyknqDR/wBie3lrRshQbUj4EdeJutgbWFOQnDxVLhp5qQeJW0OPAkAKBz62eeTFMVaXL/r9K0JZZU+jT8VZDjhAyA+4ninxQjj3npRo1RYdAaL2aXFifBtaYKIanyqOwhK1ObvoONbvFBCt3cIIx6PEnOaVFdC49GBuuufGnyE9MDtI+YR5tlwiXe3xbjb5LMqDLbS8zIZVvNutqGUqSeoIoO+VtqQaa2BarIWEvXJLVub8S6sb37CV0JfJ42tN6WRaoMuQf4J3pxLC+04fA1zVgLSfmsurOe5K1Ajgo00f5QfWARG0hpBteFqW7dJCO7GWm8+/taFFKY5w08F6yqbNCXDjw81RCr2/5PzXaVRNUaJkujeQU3WIlR6HDbwH9mfrqiVTjZNtHuOynW9v1Ra0pckxEuILS1YS4laCkg+HEH2pFMJo+kYWoaN21wKvlrba1bdP7fJkhsdvZ49rastzmucGYspDqnUpCwCQAHMLUQUhRGSME0V4TCL1JcmuRGjbZ8JLTqHFtvNyxvZSr0SpK0hJUAc8jjkKqFbGBCtjSSsyFqT2rz3rKeWv0luHv3iSffT/AKQ1Xe9nboc084iRaFnfesj6yI7meJUyrj2Kz4eieo60ikc2Q2bgjC+gv9m5oIGyRnfzI7PDtRR1V5Psc9pL0ZOTans5Nsl7zkFZ7kfLZ/Ryn6NBq+x7ppuSq3Xy3PWq5qSSyl0hTUgjj8U6PRc9nBXHiBVptDbRbHr+G45bHltTY4HnVukjckxSfnp6g9Fpyk9/SnjUFrtN8tMiDe4kWXbHQA6zKSFNnJwOB5HPIjjnlWW8g7ZR9/8Aqzo9UqKTEbrt7D+Y/MKoiHEuoS4kgoUAoHwNeWn0PKeSk8WlltXtwD9xqfax2KXXSCFytKoevFibGVWxZ3psVPc0o/lkAfJPpjoVUJrfPZcvb3YO9oxLbCuoKHEcFJUDxSrHMHjwrwx4u3IXY0OsQ1QbY2dzB/Mp2l3FyxLg3xnPbWaWzcAB1S2sFY96Cse+rpNrQ4hLjSgWljfSR1B4g+8YqmbrKJLTjDgy06koWPAjB++rJbFr4u/bMdOvPK3pURg2+QTz7RhRaOfaEA++quzH4FIvaSHZUsl/kLen/qFHlU6X3VWDVjCOCVG1y1D5qiVsqPsVvp/TFArT+oJ2jbsm5R2Vuxn0pTKicvOGx6qkHlvp44PUEg1eXX+kmddaNvWnnSEfCEdSGnD/ACbo9JtfuWlJ+uqQ6NuXnsVdmvEdLdxjOONuMuAeulW6tI7iCDw8aJifeK9r2wfBBaWY5iaOQ2vlp70ebHfbfqS2tXG2SUyIrnDeHApV1SpPNKh1Bpx6E0EYthXZbgq42Ge9bpivyifyjD47nEHn7QcjoaMOj9q+mrc22jVNhkW+Y3znshU2Io9/ojfb9iknHeaGdEDmM+XNFVUU9IP9rL94yP8Aik9m0xPvCgptstRzzecGBjwHWiVZrBEsbHZsJ3nFeu6r1lfuHhTVadpWjb4lJt2qrJIzySma2lQ/RUQR9Vbs7WemrY2XJuorNGQPlPT2U/eqsujfwskstV0nE2CfOXOkCc4xxoW3jygNGQkqRaZEnUMocA3amStGfF5WG0jxyfZQk1Zr/U+ukOx58hNpsrmQbZbnVbzqe55/gpQ70oCU+2tGwkZfha01JPVO2wtv38vVTjaptdEpMrS+kpe/IXlm4XZhWW4iTwU00ocFPEZGRwRzzvYADMl+Lp+0bzbYRHjNhDTKevRKR7Tj7TWwoxbXD5NRocdHAABKEJ8AKjTb/wAOT1z5gLFntwLiUuDGSBkqV446dB4mthY4bwXWUdDHprDm8juJ7B9h80XvJt087I1TdrvJ9I2iEmLvdPOZKu1dPtCEoT7FVZr0d5O8fRzk/ifqzQ22EWB2y7OIEmS2W597cXdpCVDintsFtJ/NbDYqTbQ71/BzQeprsFbqoVtkOpP0uzIT+0RWcp3y7fJcXNJvc+Xtv6clUyDNVdzPu6+K7tOkziTzw46op/ZCa+zrDT4AcbSsDlvDOPYelfC1RfMLVBi4AMdhto+5IH306WKx3bWV5Nm0+0hUhvBlzXQSxAQeq8ess/JbHE8zgcasQXvNl9AbLDp9CzpuDQPM2TdFhXG4XSPabGy9cLtIGW4ZOUoR1cW5/Jtjqok9wBNWL2b7JYWjVoutyebuep1IKTNKClqMDzRHQeKB3qPpK6kDhT/orQNr0DZ3IVqBXKfPaSZ0n0npTmOC3COg6JHBI4AV8tXbQYGiLA3crqw556+S1FtrRBekvD5CM8MDmVngE8T3V5uv1I1xNfqElY/rYbyb+cSnfU+qrToy0O3W8y0RYbWEgkby3FHkhtI4rWeiRx91VE2q3a97UVJMZLFktLDvbR7TuD45QBAckLRzc7gMpRnqcmt283W6auvPw3qB5D09IKY8drPYQUH5DQPU/KWfSV4DhTaZC5JKIu7ug7qniMpHeE/OP2Dx5Vdj+hN2ce1NqP2eZJHvrefBo/v8shfYbgdLXuRbr5GUi03NAjXKM4fRKDwQ8lXI7pON4dPECh/tU1fc9Yaufeud0N0VbmkWxiWRxdZYG4hRPUkDJPUknrRe2oxYEXSMqXKLi5iMIjuqXlYWo8QOm6RnIAqteRmn1PUGeMOIyuA1rSG6ZWuYx19wB/8Ae9ea9JwOteaVbpUrKbJNSi+6aREdczLt2GlZPFTfyD+HuqS3F2VZlGYyO1gn8uz1b+mk93ePf31W7QeqHNKX+PNO8Yqj2chA+U2efvHP3Vahl5qUyh1paXGXUhSVjiFJI4GkVbF0Um62CvrfsvqX6+jELjZ8ePLkVpw5SJj8a62ua/DukM5ZmRlbj7B7u4pPVKspNHTQG19i/TbfZdXtsRL2lzESY36EOc5jAwD+Tdxn0DwOcpOeArLdre/p6T59BUURCcHr2R7j3pPTu+2nmLOh6lguw5Lad5aN11lXL2j38e8VgQLZyPoiK/TIq0nG2Ueh8fy6vSoAdOPKhjtF2KWbXExN5iL+CdUNcU3FlGUv45Jfb4doPHgodD0oTbKtuNz01MXpzVSpdztENH+tAhTr1ubBCR25GSto9F8VJA45AyLRRpLMyOzIjvNvR3kBxt1pYUhaSMhSVDgQR1FZOa+B1xwXHOaWSFjsOaqcakg3jRMxuBqK0S2JLyuzjOw2lSWJiu5paR630FAKH20Y/J1iXW2WzUsO5xTGQ9PFwYZKgpTSXkYUhRHDeBaBIGcb/OjFMhR7hGcjSmG3mHMbzbiQpJxy4HqO/pXyttriWlpTURkNoUd48Scn31HTAtLWjjxRlTWz1TWtndfbwx9VuEdKpj5RGgXNL7RJGoorZ+Bb8355IS3kKZkNkJdWn3FCz1wVHkk1cYS/4+uItOD2YdbPzhnCveCU+5QqObRNJK1fpxyJFW01doyxKt7zoyhD6QQAr6C0lTavorNSmk6N9jwKCLi1wkZxb+FVAhS7lFZbU4j4ThrTvIkMEdrunllPyvdx9tO0O4R5n/V3gpaeaDlK0+1J4il/B6XAjuTNPwXnbel1aJViWQmTbn0n4xtvPBQCs+genFJIIFfFrzG+RW5HZpdRkgFxG6tCgcFJB4pII4itJGALvNOrxUsAYc/xP9HsX2k26FMVvSYcZ5R6uspUfrIr4t2a2sqCm7dBQocimOgH7q9fB+5walS2h3B3eH7QNY8wcJ9K4TSO7eQPuTWe4/yTDom3v0Qv5LcUsNo3lKCW09ScAfhWkbl2/owWlSSeHaeq2P0zz9wNek2qIFha2y8sclPrLhH6xOK9T5D7LbTcRkPTpLqI8ZoqwFOKPDJ6JABUfBJrxoBdbmpLIYoy9/VaOz8+6ZLqlTBaVKdTLuLhPm7WN1lk/P3T3d6jn2V9tMaekbR9SWHSdu3lWR5wv3ScM/HR21Zd3D1SVYRvcipWBnBqRu7ObHakC66lelX24OrQ23FSMNPOnghlphPrEngAonvPDNWJ2V6Fd0nbJE+6NsJ1DddxcpLOC3EbSMNRW8cNxsE8vWUVHqKK3sjZu4nl4riNS1OSUGGMbQePbbv8VP0BKEhKUhCEgBKRySOgHgKHO3mHNuGyfUcSAhK5DyWEFKjhO527e8SegAzk92amzk9arwzBZwQhkvyDz3QTuoHtJCj7E+NbziEvIUhaQpChgpIyCO6gWv2uDilZFxtCqVo/ROotf3SVBTEkWSHCeLVwuDu4vcVzLccgkOLIPrHgjmRn0as/prTFq0fZ49ps0REaCzk4BypxR5rWo8VrPMqPE05RYbECO3Gistsx2hhDbaQEpHPgKbdT6lhaTsz9znBxaG8IbZZGXH3FHCGkDqpR4Du4k8ATWjpC/qMFgtqiolnIknde3p6Ju13ru26As5nzt96Q8vsYcFojtZb2M7ic8gBxUo8EjiegNX7nc7lqK7v3u9yEyLm+N0BvPZRWs5DLQPJA5k81HiemI/K1Re9dbQ7jdb+hTM6EhyOmCFZbgp3gA0joe8q+WTnljGvOmu3yabZCcKY6eMmQn5vzR7eX28hWxZs6g810GiUbGs/Vyi7j7o/Of0W526r06tphRTb2yUuvJPF5Q5oSeg7z7h1p3QhLaEoQkJQkYAHAAVovyodlhtg7rTKAEttp5nHIAdajd51uu06cm3l1tDe+eygtE+k4v5x8Ov6J76o1hkNmBdDLUxUjDLOc2uUNdtepRcLw1Z2F5YgDLmDwLp5/UMD66FNbEmQ5JedeeUVuuKK1KPMk8zWvXRxRiNgYOS+J6jWPral9Q/i4/LklSpUq0QS9Jo27HdcpUhOnJrnFPGItR59S3+I947qCGa+sd9yO6hxtakOIIUlSTggjqKymiErNrkx0vUZNOqGzx8uPeFc1SEuJUlSQpKgQQRkEdxFQS82d7T7wlxVK8xBylYPpRz3E9U9x6cj31nZztAa1XBTFmLSi7sjC05x2w+enx7x7+tTtSUrSUqAUkjBBGQRXPEOgftcF9khlh1OnbUQHz7O4px2PqXcrRqaelLZnImgOFR3ArLaEsp8AcnwHpGpVsgm6xtFwur9phou2h23l9vGjo7JLDwPp+YpJJcIOStHopJ4JwvIoIyXJWg57irfNDFqviksONLOexfSlfYrT9EFZz3Dwq+FhsUTTVkgWaE2ERLeymO2O8JGCT4k5JPUk0RK9jI9wF939L57XxzfqnQyYLbn1Xo3ASICJtvSJba0hxAQcF1P0c/KxyBxx4HFbEOWxPjNSYzgcYdG8lQ6+7oehB5GvrgdwpsRAcgXJyTEGY8tW9IYzyc/nU9xPyh14HnnK3C8yF97lHccQ2+wAZUVXaNj54xhSD7Rw9uD0rcSoLSFAHBGQFDBr0BkcaRFeXwvQM3CFW0jQcsz16r05HL10CEouNuRgfCTKRwUnp26B6p+WPQPySAVf22I13i3iErftWoUg7+CAJITwODyK0JIOflN4PGrk4obbVdnUfU2jbuzbYyGbkN+WyWk43nwd8Kx3lQz4knvNEsl3Wa7w/PBb0lQ+lkEjTwN/zxVfKVadpuLd2tsWc3jdkNpcIHySRxT7jke6tzPPuHOsyLGy+mRytkYJG8DlLNOGirPOv19kXKFAXN+DAuNEYQoJDshQAcVvK4JShJCN45xlXM8KHerdRrMR6LbV5dOEB1PzyQEge8jjV1dnujIeidL262R0AuNMpDrp9ZauZJ/SJPtJrS3Rs3HmuX1/UMimZ4lNGidmvwRORfr++1cNRpSpLPZAiNb0K9ZDIPEqI4KdV6SuQCRwog44YrNZArB7y83K5RrbX71qxYLcV6W8CVOynO0Wo8+AASkeAAwPfXyuk1UKMC0gOSnVBphsngtw8s+AwSfAGt/gDTBIfd8786SyHZawpmAwo4AT8t1R6JPDJ+aABxVivBkrx2BhOcd5DTjcBcntpqWu0Vn1lJzgrI6Aq/54VEZWnHtYXhdyuS3GLbAK2bfGAwpR9VchWeRVxSkcwgfTNSq12xNuQ4pThfmSCFyJCxguKxgcOiQOASOQ9pJ0NZ6pi6J0rd9QSwVM26Op7sxzdWOCEDvKlEJ99Xbe+1vNVJ2jceSpZtGd+C9pWtbfb/jCqWzF7RPBS1IZSFJ4dd5WCfCvIfjaVtyGBuuTXBvKA+UrvPckch4VHrbclhL18lrTIu09a5AV033CVLdPhlRCfAV9rbaJd/fU+ta0x1K+MkHiV8eSO8+PIUc9ovY8F2Ol7ooGc3EY88/2lFjvahlOSZjxTEaBL7xOAlI47qe7hz7h40IdousP4VXYCONy1wx2UVAGBujmrHj9wFS7ahreO2ydM2VaUxWvRkuNnIUQeKAevHmepoQLOetMaSGw3uHguM9pNW6VxpYXXA949p7PALwaVKlRy5FKlSpVFEqVKlUUWzEmPQ5DUiO4pp5s7yVpOCDR90LtRbvDCI1ywJaBxUOah346/eKryOdfZmQuO6l1pa0OIOUqScEGsJ6dsws5ONH1ifTJd8Zu08R2q6WhocK/6mvUqS21KZiRGYzKVgLRuvBSnTjvUAEHwBHWrQ7PHXXdH20OureLIcYQ44cqU224pCCT1O6kDPXFc+NkG1uPYtRt/CywzGmoTGku49EEHLbh7sEkHwVnpXQnRFxgyrDEjw1JHmzSQUBW9wPEKB6g5znxpFWRujIB4LoH1cdYTOzjc38/yyk2OVYrINImgVmm+M45DlGG+orbcJVHdUck9S2T3jmD1Hik04183WUPtlCxkHj4gjkRXvjjicmovACEiKwDukHHI5r1WDjrXq9IuufOo7fJ0brXVFkaccY8xub3ZhBxlpxXaNnHdurFN0i5S5ad16S6tPcVcKO/lRaGXGnQdcxG8sLQiBc90epx+JePhklsnxRVfjwznhTQdcB4HFdHpVVup+jcbbcfZbdkjefap05EA4vXFknwSg9oT9SK6JM8Wmz3gVR3Y/pp27386gcQRBhBcaISPyr6sJWoeCR6Oe8nuq8bad1CUnmABQ1WRcN7EnrZBLMZBw5eX/V6FeqVI0GhVg9a1osXsnHHlnefdxvK7gOSR4D7+NbQpV6F4RlYxxrTn2qLc1Q/O2g6mLITIQhR9ErSCASOuN4nB64PStw99QnaltGg7MdKSLvJcaM9eWYEdawnt3yOA48kp9ZR6JB7xV42uc4BvFUlLQ27uCp3E0dGavF5ZWQq2wrnLixo6c8W23lJTvHuAAAA7uPdUO2k7TEQmXbNY3U9tjs35DfJofMQR18elR7Vm01YtoslmkLW3hXnVw9VclaiVLKfmgqUePM0LFKyTmn8VKS/pJPILyv18RUraOk426zv6CytRJryTmsGlR649KlSpVFEqVKlUUSpUqVRRKlSpVFF9Er3ScHpijJsn8oK8bPfNoMvtJloZOG91eHo467hPAp+ieHdigvWQcVSSNsjdrxcLWGd8Lt8ZsV1M2d7b9P65gIejzmnDgb608C2f6Rvmg+PEeNFBt1DyErbWlaFcQpJyDXHK1XefZJjU23S34kpo5Q8wspUn3j7qsLs58re/wCmVtsXyP59Gzhb0cBKz4qR6qj4jdNJp9McMxZTyDVI34lFj8l0MBrNCzZzt90XtIWxFgXVhm6ucBDkK7NxZ7khXM+Az76KWeApY+NzDZwsmLJGvy03WawRWaxnjVFdalztsS72+Vb58ZuTBltKZfYdGUuIUMEH3H8apPqrYjcNM69i6bdmKRpy4FbkG5LV8Y40niYw/pwOGeRSN4AnIq8hGaY9V6UtusrI/aLo0pcd0hSFtq3HGXEnKHW1c0rSeIP3gkUXS1ToSQDgoeaEPsez5oc7PtNx0SoMSHHQzbbahJDaB6KUp9VP18fHnRh4UM9D3Z/SU9nRepi2i7OlblvuaU7rV6QniSPmPpHrt/pJyDwJdYSMc13WN+9EGcS5aLWxbsXo1jpWawck4HEmqKLGaRNDHX3lAbP9nPbNXS+tSLi0Dm32/wCPfz3ED0UfpEVUvaZ5Z2qtTpeg6TYGnbavKe3SoOTFj8/GEfojPjRkNDLLm1ggp66KLncq122LbzpnZBbnBMeTOvy05j2llwBxR6KcP8mjxPE9Aa5z7SNp+odqWoV3m/zC47jcYjt+izGbz6jaeg+0niaikubInPuyJTzj8h1RUt11RUtZPMkniT7a1qd01IyAY4pFU1b5znAXsqyOJryedYpUUhEqVKlUUSpUqVRRf//Z" alt="Jorge Welch">
+        </div>
+        <p class="rol">Host / moderador</p>
+        <p class="nom">Jorge Welch</p>
+        <a class="arroba" href="https://x.com/chilangamer" target="_blank" rel="noopener">@chilangamer</a>
+        <p class="postura"><b>Su chamba</b>Cortar la vuelta cuando se repita el argumento, forzar el "sí, pero" y cobrar el veredicto final a cada quien.</p>
+      </article>
+
+      <article class="silla">
+        <div class="avatar-caja">
+          <span class="iniciales">CO</span>
+          <img src="https://unavatar.io/x/charliehdzojeda" alt="Charlie Ojeda" loading="lazy" onerror="this.style.display='none'">
+        </div>
+        <p class="rol">Colaborador</p>
+        <p class="nom">Charlie Ojeda</p>
+        <a class="arroba" href="https://x.com/charliehdzojeda" target="_blank" rel="noopener">@charliehdzojeda</a>
+        <p class="postura"><b>Postura sugerida</b>El purista práctico: el juego original en su hardware, con las concesiones mínimas (mod de video, everdrive) para poder jugarlo hoy.</p>
+      </article>
+
+      <article class="silla">
+        <div class="avatar-caja">
+          <span class="iniciales">TC</span>
+          <img src="https://unavatar.io/x/Torchic204" alt="Torchic" loading="lazy" onerror="this.style.display='none'">
+        </div>
+        <p class="rol">Colaborador</p>
+        <p class="nom">Torchic</p>
+        <a class="arroba" href="https://x.com/Torchic204" target="_blank" rel="noopener">@Torchic204</a>
+        <p class="postura"><b>Postura sugerida</b>Pro-emulación sin culpa: si mejora el acceso, la resolución y el guardado rápido, es la mejor versión disponible. Punto.</p>
+      </article>
+
+      <article class="silla">
+        <div class="avatar-caja">
+          <span class="iniciales">CN</span>
+          <img src="https://unavatar.io/x/NintenderoRegio" alt="Carlos" loading="lazy" onerror="this.style.display='none'">
+        </div>
+        <p class="rol">Colaborador</p>
+        <p class="nom">Carlos</p>
+        <a class="arroba" href="https://x.com/NintenderoRegio" target="_blank" rel="noopener">@NintenderoRegio</a>
+        <p class="postura"><b>Postura sugerida</b>Defensor del canal oficial: comprar el relanzamiento, apoyar a quien todavía publica su catálogo y exigirle calidad.</p>
+      </article>
+
+      <article class="silla">
+        <div class="avatar-caja">
+          <span class="iniciales">OM</span>
+          <img src="https://unavatar.io/bluesky/hefestomar.bsky.social" alt="Omar" loading="lazy" onerror="this.style.display='none'">
+        </div>
+        <p class="rol">Colaborador</p>
+        <p class="nom">Omar</p>
+        <a class="arroba" href="https://bsky.app/profile/hefestomar.bsky.social" target="_blank" rel="noopener">@hefestomar.bsky.social</a>
+        <p class="postura"><b>Postura sugerida</b>El bando de la comunidad: decompilaciones, recompilaciones y ports de fans como la tercera vía que ni las empresas ni los puristas vieron venir.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= MECÁNICA ================= -->
+  <section id="mecanica">
+    <div class="rotulo"><span class="num">Mecánica</span></div>
+    <h2>Cómo se debate sin dar vueltas</h2>
+    <p class="intro-sec">Tres reglas para que el episodio no termine en el clásico empate tibio.</p>
+
+    <div class="glosario">
+      <div>
+        <dt>El punto de rotura</dt>
+        <dd>Cada bloque cierra con la misma pregunta: <em>¿aquí ya se rompió el juego o sigue siendo el mismo?</em> Respuesta corta de cada quien: <b>SIGUE</b> o <b>SE ROMPIÓ</b>. Se cuentan al final.</dd>
+      </div>
+      <div>
+        <dt>Prohibido el "depende"</dt>
+        <dd>Se vale matizar, pero hay que nombrar la variable: depende del género, del input lag, del precio, de la región. Si no se nombra, Jorge lo devuelve.</dd>
+      </div>
+      <div>
+        <dt>Un ejemplo por argumento</dt>
+        <dd>Ninguna afirmación se queda en abstracto: siempre acompañada de un juego concreto y en qué plataforma se probó. Es un chatcast, no una tesis.</dd>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ESCALETA ================= -->
+  <section id="escaleta">
+    <div class="rotulo"><span class="num">Escaleta</span></div>
+    <h2>Corrida del episodio</h2>
+    <p class="intro-sec">Los bloques están colapsados. Toca cualquiera para abrirlo. Los tiempos son objetivo, no camisa de fuerza.</p>
+
+    <!-- COLD OPEN -->
+    <details class="bloque" open>
+      <summary>
+        <span class="tc">00:00<small>3 min</small></span>
+        <span class="bl-tit">Cold open<span>La confesión de arranque, sin rúbrica todavía</span></span>
+        <span class="flecha"></span>
+      </summary>
+      <div class="bl-cuerpo">
+        <span class="et">Arranque en frío</span>
+        <p class="pregunta">Ronda relámpago: ¿cuál fue el último juego retro que jugaste, y lo jugaste en qué exactamente? Nombre del juego, nombre de la plataforma, sin justificarse.</p>
+        <ul>
+          <li>Sin música de entrada. Se entra directo con las respuestas encimadas — ahí sale la tensión sola.</li>
+          <li>Jorge no comenta ninguna respuesta todavía: solo las junta y suelta el gancho.</li>
+          <li><b>Gancho a rúbrica:</b> "Cuatro respuestas, cuatro plataformas distintas, el mismo juego no se jugó igual ni una sola vez. Eso es lo que vamos a romper hoy."</li>
+        </ul>
+        <div class="rotura"><b>Nota de producción</b>Este bloque es el mejor candidato para el clip vertical de promoción. Grabar con cabeceo limpio de 5 s al inicio y al final.</div>
+      </div>
+    </details>
+
+    <!-- BIENVENIDA -->
+    <details class="bloque">
+      <summary>
+        <span class="tc">03:00<small>4 min</small></span>
+        <span class="bl-tit">Rúbrica y bienvenida<span>Presentación de mesa y planteamiento del tema</span></span>
+        <span class="flecha"></span>
+      </summary>
+      <div class="bl-cuerpo">
+        <span class="et">Contenido</span>
+        <ul>
+          <li>Rúbrica Chilangamer + saludo. Presentación de los cuatro colaboradores con sus arrobas al aire.</li>
+          <li>Planteamiento del episodio en una sola frase: <em>"Retro-Rotura es sobre el momento en que un juego viejo deja de ser el juego que era."</em></li>
+          <li>Aclarar de entrada el alcance para que nadie desvíe: <b>no</b> es un episodio de piratería sí/no. Es sobre fidelidad, acceso y quién está haciendo el trabajo de conservar.</li>
+          <li>Anunciar la mecánica: siete bloques, cada uno cierra con SIGUE / SE ROMPIÓ.</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- BLOQUE 1 -->
+    <details class="bloque" id="b1">
+      <summary>
+        <span class="tc">07:00<small>8 min</small></span>
+        <span class="bl-tit">Bloque 1 · Aquí no todos hablamos de lo mismo<span>Glosario express: emular no es portear, y portear no es remake</span></span>
+        <span class="flecha"></span>
+      </summary>
+      <div class="bl-cuerpo">
+        <span class="et">Por qué va primero</span>
+        <p>La mitad de las discusiones sobre emulación se caen porque cada quien usa la palabra para algo distinto. Ocho minutos de vocabulario compartido evitan cuarenta minutos de gente hablando en paralelo.</p>
+
+        <span class="et">Términos a fijar al aire</span>
+        <div class="glosario">
+          <div><dt>Emulación por software</dt><dd>Un programa finge ser el hardware original y corre la ROM. Precisión variable, desde "perfecta" hasta "suena raro y se traba".</dd></div>
+          <div><dt>FPGA</dt><dd>Un chip reconfigurable que reimplementa la lógica del hardware, no lo imita por software. Es la promesa de latencia y comportamiento de consola real (MiSTer, Analogue).</dd></div>
+          <div><dt>Port oficial</dt><dd>La compañía toma el juego y lo adapta a la plataforma nueva. A veces es un port de verdad, a veces es un emulador con carátula bonita.</dd></div>
+          <div><dt>Decompilación</dt><dd>La comunidad reconstruye el código fuente legible del juego a partir del binario. Es el paso previo a poder modificarlo de raíz.</dd></div>
+          <div><dt>Recompilación estática</dt><dd>Traducir automáticamente el binario original a un ejecutable nativo de PC sin necesidad de tener el código fuente. Es lo que hace N64: Recompiled.</dd></div>
+          <div><dt>Remaster vs. remake</dt><dd>El remaster es el mismo juego con mejor presentación; el remake es un juego nuevo que se parece. Confundirlos arruina cualquier discusión de preservación.</dd></div>
+        </div>
+
+        <span class="et">Reparto</span>
+        <p><span class="quien">Omar abre</span> explica decompilación y recompilación en lenguaje de banqueta.</p>
+        <p><span class="quien">Torchic</span> aterriza emulación por software: qué significa "preciso" y por qué RetroArch no es un emulador sino un contenedor.</p>
+        <p><span class="quien">Carlos</span> pone el ejemplo de un relanzamiento oficial que en realidad es un emulador encapsulado.</p>
+        <p><span class="quien">Charlie</span> mete FPGA y por qué a los puristas les importa.</p>
+
+        <span class="et">Clips y referencias</span>
+        <ul class="clips">
+          <li><a href="https://www.youtube.com/watch?v=GIp7C2ro2T8" target="_blank" rel="noopener">Wiseguy explica N64: Recompiled</a><span class="bandera b-en">EN</span><span class="meta">Del propio autor de la herramienta. El fragmento donde explica que no necesita el código fuente es el más citable.</span></li>
+          <li><a href="https://www.youtube.com/watch?v=ywWwUuWRgsM" target="_blank" rel="noopener">Nerrel — la explicación digerible de la recompilación estática</a><span class="bandera b-en">EN</span><span class="meta">Es la versión para no programadores. Sirve como referencia para explicarlo al aire.</span></li>
+        </ul>
+
+        <div class="rotura"><b>Punto de rotura</b>Si un relanzamiento oficial es literalmente un emulador con menú nuevo, ¿ya se rompió, o el sello de la compañía lo salva? <b>SIGUE / SE ROMPIÓ</b></div>
+      </div>
+    </details>
+
+    <!-- BLOQUE 2 -->
+    <details class="bloque" id="b2">
+      <summary>
+        <span class="tc">15:00<small>9 min</small></span>
+        <span class="bl-tit">Bloque 2 · El 87% que nadie puede jugar<span>Por qué este debate existe y no es un capricho de coleccionista</span></span>
+        <span class="flecha"></span>
+      </summary>
+      <div class="bl-cuerpo">
+        <span class="et">Municiones</span>
+        <div class="dato">
+          <b>El dato que enmarca todo el episodio:</b> un estudio de la Video Game History Foundation publicado en julio de 2023 concluyó que cerca del <b>87% de los videojuegos clásicos lanzados en Estados Unidos antes de 2010 ya no están disponibles comercialmente</b> por ninguna vía legal. Solo alrededor del 13% sigue en circulación.
+          <cite>Video Game History Foundation / Software Preservation Network, "Survey of the Video Game Reissue Market in the United States", jul 2023</cite>
+        </div>
+        <div class="dato">
+          <b>La comparación que duele:</b> ese 13% de disponibilidad deja a los videojuegos en un nivel parecido al del cine mudo, del que sobrevive cerca del 14%, y a las grabaciones sonoras anteriores a la Segunda Guerra Mundial, cerca del 10%. La diferencia es que aquellos son de hace un siglo.
+          <cite>Análisis de PressOver sobre el estudio de la VGHF</cite>
+        </div>
+        <div class="dato">
+          <b>El caso Game Boy:</b> según el mismo estudio, para abril de 2023 apenas alrededor del 5.9% de los juegos de la familia Game Boy seguía a la venta. Un 6.5% adicional había estado disponible en las eShop de 3DS y Wii U — hasta que esas tiendas cerraron.
+          <cite>Video Game History Foundation, "The Game Availability Study, Explained"</cite>
+        </div>
+
+        <span class="et">Disparadores</span>
+        <p class="pregunta">Si nueve de cada diez juegos clásicos no se pueden comprar legalmente hoy, ¿qué le queda a alguien que quiere jugarlos: la reventa a precio de coleccionista, o la emulación?</p>
+        <p class="pregunta">¿El cierre de una tienda digital debería obligar legalmente a liberar el catálogo, o es un riesgo que el consumidor aceptó al comprar digital?</p>
+
+        <span class="et">Reparto</span>
+        <p><span class="quien">Carlos abre</span> con el dato duro y por qué las compañías no ven negocio en el catálogo largo.</p>
+        <p><span class="quien rebate">Charlie contrapuntea</span> defendiendo que la escasez es parte del valor histórico del objeto y no todo tiene que estar disponible siempre.</p>
+        <p><span class="quien">Todos</span> ronda corta: un juego que cada quien no pueda jugar hoy legalmente ni aunque quisiera pagar.</p>
+
+        <span class="et">Clips y referencias</span>
+        <ul class="clips">
+          <li><a href="https://www.youtube.com/watch?v=oCPxAWC5NRs" target="_blank" rel="noopener">Archivo del Videojuego Mexicano — preservando la historia gamer de México</a><span class="bandera b-mx">MX</span><span class="meta">Proyecto mexicano de preservación. Ideal para aterrizar el 87% a nuestra propia historia, que está aún peor documentada.</span></li>
+          <li><a href="https://www.youtube.com/shorts/IzKL7uqRWVw" target="_blank" rel="noopener">"Emular es la única forma de preservar videojuegos" (short)</a><span class="bandera b-es">ES</span><span class="meta">Postura tajante en formato corto. Sirve como provocación para abrir el bloque.</span></li>
+        </ul>
+
+        <div class="rotura"><b>Punto de rotura</b>¿Un juego que no puedes comprar por ningún medio legal sigue existiendo, o ya se rompió como producto y solo sobrevive como archivo? <b>SIGUE / SE ROMPIÓ</b></div>
+      </div>
+    </details>
+
+    <!-- BLOQUE 3 -->
+    <details class="bloque" id="b3">
+      <summary>
+        <span class="tc">24:00<small>11 min</small></span>
+        <span class="bl-tit">Bloque 3 · Trinchera A: el fierro<span>Cartucho, CRT, control original y todo lo que no se emula</span></span>
+        <span class="flecha"></span>
+      </summary>
+      <div class="bl-cuerpo">
+        <span class="et">Argumentos a favor del hardware original</span>
+        <ul>
+          <li><b>Latencia real.</b> El juego responde con el retardo para el que fue diseñado. En plataformas, matamarcianos y peleas, eso no es nostalgia, es diseño.</li>
+          <li><b>El CRT no es un filtro.</b> El dithering de Mega Drive y las transparencias de PS1 fueron dibujadas contando con cómo se mezclan las líneas en un tubo. En un LCD, esos trucos se ven como errores.</li>
+          <li><b>El control es parte del juego.</b> El stick de N64 y el D-pad de Super Nintendo no se emulan; se sustituyen. Y sustituir cambia la ejecución.</li>
+          <li><b>El ritual.</b> Meter el cartucho, la carátula, el manual, el mueble. No es técnico, pero es real y hay que decirlo sin pena.</li>
+        </ul>
+
+        <span class="et">El lado incómodo — Jorge debe cobrarlo</span>
+        <ul>
+          <li>Precios: una consola con dos o tres juegos ya no es una compra casual, y los títulos raros están en zona de subasta.</li>
+          <li>El hardware se muere: baterías de guardado que se fugan, capacitores, plásticos que amarillean, láseres cansados.</li>
+          <li>Casi nadie juega "original de verdad": si usas everdrive, mod de HDMI o upscaler, ya estás en un punto intermedio. Vale nombrarlo.</li>
+          <li>Y la trampa del FPGA: se vende como hardware exacto, pero eso también se puede auditar.</li>
+        </ul>
+
+        <div class="dato">
+          <b>Ni el hardware "exacto" es exacto:</b> en diciembre de 2025 el desarrollador Kaze Emanuar publicó pruebas comparando la consola FPGA Analogue 3D contra una Nintendo 64 real. Reportó que el sistema corre alrededor de un 5% por detrás del hardware original en la mayoría de escenarios, con la CPU cerca de un 6% más lenta y el RSP hasta un 30% más lento, además de fallar algunas verificaciones de hardware. Aun así, la califica como una de las mejores formas de jugar cartuchos de N64 hoy.
+          <cite>Kaze Emanuar, "Analogue Lied" (dic 2025), reportado por Notebookcheck</cite>
+        </div>
+
+        <span class="et">Disparadores</span>
+        <p class="pregunta">Si le pones a tu consola original un mod de HDMI, un everdrive con mil juegos y un upscaler, ¿todavía estás jugando en hardware original o ya armaste tu propio emulador con más pasos?</p>
+        <p class="pregunta">¿Cuál es el juego que a ustedes definitivamente se les descompone si lo sacan de su consola?</p>
+
+        <span class="et">Reparto</span>
+        <p><span class="quien">Charlie abre</span> — es su trinchera, que la defienda a fondo.</p>
+        <p><span class="quien rebate">Torchic</span> entra con el costo, el espacio y el mantenimiento.</p>
+        <p><span class="quien rebate">Omar</span> mete el dato de Analogue 3D para desarmar el argumento de "el fierro nunca miente".</p>
+
+        <span class="et">Clips y referencias</span>
+        <ul class="clips">
+          <li><a href="https://www.youtube.com/watch?v=wrbyP7y5z80" target="_blank" rel="noopener">Kaze Emanuar — "Analogue Lied"</a><span class="bandera b-en">EN</span><span class="meta">El video que originó la polémica de precisión de ciclos. Título provocador, contenido técnico y honesto.</span></li>
+        </ul>
+
+        <div class="rotura"><b>Punto de rotura</b>¿La consola original modificada para verse bien en tu tele de hoy sigue siendo la experiencia original? <b>SIGUE / SE ROMPIÓ</b></div>
+      </div>
+    </details>
+
+    <!-- BLOQUE 4 -->
+    <details class="bloque" id="b4">
+      <summary>
+        <span class="tc">35:00<small>11 min</small></span>
+        <span class="bl-tit">Bloque 4 · Trinchera B: el relanzamiento oficial<span>Comprar tus clásicos otra vez y qué te entregan a cambio</span></span>
+        <span class="flecha"></span>
+      </summary>
+      <div class="bl-cuerpo">
+        <span class="et">De qué estamos hablando</span>
+        <p>Aquí entran las colecciones que puedes comprar hoy en PS5, las suscripciones con catálogo clásico y las recopilaciones curadas. Es la vía legal, cómoda y con soporte. También es la que más veces ha entregado un producto que no está a la altura del original.</p>
+
+        <span class="et">A favor</span>
+        <ul>
+          <li>Es la única vía que le devuelve dinero a quien todavía mantiene vivo el catálogo. Si nadie compra, nadie relanza.</li>
+          <li>Cuando se hace bien, el relanzamiento agrega contexto: entrevistas, arte, prototipos, versiones regionales. La curaduría es preservación.</li>
+          <li>Cero fricción: prendes y juegas, con trofeos, guardado en la nube y control moderno.</li>
+        </ul>
+
+        <span class="et">En contra — el caso más citable</span>
+        <div class="dato">
+          <b>El escándalo PAL de PS Plus Premium:</b> al lanzarse el servicio renovado en 2022, se detectó que varios clásicos de PS1 — entre ellos Ape Escape, Jumping Flash y Syphon Filter — usaban las versiones europeas PAL a 50 Hz incluso en regiones NTSC, lo que los hace correr aproximadamente 20% más lento que la versión original.
+          <cite>Reportado por VGC y cubierto en español por 3DJuegos LATAM y LEVEL UP</cite>
+        </div>
+        <div class="dato">
+          <b>Y el parche que empeoró las cosas:</b> Sony aplicó una actualización que subía la salida PAL a 60 Hz mediante mezcla de cuadros. El resultado fue un efecto fantasma visible en el movimiento de cámara, además de que no corregía la latencia del código a 50 Hz. Meses después llegó la opción de cambiar de región por juego.
+          <cite>Análisis de Digital Foundry y cobertura de VGC / TechRadar, 2022</cite>
+        </div>
+
+        <span class="et">Disparadores</span>
+        <p class="pregunta">Si pagas por la versión oficial y te entregan una emulación peor que la que un fan hizo gratis, ¿qué compraste exactamente: el juego o el permiso de jugarlo?</p>
+        <p class="pregunta">¿Un relanzamiento oficial mal hecho hace más daño a la preservación que no relanzar nada, porque bloquea que alguien más lo haga bien?</p>
+        <p class="pregunta">Suscripción vs. compra: si el clásico solo vive dentro de un servicio mensual, ¿lo estás preservando o lo estás rentando?</p>
+
+        <span class="et">Reparto</span>
+        <p><span class="quien">Carlos abre</span> — su trinchera. Que defienda el consumo legal y la exigencia de calidad como postura activa.</p>
+        <p><span class="quien rebate">Charlie</span> ataca por fidelidad: si la versión oficial es peor, el purista tiene razón.</p>
+        <p><span class="quien rebate">Torchic</span> ataca por comodidad: pero es la única que funciona en dos clics.</p>
+        <p><span class="quien">Jorge</span> pide a cada quien un relanzamiento oficial que sí valió la pena. Que digan títulos.</p>
+
+        <div class="rotura"><b>Punto de rotura</b>Un clásico oficial corriendo 20% más lento porque te dieron la versión equivocada: ¿es el juego, o ya es otro juego? <b>SIGUE / SE ROMPIÓ</b></div>
+      </div>
+    </details>
+
+    <!-- CORTE -->
+    <details class="bloque">
+      <summary>
+        <span class="tc">46:00<small>2 min</small></span>
+        <span class="bl-tit">Corte y autopromo<span>Respiro, redes y recordatorio del formato</span></span>
+        <span class="flecha"></span>
+      </summary>
+      <div class="bl-cuerpo">
+        <ul>
+          <li>Recordar redes de la mesa completa y dónde se escucha el podcast.</li>
+          <li>Lanzar la pregunta abierta a la audiencia para respuestas en redes: <em>"¿En qué lo jugaste tú? Cartucho, colección oficial o port de la comunidad."</em></li>
+          <li>Sembrar el bloque siguiente: "Ahora sí, el bando que nadie invitó y que está haciendo el mejor trabajo."</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- BLOQUE 5 -->
+    <details class="bloque" id="b5">
+      <summary>
+        <span class="tc">48:00<small>13 min</small></span>
+        <span class="bl-tit">Bloque 5 · Trinchera C: la comunidad<span>Decompilaciones, recompilaciones y ports que las compañías no van a hacer</span></span>
+        <span class="flecha"></span>
+      </summary>
+      <div class="bl-cuerpo">
+        <span class="et">Bloque más largo del episodio, a propósito</span>
+        <p>Esta es la parte del tema que menos se ha discutido en el podcast y la que más cambió en los últimos años. Aquí ya no hablamos de emular: hablamos de convertir un juego de 1998 en un ejecutable nativo con resolución libre, cámara analógica, controles remapeables y hasta iluminación nueva.</p>
+
+        <span class="et">Los casos concretos que hay que nombrar al aire</span>
+        <ul>
+          <li><b>Ship of Harkinian.</b> Port nativo de The Legend of Zelda: Ocarina of Time para PC hecho por el grupo Harbour Masters. Nació en marzo de 2022, cuatro meses después de que el equipo ZRET terminara de decompilar el ejecutable del juego tras unos 21 meses de trabajo. Después llegaron versiones para Linux, macOS, Wii U y Switch.</li>
+          <li><b>N64: Recompiled y Zelda 64: Recompiled.</b> Recompilación estática: no parte del código fuente decompilado, traduce el binario directamente. Es lo que permitió que Majora's Mask corriera de forma nativa en PC con framerate alto y pantalla ancha, usando el renderizador RT64.</li>
+          <li><b>El detalle que cambia todo:</b> como la recompilación no necesita el código fuente, la técnica es aplicable a prácticamente cualquier juego de la plataforma. Deja de ser un proyecto por juego y se vuelve una herramienta.</li>
+          <li><b>Y el dato irónico:</b> la recompilación no es exclusiva de los fans. Digital Eclipse ha usado esa misma aproximación en recopilaciones comerciales.</li>
+        </ul>
+
+        <span class="et">Disparadores</span>
+        <p class="pregunta">Cuando la comunidad te entrega Ocarina of Time con cámara analógica, pantalla ancha y 60 cuadros, ¿te está dando una mejor versión del juego o te está dando un juego distinto que se le parece mucho?</p>
+        <p class="pregunta">¿Por qué una compañía con todo el dinero del mundo no hace esto, y un grupo de gente sin sueldo sí? ¿Es falta de negocio, de talento o de ganas?</p>
+        <p class="pregunta">Estos ports exigen que tengas el juego original para funcionar. ¿Eso es un tecnicismo legal o sí es una postura ética de los desarrolladores?</p>
+        <p class="pregunta">Riesgo real: todo esto vive mientras la empresa dueña no decida tumbarlo. ¿Preservación construida sobre terreno prestado sirve como preservación?</p>
+
+        <span class="et">Reparto</span>
+        <p><span class="quien">Omar abre</span> — su trinchera. Explicar los proyectos con ejemplos que se puedan visualizar.</p>
+        <p><span class="quien rebate">Charlie</span> pregunta lo obvio: si le cambias cámara, resolución y controles, ¿en qué momento dejó de ser el juego de 1998?</p>
+        <p><span class="quien">Carlos</span> aporta el ángulo comercial: por qué a la compañía no le sale a cuenta.</p>
+        <p><span class="quien">Torchic</span> cierra con lo práctico: qué tan accesible es esto para alguien que no es técnico.</p>
+
+        <span class="et">Clips y referencias</span>
+        <ul class="clips">
+          <li><a href="https://www.youtube.com/watch?v=zhKU78jE1JQ" target="_blank" rel="noopener">Zelda Ocarina of Time con HD y en español — Ship of Harkinian</a><span class="bandera b-es">ES</span><span class="meta">Prioridad: es la referencia en español para mostrar de qué estamos hablando. Buen material para cita al aire.</span></li>
+          <li><a href="https://www.youtube.com/watch?v=7dhHhBlXU3o" target="_blank" rel="noopener">Tutorial: Zelda Majora's Mask en PC a 4K y +60 FPS</a><span class="bandera b-es">ES</span><span class="meta">Muestra la recompilación estática funcionando. El canal acredita el trabajo original de Wiseguy.</span></li>
+          <li><a href="https://www.youtube.com/watch?v=G94xJm5P4G0" target="_blank" rel="noopener">Video Game Esoterica — el estado actual de Ship of Harkinian</a><span class="bandera b-en">EN</span><span class="meta">Para dimensionar cuánto ha crecido el proyecto y qué trae de nuevo.</span></li>
+          <li><a href="https://www.youtube.com/watch?v=Q9dO7D0VRWc" target="_blank" rel="noopener">Guía actualizada de instalación de Ship of Harkinian</a><span class="bandera b-en">EN</span><span class="meta">Referencia práctica por si alguien de la mesa quiere probarlo antes de grabar. Muy recomendable que al menos uno lo haga.</span></li>
+        </ul>
+
+        <div class="rotura"><b>Punto de rotura</b>Ocarina of Time a 60 cuadros, pantalla ancha y cámara libre: ¿es la mejor versión que existe, o ya rompimos el juego? <b>SIGUE / SE ROMPIÓ</b></div>
+      </div>
+    </details>
+
+    <!-- BLOQUE 6 -->
+    <details class="bloque" id="b6">
+      <summary>
+        <span class="tc">61:00<small>8 min</small></span>
+        <span class="bl-tit">Bloque 6 · La zona gris<span>Legalidad, ética y quién tiene derecho a conservar</span></span>
+        <span class="flecha"></span>
+      </summary>
+      <div class="bl-cuerpo">
+        <span class="et">Encuadre — Jorge lo dice de entrada</span>
+        <p>El emulador como programa no es el problema legal; el pleito está en las ROMs y en quién puede distribuirlas. Este bloque discute el marco, no da asesoría legal ni recomienda de dónde bajar nada.</p>
+
+        <span class="et">Puntos a discutir</span>
+        <ul>
+          <li>La distinción clásica: emular es una cosa, distribuir el contenido protegido es otra. Y hacer tu propio respaldo del cartucho que compraste es una tercera.</li>
+          <li>El argumento de las instituciones: bibliotecas y archivos sostienen que la legislación de derechos de autor les impide hacer su trabajo con los videojuegos, cuando ya pueden hacerlo con libros, cine y audio.</li>
+          <li>El contraargumento de la industria: que ya preserva su propia historia comercialmente y que ampliar las excepciones le afectaría. El estudio del 87% existe justamente para poner esa afirmación a prueba.</li>
+          <li>La ironía que hay que decir: las propias compañías usan emulación para sus relanzamientos. La herramienta no es el problema; quién la usa, sí.</li>
+        </ul>
+
+        <span class="et">Disparadores</span>
+        <p class="pregunta">¿Existe una línea ética clara entre emular un juego que ya no se vende en ningún lado y emular uno que está en catálogo hoy mismo? ¿Dónde la ponen ustedes?</p>
+        <p class="pregunta">Si una compañía no vende un juego desde hace veinte años pero lo defiende legalmente, ¿está protegiendo su propiedad o está bloqueando su conservación?</p>
+
+        <span class="et">Reparto</span>
+        <p><span class="quien">Carlos abre</span> con el marco legal y la postura de la industria.</p>
+        <p><span class="quien rebate">Torchic y Omar</span> con la postura de preservación.</p>
+        <p><span class="quien">Charlie</span> con el ángulo del coleccionista: comprar el original también es una forma de sostener el mercado.</p>
+        <p><span class="quien">Todos</span> cierre: cada quien dice dónde pone su línea personal, en una frase.</p>
+
+        <div class="rotura"><b>Punto de rotura</b>¿La preservación hecha por la comunidad es legítima aunque sea legalmente frágil? <b>SIGUE / SE ROMPIÓ</b></div>
+      </div>
+    </details>
+
+    <!-- BLOQUE 7 -->
+    <details class="bloque" id="b7">
+      <summary>
+        <span class="tc">69:00<small>8 min</small></span>
+        <span class="bl-tit">Bloque 7 · Retro a la mexicana<span>El bloque que solo puede hacer este podcast</span></span>
+        <span class="flecha"></span>
+      </summary>
+      <div class="bl-cuerpo">
+        <span class="et">Por qué este bloque</span>
+        <p>Todo el debate anterior está armado con datos de Estados Unidos y Europa. Aquí lo aterrizamos: en México la relación con lo original y lo emulado nunca fue la misma, y esa diferencia merece su propio espacio.</p>
+
+        <span class="et">Temas</span>
+        <ul>
+          <li><b>El Family y los cartuchos de mil juegos.</b> Para buena parte de la mesa y de la audiencia, la primera experiencia "retro" ya era una copia. La nostalgia mexicana está construida sobre hardware clon.</li>
+          <li><b>El precio en pesos.</b> Comparar lo que cuesta hoy armar un setup original contra una suscripción o una computadora modesta. Aquí el argumento económico pega distinto.</li>
+          <li><b>NTSC 60 Hz.</b> Ventaja histórica: crecimos con el estándar "bueno". Por eso el escándalo de las versiones PAL en los relanzamientos se siente como una regresión y no como un detalle técnico.</li>
+          <li><b>Lo que nadie está guardando.</b> Revistas, publicidad, doblajes, manuales en español latino, la escena arcade local. Ahí es donde el 87% probablemente es peor y ni siquiera está medido.</li>
+          <li><b>Referentes propios.</b> Hay trabajo mexicano serio en documentación técnica y preservación — vale la pena nombrarlo al aire en vez de citar siempre a los mismos canales gringos.</li>
+        </ul>
+
+        <span class="et">Disparadores</span>
+        <p class="pregunta">¿Cuántos de nosotros jugamos por primera vez un "original" ya de adultos y con dinero propio? ¿Cambia eso lo que entendemos por auténtico?</p>
+        <p class="pregunta">¿Qué pieza de nuestra historia gamer mexicana creen que ya se perdió y nadie va a poder recuperar?</p>
+
+        <span class="et">Clips y referencias</span>
+        <ul class="clips">
+          <li><a href="https://www.youtube.com/watch?v=oCPxAWC5NRs" target="_blank" rel="noopener">Archivo del Videojuego Mexicano</a><span class="bandera b-mx">MX</span><span class="meta">Preservación de la historia gamer de México. Candidato natural a invitado para un episodio futuro.</span></li>
+          <li><a href="https://www.youtube.com/watch?v=kpb_mmR8On4" target="_blank" rel="noopener">Los videojuegos y la realidad mexicana — análisis sobre emuladores y piratería</a><span class="bandera b-mx">MX</span><span class="meta">Aborda de frente la relación entre acceso, precio y copia en el contexto local.</span></li>
+          <li><a href="https://www.diariodemexico.com/escena/la-importancia-de-conservar-los-videojuegos-con-artemio-urbina" target="_blank" rel="noopener">Entrevista con Artemio Urbina sobre conservación de videojuegos</a><span class="bandera b-mx">MX</span><span class="meta">Referente mexicano en temas técnicos de hardware, audio y emulación. Su postura de "lo importante es jugar, la obsesión técnica no debe estorbar" es un buen cierre de bloque.</span></li>
+        </ul>
+
+        <div class="rotura"><b>Punto de rotura</b>Si nuestra memoria colectiva se formó con copias y clones, ¿el "original" alguna vez fue nuestro punto de referencia? <b>SIGUE / SE ROMPIÓ</b></div>
+      </div>
+    </details>
+
+    <!-- VEREDICTO -->
+    <details class="bloque">
+      <summary>
+        <span class="tc">77:00<small>6 min</small></span>
+        <span class="bl-tit">Veredicto · La Retro-Rotura<span>Conteo de puntos de rotura y postura final de cada quien</span></span>
+        <span class="flecha"></span>
+      </summary>
+      <div class="bl-cuerpo">
+        <span class="et">Mecánica de cierre</span>
+        <ul>
+          <li>Jorge lee los siete puntos de rotura y el conteo de SIGUE / SE ROMPIÓ de cada participante.</li>
+          <li>Cada quien responde en máximo 45 segundos: <b>"Si mañana solo pudiera conservar una forma de jugar retro para el resto de mi vida, elijo ___ y renuncio a ___."</b></li>
+          <li>Nadie puede responder "las tres". Esa es la gracia.</li>
+        </ul>
+
+        <span class="et">Cierre editorial sugerido para Jorge</span>
+        <p>La conclusión honesta del tema probablemente no sea que una vía gane, sino que cada una preserva algo distinto: el fierro conserva el comportamiento, el relanzamiento oficial conserva el acceso legal, y la comunidad conserva la posibilidad de que el juego siga siendo jugable dentro de treinta años. La rotura no está en elegir mal; está en creer que con una sola basta.</p>
+      </div>
+    </details>
+
+    <!-- DESPEDIDA -->
+    <details class="bloque">
+      <summary>
+        <span class="tc">83:00<small>3 min</small></span>
+        <span class="bl-tit">Despedida<span>Redes, siguiente episodio y salida</span></span>
+        <span class="flecha"></span>
+      </summary>
+      <div class="bl-cuerpo">
+        <ul>
+          <li>Ronda de despedidas con arroba al aire de cada participante.</li>
+          <li>Pregunta abierta para la audiencia como semilla de conversación en redes.</li>
+          <li>Adelanto del siguiente episodio y salida con rúbrica.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <!-- ================= VIDEOGRAFÍA ================= -->
+  <section id="videografia">
+    <div class="rotulo"><span class="num">Anexo A</span></div>
+    <h2>Videografía</h2>
+    <p class="intro-sec">
+      Enlaces directos verificados al momento de armar este borrador. Prioridad para contenido en español y de
+      canales mexicanos; el material en inglés se incluye solo cuando es la fuente primaria del tema.
+    </p>
+    <ul class="fuentes">
+      <li><a href="https://www.youtube.com/watch?v=oCPxAWC5NRs" target="_blank" rel="noopener">Archivo del Videojuego Mexicano — Preservando la historia gamer de México</a><span class="bandera b-mx">MX</span><span class="pub">YouTube · usar en bloques 2 y 7</span></li>
+      <li><a href="https://www.youtube.com/watch?v=kpb_mmR8On4" target="_blank" rel="noopener">Los videojuegos y la realidad mexicana (análisis sobre emuladores y piratería)</a><span class="bandera b-mx">MX</span><span class="pub">YouTube · bloque 7</span></li>
+      <li><a href="https://www.youtube.com/watch?v=zhKU78jE1JQ" target="_blank" rel="noopener">Zelda: Ocarina of Time con HD y en español — Ship of Harkinian</a><span class="bandera b-es">ES</span><span class="pub">YouTube · bloque 5</span></li>
+      <li><a href="https://www.youtube.com/watch?v=7dhHhBlXU3o" target="_blank" rel="noopener">Tutorial: Zelda Majora's Mask en PC a 4K y más de 60 FPS</a><span class="bandera b-es">ES</span><span class="pub">YouTube · bloque 5</span></li>
+      <li><a href="https://www.youtube.com/shorts/IzKL7uqRWVw" target="_blank" rel="noopener">"Emular es la única forma de preservar videojuegos" (short)</a><span class="bandera b-es">ES</span><span class="pub">YouTube Shorts · bloque 2, como provocación</span></li>
+      <li><a href="https://www.youtube.com/watch?v=l7OmB3Z03dQ" target="_blank" rel="noopener">La guerra de las consolas — documental sobre la historia de los videojuegos, parte 1</a><span class="bandera b-es">ES</span><span class="pub">YouTube · contexto histórico, material de preparación</span></li>
+      <li><a href="https://www.youtube.com/watch?v=wrbyP7y5z80" target="_blank" rel="noopener">Kaze Emanuar — "Analogue Lied" (pruebas de precisión del Analogue 3D)</a><span class="bandera b-en">EN</span><span class="pub">YouTube · bloque 3, fuente primaria</span></li>
+      <li><a href="https://www.youtube.com/watch?v=GIp7C2ro2T8" target="_blank" rel="noopener">Wiseguy — N64: Recompiled, explicado por su autor</a><span class="bandera b-en">EN</span><span class="pub">YouTube · bloques 1 y 5, fuente primaria</span></li>
+      <li><a href="https://www.youtube.com/watch?v=ywWwUuWRgsM" target="_blank" rel="noopener">Nerrel — la recompilación estática explicada para no programadores</a><span class="bandera b-en">EN</span><span class="pub">YouTube · bloque 1</span></li>
+      <li><a href="https://www.youtube.com/watch?v=G94xJm5P4G0" target="_blank" rel="noopener">Video Game Esoterica — estado actual de Ship of Harkinian</a><span class="bandera b-en">EN</span><span class="pub">YouTube · bloque 5</span></li>
+      <li><a href="https://www.youtube.com/watch?v=Q9dO7D0VRWc" target="_blank" rel="noopener">Guía actualizada de instalación de Ship of Harkinian</a><span class="bandera b-en">EN</span><span class="pub">YouTube · preparación de mesa</span></li>
+    </ul>
+  </section>
+
+  <!-- ================= BIBLIOGRAFÍA ================= -->
+  <section id="bibliografia">
+    <div class="rotulo"><span class="num">Anexo B</span></div>
+    <h2>Bibliografía</h2>
+    <p class="intro-sec">Fuentes de los datos citados en los bloques. Están ordenadas por relevancia para la discusión, no alfabéticamente.</p>
+    <ul class="fuentes">
+      <li><a href="https://gamehistory.org/87percent/" target="_blank" rel="noopener">87% Missing: The Disappearance of Classic Video Games</a><span class="pub">Video Game History Foundation / Software Preservation Network · estudio completo, julio 2023</span></li>
+      <li><a href="https://gamehistory.org/study-explainer/" target="_blank" rel="noopener">The Game Availability Study, Explained</a><span class="pub">Video Game History Foundation · guía de lectura del estudio, con el desglose de Game Boy</span></li>
+      <li><a href="https://pressover.news/articulos/87-videojuegos-inaccesibles-video-game-history-foundation/" target="_blank" rel="noopener">El 87% de los videojuegos son inaccesibles</a><span class="pub">PressOver · análisis en español con la comparación contra cine mudo y fonogramas</span></li>
+      <li><a href="https://www.eurogamer.es/la-video-game-history-foundation-estima-que-un-87-de-juegos-clasicos-lanzados-en-eeuu-ya-no-son-accesibles-a-dia-de-hoy" target="_blank" rel="noopener">La VGHF estima que un 87% de juegos clásicos ya no son accesibles</a><span class="pub">Eurogamer España · resumen de la metodología del estudio</span></li>
+      <li><a href="https://www.gamerfocus.co/juegos/el-87-de-los-juegos-clasicos-no-estan-disponibles-en-la-actualidad/" target="_blank" rel="noopener">El 87% de los juegos clásicos no están disponibles en la actualidad</a><span class="pub">GamerFocus · cobertura latinoamericana</span></li>
+      <li><a href="https://www.3djuegos.lat/ps5/usuario-ps-plus-premium-informa-que-juegos-ps1-entregas-pal-que-corren-a-50hz-25-fps" target="_blank" rel="noopener">Clásicos de PS1 en PS Plus corriendo a 50 Hz y 25 FPS</a><span class="pub">3DJuegos LATAM · el reporte original del caso PAL</span></li>
+      <li><a href="https://www.levelup.com/noticias/hay-esperanza-clasicos-de-ps-plus-en-version-japonesa-tienen-mejor-desempeno/" target="_blank" rel="noopener">Clásicos de PS Plus en versión japonesa tienen mejor desempeño</a><span class="pub">LEVEL UP (México) · seguimiento del caso desde medio mexicano</span></li>
+      <li><a href="https://www.videogameschronicle.com/news/ps-pluss-first-classic-ps1-game-has-finally-added-50hz-60hz-region-switching/" target="_blank" rel="noopener">PS Plus añade por fin el cambio de región 50/60 Hz</a><span class="pub">Video Games Chronicle · desenlace del caso y lista de títulos afectados</span></li>
+      <li><a href="https://www.qualbert.com/ps-plus-ps1-classics-overview-and-analysis/" target="_blank" rel="noopener">PS Plus — PS1 Classics: análisis técnico</a><span class="pub">Qualbert · detalle del judder, el frame blending y el efecto fantasma</span></li>
+      <li><a href="https://www.notebookcheck.org/Un-veterano-desarrollador-de-N64-afirma-que-Analogue-3D-no-se-acerca-ni-de-lejos-a-la-precision-del-ciclo-en-un-nuevo-video-de-prueba.1190647.0.html" target="_blank" rel="noopener">Un desarrollador veterano de N64 afirma que Analogue 3D no es cycle accurate</a><span class="pub">Notebookcheck en español · resumen de las pruebas de Kaze Emanuar, diciembre 2025</span></li>
+      <li><a href="https://www.techradar.com/gaming/analogue-3d-review" target="_blank" rel="noopener">Analogue 3D — reseña</a><span class="pub">TechRadar · la contraparte positiva del hardware FPGA, útil para equilibrar el bloque 3</span></li>
+      <li><a href="https://lexlatin.com/reportajes/nintendo-emulacion-preservacion-videojuegos" target="_blank" rel="noopener">Nintendo vs. la emulación y preservación de videojuegos</a><span class="pub">LexLatin · el marco legal explicado desde una publicación jurídica latinoamericana</span></li>
+      <li><a href="https://es.wikipedia.org/wiki/Preservaci%C3%B3n_de_videojuegos" target="_blank" rel="noopener">Preservación de videojuegos</a><span class="pub">Wikipedia en español · panorama general y vocabulario base</span></li>
+      <li><a href="https://en.wikipedia.org/wiki/Ship_of_Harkinian" target="_blank" rel="noopener">Ship of Harkinian</a><span class="pub">Wikipedia · cronología del proyecto, equipo Harbour Masters y decompilación de ZRET</span></li>
+      <li><a href="https://www.diariodemexico.com/escena/la-importancia-de-conservar-los-videojuegos-con-artemio-urbina" target="_blank" rel="noopener">La importancia de conservar los videojuegos, con Artemio Urbina</a><span class="pub">Diario de México · referente mexicano en preservación técnica</span></li>
+      <li><a href="https://www.muycomputer.com/2023/07/11/el-87-de-los-juegos-clasicos-estan-en-peligro-de-desaparecer-para-siempre/" target="_blank" rel="noopener">El 87% de los juegos clásicos están en peligro de desaparecer</a><span class="pub">MuyComputer · cobertura en español con enlace al PDF del estudio</span></li>
+    </ul>
+  </section>
+
+  <!-- ================= DOCUMENTALES ================= -->
+  <section id="documentales">
+    <div class="rotulo"><span class="num">Anexo C</span></div>
+    <h2>Documentales y debates para ver antes de grabar</h2>
+    <p class="intro-sec">
+      Material de preparación para la mesa. Todos con enlace directo a la plataforma donde se pueden ver.
+    </p>
+    <ul class="fuentes">
+      <li><a href="https://www.youtube.com/watch?v=l7OmB3Z03dQ" target="_blank" rel="noopener">La guerra de las consolas (documental en cinco partes)</a><span class="bandera b-es">ES</span><span class="pub">YouTube · historia de los videojuegos de 1952 a 1991, en español</span></li>
+      <li><a href="https://vandal.elespanol.com/reportaje/los-15-mejores-documentales-de-videojuegos" target="_blank" rel="noopener">Los 15 mejores documentales de videojuegos</a><span class="pub">Vandal · listado curado en español, útil para escoger material adicional</span></li>
+      <li><a href="https://www.netflix.com/mx/title/81019087" target="_blank" rel="noopener">High Score</a><span class="pub">Netflix México · serie documental sobre la era clásica, con material de archivo y entrevistas a creadores</span></li>
+      <li><a href="https://www.primevideo.com/detail/0SP3M4H5YLMETO27UKMKDBP7SY" target="_blank" rel="noopener">Insert Coin</a><span class="pub">Prime Video · sobre Midway y la era dorada del arcade; contrapunto sobre lo que se perdió del hardware que no era doméstico</span></li>
+      <li><a href="https://www.youtube.com/watch?v=32wN4IIDW1o" target="_blank" rel="noopener">How Videogames Changed the World</a><span class="bandera b-en">EN</span><span class="pub">YouTube · documental británico de 2013 que ordena los juegos por su contexto cultural más que por su tecnología</span></li>
+      <li><a href="https://www.youtube.com/playlist?list=PLY9cZ8nX4xmniR8FQvfBy0NX5G5Ei99h5" target="_blank" rel="noopener">DF Retro Super Show (playlist completa)</a><span class="bandera b-en">EN</span><span class="pub">YouTube · Digital Foundry · análisis técnicos comparando versiones y emulaciones contra hardware original; la mejor referencia audiovisual para el bloque 4</span></li>
+    </ul>
+  </section>
+
+  <p class="pie">Escaleta · <b>Ep. 181 "Retro-Rotura"</b> · Chilangamer Podcast × Compass Catchup</p>
+
+</div>
+
+<script>
+(function(){
+  var lienzo = document.getElementById('bolillos');
+  if(!lienzo) return;
+  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    lienzo.style.display = 'none';
+    return;
+  }
+  var ctx = lienzo.getContext('2d');
+  var dpr = Math.min(window.devicePixelRatio || 1, 2);
+  var W = 0, H = 0;
+  var panes = [];
+
+  function medir(){
+    W = window.innerWidth;
+    H = window.innerHeight;
+    lienzo.width = W * dpr;
+    lienzo.height = H * dpr;
+    lienzo.style.width = W + 'px';
+    lienzo.style.height = H + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  function crear(n){
+    panes = [];
+    for(var i = 0; i < n; i++){
+      panes.push({
+        x: Math.random() * W,
+        y: Math.random() * H * 0.6,
+        vx: (Math.random() - 0.5) * 1.5,
+        vy: Math.random() * 1.2,
+        r: 9 + Math.random() * 8,
+        giro: Math.random() * Math.PI * 2,
+        vgiro: (Math.random() - 0.5) * 0.05,
+        alfa: 0.22 + Math.random() * 0.3,
+        rebote: 0.68 + Math.random() * 0.16
+      });
+    }
+  }
+
+  function bolillo(p){
+    var rx = p.r, ry = p.r * 0.56;
+    ctx.save();
+    ctx.translate(p.x, p.y);
+    ctx.rotate(p.giro);
+    ctx.globalAlpha = p.alfa;
+
+    // cuerpo
+    var g = ctx.createLinearGradient(-rx, -ry, rx, ry);
+    g.addColorStop(0, '#F2D6A6');
+    g.addColorStop(0.55, '#E8C48A');
+    g.addColorStop(1, '#C0864A');
+    ctx.fillStyle = g;
+    ctx.beginPath();
+    ctx.ellipse(0, 0, rx, ry, 0, 0, Math.PI * 2);
+    ctx.fill();
+
+    // puntas del bolillo
+    ctx.beginPath();
+    ctx.moveTo(-rx, 0);
+    ctx.lineTo(-rx - p.r * 0.28, 0);
+    ctx.moveTo(rx, 0);
+    ctx.lineTo(rx + p.r * 0.28, 0);
+    ctx.strokeStyle = '#C0864A';
+    ctx.lineWidth = Math.max(1, p.r * 0.14);
+    ctx.lineCap = 'round';
+    ctx.stroke();
+
+    // el corte característico
+    ctx.beginPath();
+    ctx.moveTo(-rx * 0.52, -ry * 0.26);
+    ctx.quadraticCurveTo(0, -ry * 0.62, rx * 0.52, -ry * 0.26);
+    ctx.strokeStyle = 'rgba(120,72,30,.75)';
+    ctx.lineWidth = Math.max(1, p.r * 0.11);
+    ctx.stroke();
+
+    ctx.restore();
+  }
+
+  function paso(){
+    ctx.clearRect(0, 0, W, H);
+    for(var i = 0; i < panes.length; i++){
+      var p = panes[i];
+      p.vy += 0.052;              // gravedad
+      p.x += p.vx;
+      p.y += p.vy;
+      p.giro += p.vgiro;
+
+      // piso: rebota
+      if(p.y > H - p.r * 0.6){
+        p.y = H - p.r * 0.6;
+        p.vy *= -p.rebote;
+        p.vx *= 0.985;
+        p.vgiro = (Math.random() - 0.5) * 0.07;
+        if(Math.abs(p.vy) < 1.6) p.vy = -(3.4 + Math.random() * 3.2); // brinco nuevo
+      }
+      // paredes: envuelve
+      if(p.x < -p.r * 1.6) p.x = W + p.r * 1.6;
+      if(p.x > W + p.r * 1.6) p.x = -p.r * 1.6;
+
+      bolillo(p);
+    }
+    requestAnimationFrame(paso);
+  }
+
+  function arrancar(){
+    medir();
+    crear(W < 700 ? 8 : 16);
+  }
+
+  arrancar();
+  var t;
+  window.addEventListener('resize', function(){
+    clearTimeout(t);
+    t = setTimeout(arrancar, 220);
+  });
+  requestAnimationFrame(paso);
+})();
+</script>
+</body>
+</html>
