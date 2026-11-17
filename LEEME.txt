@@ -1,0 +1,33 @@
+ESCALETA — Ep. 191 "Ocarina of Time: El Remake"
+Chilangamer Podcast x Compass Catchup
+================================================
+
+CONTENIDO
+  chilangamer/ep191/index.html   Escaleta completa (autocontenida)
+  chilangamer/ep191/og-ep191.jpg Miniatura para compartir (1200x630)
+
+COMO SUBIRLO
+  1. En el repositorio "colaboraciones", entra a la carpeta
+     "chilangamer" (donde ya viven ep181 y ep184).
+     Quedate en ese nivel: el breadcrumb debe decir
+     colaboraciones / chilangamer
+  2. Add file > Upload files y arrastra la carpeta "ep191".
+  3. Confirma el commit.
+
+  RECORDATORIO: Upload files sube SIEMPRE a la carpeta que estas
+  viendo. Si lo haces desde la raiz, los archivos caen fuera de su
+  carpeta (ya paso dos veces).
+
+  Los DOS archivos deben quedar en la MISMA carpeta. Si separas la
+  imagen del HTML, la previsualizacion al compartir deja de funcionar.
+
+URL RESULTANTE
+  https://compasscatchup-cmyk.github.io/colaboraciones/chilangamer/ep191/
+
+SI CAMBIAS LA RUTA
+  Edita esa direccion en las etiquetas og:url, og:image,
+  og:image:secure_url, twitter:image y link rel="canonical".
+
+VERIFICAR ANTES DE GRABAR
+  Los rumores de Majora's Mask se mueven rapido. Revisar el estado
+  del tema el mismo dia de la grabacion (ver Anexo C).
