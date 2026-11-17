@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Escaleta colaborativa: el recorrido completo de Ocarina of Time en su remake de Switch 2, del Bosque Kokiri al Castillo de Ganon, y lo que se sabe del posible Majora's Mask.">
+<meta name="theme-color" content="#0D1F15">
+<link rel="canonical" href="https://compasscatchup-cmyk.github.io/colaboraciones/chilangamer/ep191/">
+
+<!-- Previsualización al compartir (WhatsApp, X, Facebook, Telegram, Discord) -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Compass Catchup">
+<meta property="og:locale" content="es_MX">
+<meta property="og:url" content="https://compasscatchup-cmyk.github.io/colaboraciones/chilangamer/ep191/">
+<meta property="og:title" content="Ep. 191 «Ocarina of Time: El Remake» — Chilangamer Podcast × Compass Catchup">
+<meta property="og:description" content="El recorrido completo del juego, del Árbol Deku al Castillo de Ganon, y todo lo que se sabe del posible Majora's Mask.">
+<meta property="og:image" content="https://compasscatchup-cmyk.github.io/colaboraciones/chilangamer/ep191/og-ep191.jpg">
+<meta property="og:image:secure_url" content="https://compasscatchup-cmyk.github.io/colaboraciones/chilangamer/ep191/og-ep191.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Letrero de madera kokiri con el título Ocarina of Time: El Remake, episodio 191 de Chilangamer Podcast con Compass Catchup">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@compasscatchup">
+<meta name="twitter:creator" content="@chilangamer">
+<meta name="twitter:title" content="Ep. 191 «Ocarina of Time: El Remake» — Chilangamer Podcast × Compass Catchup">
+<meta name="twitter:description" content="El recorrido completo del juego, del Árbol Deku al Castillo de Ganon, y todo lo que se sabe del posible Majora's Mask.">
+<meta name="twitter:image" content="https://compasscatchup-cmyk.github.io/colaboraciones/chilangamer/ep191/og-ep191.jpg">
+<meta name="twitter:image:alt" content="Letrero de madera kokiri con el título Ocarina of Time: El Remake">
+
+<title>Ep. 191 "Ocarina of Time: El Remake" · Chilangamer Podcast — Escaleta</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Spectral:ital,wght@0,300;0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --noche:#060F0B;
+  --bosque:#0C1C13;
+  --bosque-2:#122A1C;
+  --musgo:#3F6330;
+  --hoja:#8FBF5A;
+  --hoja-clara:#C6E39A;
+  --madera:#8B5E34;
+  --madera-osc:#5A3A1C;
+  --madera-clara:#B98A52;
+  --oro:#E8C56A;
+  --oro-claro:#F6E3A8;
+  --pergamino:#F2E6C8;
+  --tiza:#E6EFDC;
+  --tiza-mute:#9CB392;
+  --agua:#6FC6D9;
+  --fuego:#E8763C;
+  --sombra:#9C8BD4;
+  --espiritu:#E0A95F;
+  --linea:rgba(230,239,220,.13);
+  --zona:var(--hoja);
+  --radio:14px;
+  --display:'Cinzel', Georgia, serif;
+  --texto:'Spectral', Georgia, serif;
+  --mono:'JetBrains Mono', ui-monospace, monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    radial-gradient(1200px 700px at 50% -12%, #1E3D27 0%, transparent 60%),
+    radial-gradient(900px 500px at 88% 10%, #27401F 0%, transparent 58%),
+    linear-gradient(180deg, var(--bosque) 0%, var(--noche) 62%, #030806 100%);
+  background-attachment:fixed;
+  color:var(--tiza);
+  font-family:var(--texto);
+  font-size:16.5px;line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ====== HILO DEL TIEMPO (barra de progreso de lectura) ====== */
+#hilo{position:fixed;top:0;left:0;height:3px;width:0;z-index:40;
+  background:linear-gradient(90deg,var(--musgo),var(--oro) 60%,var(--oro-claro));
+  box-shadow:0 0 12px rgba(232,197,106,.75);transition:width .12s linear}
+
+/* ====== HOJAS CAYENDO ====== */
+#hojas{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.62}
+.envoltura{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:0 22px 96px}
+
+/* ====== LETRERO KOKIRI (encabezado) ====== */
+.hero{padding:34px 0 10px}
+.claro{
+  position:relative;border-radius:22px;overflow:hidden;
+  border:1px solid rgba(143,191,90,.22);
+  background:
+    radial-gradient(70% 90% at 50% 18%, rgba(160,205,105,.26) 0%, transparent 62%),
+    linear-gradient(180deg,#0F2417 0%,#0A1810 100%);
+  padding:44px 30px 36px;
+  box-shadow:inset 0 0 120px rgba(0,0,0,.55);
+}
+.rayos{position:absolute;inset:-20% -10%;pointer-events:none;opacity:.5;
+  background:repeating-linear-gradient(104deg, rgba(198,227,154,.13) 0 26px, transparent 26px 120px);
+  filter:blur(6px);animation:derivar 24s ease-in-out infinite alternate}
+@keyframes derivar{from{transform:translateX(-26px)}to{transform:translateX(26px)}}
+.luciernagas{position:absolute;inset:0;pointer-events:none}
+.luciernagas i{position:absolute;width:5px;height:5px;border-radius:50%;
+  background:var(--oro-claro);box-shadow:0 0 10px 3px rgba(232,197,106,.55);opacity:0;
+  animation:brillar 7s ease-in-out infinite}
+@keyframes brillar{0%,100%{opacity:0;transform:translate(0,0)}
+  40%{opacity:.95}60%{opacity:.7}100%{transform:translate(28px,-40px)}}
+
+.tabla{
+  position:relative;z-index:2;max-width:860px;margin:0 auto;
+  border-radius:20px;padding:34px 30px 30px;text-align:center;
+  background:
+    repeating-linear-gradient(180deg, rgba(0,0,0,.14) 0 2px, transparent 2px 7px),
+    linear-gradient(180deg,#9A6B3D 0%,#86582F 45%,#6E4624 100%);
+  border:6px solid #553518;
+  box-shadow:0 22px 50px rgba(0,0,0,.6), inset 0 0 0 2px rgba(222,186,126,.28);
+}
+.tabla::before,.tabla::after{content:"";position:absolute;width:16px;height:16px;border-radius:50%;
+  background:radial-gradient(circle at 36% 32%, #D9BD86, #6B4A22 70%);box-shadow:0 1px 2px rgba(0,0,0,.6)}
+.tabla::before{left:18px;top:16px}.tabla::after{right:18px;top:16px}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.26em;text-transform:uppercase;
+  color:#F0DCB2;margin:0 0 14px;text-shadow:0 1px 0 rgba(0,0,0,.6)}
+h1.titulo{
+  font-family:var(--display);font-weight:800;
+  font-size:clamp(2rem,6.4vw,4.1rem);line-height:.98;letter-spacing:.01em;margin:0;
+  color:#FBF0D2;text-transform:uppercase;
+  text-shadow:0 2px 0 rgba(60,34,12,.9), 0 -1px 0 rgba(255,246,214,.25), 0 10px 24px rgba(0,0,0,.45);
+}
+h1.titulo small{display:block;font-size:.3em;letter-spacing:.34em;margin-top:16px;color:#D8E9AC;font-weight:600}
+.vara{width:min(420px,78%);height:2px;margin:18px auto 0;
+  background:linear-gradient(90deg,transparent,rgba(240,220,178,.55),transparent)}
+.tabla .lema{margin:14px 0 0;font-size:.98rem;color:#F0E0BC;font-style:italic}
+
+.colgantes{position:relative;z-index:2;display:flex;justify-content:center;align-items:flex-start;
+  gap:clamp(28px,9vw,120px);margin-top:-6px}
+.colgante{text-align:center;transform-origin:50% -26px;animation:mecer 5.5s ease-in-out infinite}
+.colgante:nth-child(2){animation-delay:-2.3s;animation-duration:6.4s}
+@keyframes mecer{0%,100%{transform:rotate(-2.2deg)}50%{transform:rotate(2.2deg)}}
+.cuerda{width:2px;height:30px;margin:0 auto;background:linear-gradient(180deg,rgba(214,186,132,.1),rgba(214,186,132,.75))}
+.marco{width:104px;height:104px;margin:0 auto;padding:7px;background:linear-gradient(180deg,#8B5E34,#5A3A1C);
+  border:3px solid #4A2E13;box-shadow:0 8px 20px rgba(0,0,0,.55)}
+.marco.redondo{border-radius:50%}
+.marco img{width:100%;height:100%;display:block;object-fit:cover}
+.marco.redondo img{border-radius:50%}
+.colgante p{margin:10px 0 0;font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--tiza-mute)}
+
+.etiqueta{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--oro-claro);border:1px solid rgba(232,197,106,.4);
+  background:rgba(232,197,106,.09);padding:7px 16px;border-radius:999px;margin:30px 0 0;
+}
+.etiqueta::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--oro);
+  box-shadow:0 0 10px var(--oro);animation:latir 3s ease-in-out infinite}
+@keyframes latir{0%,100%{opacity:1}50%{opacity:.3}}
+.bajada{max-width:70ch;color:var(--tiza-mute);font-size:1.06rem;margin:20px 0 0}
+.bajada strong{color:var(--tiza);font-weight:700}
+.bajada em{color:var(--hoja-clara);font-style:italic}
+
+.ficha{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:1px;background:var(--linea);border:1px solid var(--linea);border-radius:var(--radio);
+  overflow:hidden;margin:34px 0 0}
+.ficha div{background:rgba(12,28,19,.9);padding:15px 17px}
+.ficha dt{font-family:var(--mono);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--tiza-mute);margin:0 0 7px}
+.ficha dd{margin:0;font-weight:700;font-size:.98rem;color:var(--pergamino);font-family:var(--display)}
+.ficha dd small{display:block;font-weight:400;font-size:.8rem;color:var(--tiza-mute);font-family:var(--texto);letter-spacing:0}
+
+/* ====== SECCIONES ====== */
+section{margin-top:78px;scroll-margin-top:24px}
+.rotulo{font-family:var(--mono);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--oro)}
+h2{font-family:var(--display);font-weight:700;font-size:clamp(1.5rem,3.6vw,2.2rem);
+  letter-spacing:.01em;margin:10px 0 10px;color:var(--pergamino)}
+h3{font-family:var(--display);font-weight:700;font-size:1.05rem;margin:0 0 8px;color:var(--hoja-clara)}
+.intro-sec{color:var(--tiza-mute);max-width:74ch;margin:0 0 26px}
+
+/* ====== EMBLEMAS ANIMADOS ====== */
+.em{width:40px;height:40px;flex:none;display:block;overflow:visible}
+.em .trazo{fill:none;stroke:var(--zona);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.em .relleno{fill:var(--zona);opacity:.22}
+.sway{transform-origin:50% 92%;animation:sway 4.6s ease-in-out infinite}
+@keyframes sway{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(7deg)}}
+.flick{transform-origin:50% 90%;animation:flick 1.5s ease-in-out infinite}
+@keyframes flick{0%,100%{transform:scaleY(1) scaleX(1)}35%{transform:scaleY(1.13) scaleX(.93)}70%{transform:scaleY(.95) scaleX(1.05)}}
+.ripple{transform-origin:50% 62%;animation:ripple 3s ease-out infinite}
+@keyframes ripple{0%{transform:scale(.55);opacity:.95}100%{transform:scale(1.45);opacity:0}}
+.spin{transform-origin:50% 50%;animation:spin 22s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.pulse{transform-origin:50% 50%;animation:pulse 2.8s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.35;transform:scale(.92)}50%{opacity:1;transform:scale(1.06)}}
+.shine{animation:shine 3.4s ease-in-out infinite}
+@keyframes shine{0%,100%{opacity:.3}45%{opacity:1}}
+.float{animation:float 5s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+
+/* ====== MESA ====== */
+.mesa{display:grid;grid-template-columns:repeat(auto-fill,minmax(196px,1fr));gap:14px}
+.silla{background:linear-gradient(170deg, rgba(27,52,34,.72), rgba(10,22,15,.92));
+  border:1px solid var(--linea);border-radius:var(--radio);padding:18px 16px;
+  transition:border-color .22s ease, transform .22s ease}
+.silla:hover{border-color:rgba(143,191,90,.5);transform:translateY(-3px)}
+.silla.host{border-color:rgba(232,197,106,.45);background:linear-gradient(170deg, rgba(70,55,20,.55), rgba(10,22,15,.94))}
+.avatar-caja{width:66px;height:66px;border-radius:50%;overflow:hidden;position:relative;
+  border:2px solid rgba(143,191,90,.35);margin-bottom:12px;background:#16301F}
+.silla.host .avatar-caja{border-color:var(--oro)}
+.avatar-caja img{width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:2}
+.avatar-caja .iniciales{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-family:var(--display);font-weight:700;font-size:1.3rem;color:var(--hoja-clara);z-index:1}
+.silla .rol{font-family:var(--mono);font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--tiza-mute);margin-bottom:6px}
+.silla.host .rol{color:var(--oro)}
+.silla .nom{font-family:var(--display);font-weight:700;font-size:1.1rem;margin-bottom:5px;color:var(--pergamino)}
+.silla a.arroba{font-family:var(--mono);font-size:.76rem;color:var(--agua);text-decoration:none;
+  border-bottom:1px solid rgba(111,198,217,.3);word-break:break-all}
+.silla a.arroba:hover{color:var(--tiza);border-bottom-color:var(--tiza)}
+.silla .postura{margin-top:12px;padding-top:12px;border-top:1px solid var(--linea);font-size:.86rem;color:var(--tiza-mute);line-height:1.58}
+.silla .postura b{color:var(--hoja-clara);display:block;font-size:8.5px;font-family:var(--mono);
+  letter-spacing:.16em;text-transform:uppercase;margin-bottom:6px;font-weight:400}
+
+/* ====== BLOQUES ====== */
+.bloque{border:1px solid var(--linea);border-left:3px solid var(--zona);border-radius:var(--radio);
+  background:rgba(10,24,16,.72);margin-bottom:16px;overflow:hidden;transition:border-color .22s ease, box-shadow .22s ease}
+.bloque:hover{box-shadow:0 0 0 1px rgba(143,191,90,.18), 0 10px 34px rgba(0,0,0,.35)}
+.z-bosque{--zona:#8FBF5A}.z-oro{--zona:#E8C56A}.z-fuego{--zona:#E8763C}.z-agua{--zona:#6FC6D9}
+.z-sombra{--zona:#9C8BD4}.z-espiritu{--zona:#E0A95F}.z-noche{--zona:#7FA3C9}.z-roca{--zona:#C08A5E}
+.bloque > summary{list-style:none;cursor:pointer;padding:18px 22px;display:grid;
+  grid-template-columns:auto 1fr auto;gap:16px;align-items:center}
+.bloque > summary::-webkit-details-marker{display:none}
+.tc{font-family:var(--mono);font-size:.82rem;font-weight:700;color:var(--zona)}
+.tc small{display:block;font-weight:400;font-size:.68rem;color:var(--tiza-mute);margin-top:2px}
+.bl-tit{font-family:var(--display);font-weight:700;font-size:1.04rem;line-height:1.25;color:var(--pergamino)}
+.bl-tit span{display:block;font-family:var(--texto);font-weight:400;font-size:.87rem;color:var(--tiza-mute);margin-top:3px}
+.flecha{width:10px;height:10px;border-right:2px solid var(--tiza-mute);border-bottom:2px solid var(--tiza-mute);
+  transform:rotate(45deg);transition:transform .22s ease;margin-right:4px}
+.bloque[open] .flecha{transform:rotate(-135deg)}
+.bl-cuerpo{padding:4px 24px 26px}
+.divisor{height:22px;margin:0 0 18px;background-repeat:no-repeat;background-position:center;
+  background-size:300px 22px;opacity:.65;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 22'%3E%3Cpath d='M10 11h110M180 11h110' stroke='%238FBF5A' stroke-opacity='.5' stroke-width='1'/%3E%3Cpath d='M150 4c7 3 11 7 11 7s-4 4-11 7c-7-3-11-7-11-7s4-4 11-7z' fill='none' stroke='%23E8C56A' stroke-width='1.3'/%3E%3Cpath d='M139 11h22' stroke='%23E8C56A' stroke-width='.8'/%3E%3C/svg%3E")}
+
+.et{font-family:var(--mono);font-size:9px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--zona);margin:22px 0 10px;display:block}
+.et:first-of-type{margin-top:0}
+.bl-cuerpo ul{margin:0 0 4px;padding-left:20px}
+.bl-cuerpo li{margin-bottom:8px}
+.bl-cuerpo li::marker{color:var(--zona)}
+.bl-cuerpo p{margin:0 0 11px}
+
+.relato{border-left:2px solid rgba(143,191,90,.3);padding:4px 0 4px 16px;margin:0 0 14px;
+  font-style:italic;color:var(--hoja-clara);font-size:1.02rem}
+.pregunta{border-left:2px solid var(--zona);padding:2px 0 2px 15px;margin:0 0 12px;
+  font-size:1.02rem;font-weight:600;color:var(--tiza);font-style:normal}
+.quien{display:inline-block;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
+  background:rgba(111,198,217,.1);color:var(--agua);border:1px solid rgba(111,198,217,.28);
+  padding:2px 8px;border-radius:5px;margin-right:6px;white-space:nowrap}
+.quien.rebate{background:rgba(232,197,106,.1);color:var(--oro);border-color:rgba(232,197,106,.3)}
+
+.nuevo{background:rgba(31,60,40,.6);border:1px solid var(--linea);border-left:3px solid var(--hoja);
+  border-radius:9px;padding:13px 16px;margin:0 0 10px;font-size:.93rem}
+.nuevo b{color:var(--hoja-clara)}
+.nuevo cite{display:block;font-style:normal;font-family:var(--mono);font-size:.68rem;color:var(--tiza-mute);margin-top:7px;letter-spacing:.04em}
+.curioso{background:rgba(58,46,18,.5);border:1px solid rgba(232,197,106,.22);border-left:3px solid var(--oro);
+  border-radius:9px;padding:13px 16px;margin:0 0 10px;font-size:.93rem}
+.curioso b{color:var(--oro-claro)}
+.curioso cite{display:block;font-style:normal;font-family:var(--mono);font-size:.68rem;color:var(--tiza-mute);margin-top:7px;letter-spacing:.04em}
+
+.contraste{background:linear-gradient(100deg, rgba(232,197,106,.12), rgba(232,197,106,.02));
+  border:1px dashed rgba(232,197,106,.4);border-radius:9px;padding:14px 16px;margin:20px 0 0;font-size:.93rem}
+.contraste b{font-family:var(--mono);font-size:9px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--oro);display:block;margin-bottom:9px}
+.veredictos{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.veredictos span{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;
+  border:1px solid var(--linea);border-radius:5px;padding:3px 10px;color:var(--tiza-mute)}
+.veredictos span:nth-child(1){color:var(--hoja);border-color:rgba(143,191,90,.4)}
+.veredictos span:nth-child(2){color:var(--oro);border-color:rgba(232,197,106,.4)}
+.veredictos span:nth-child(3){color:var(--fuego);border-color:rgba(232,118,60,.4)}
+
+/* ====== OCARINA (mecánica) ====== */
+.ocarina{display:flex;align-items:center;gap:10px;margin:16px 0 0}
+.ocarina i{width:11px;height:11px;border-radius:50%;background:var(--oro);opacity:.25;
+  animation:nota 3.2s ease-in-out infinite}
+.ocarina i:nth-child(2){animation-delay:.32s}.ocarina i:nth-child(3){animation-delay:.64s}
+.ocarina i:nth-child(4){animation-delay:.96s}.ocarina i:nth-child(5){animation-delay:1.28s}
+@keyframes nota{0%,70%,100%{opacity:.22;transform:translateY(0) scale(1)}
+  20%{opacity:1;transform:translateY(-7px) scale(1.25);box-shadow:0 0 14px var(--oro)}}
+.ocarina em{font-style:italic;color:var(--tiza-mute);font-size:.86rem;margin-left:6px}
+
+.glosario{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:12px}
+.glosario div{background:rgba(18,42,28,.62);border:1px solid var(--linea);border-radius:11px;padding:16px 18px}
+.glosario dt{font-family:var(--display);font-weight:700;font-size:.98rem;color:var(--hoja-clara);margin-bottom:6px}
+.glosario dd{margin:0;font-size:.89rem;color:var(--tiza-mute);line-height:1.6}
+.glosario dd b{color:var(--pergamino)}
+
+/* ====== FUENTES ====== */
+.fuentes{list-style:none;padding:0;margin:0;counter-reset:f}
+.fuentes li{counter-increment:f;position:relative;padding:12px 0 12px 46px;border-bottom:1px solid var(--linea);font-size:.92rem;line-height:1.58}
+.fuentes li::before{content:counter(f,decimal-leading-zero);position:absolute;left:0;top:14px;
+  font-family:var(--mono);font-size:.72rem;color:var(--oro)}
+.fuentes a{color:var(--tiza);text-decoration:none;border-bottom:1px solid rgba(143,191,90,.4);font-weight:600}
+.fuentes a:hover{color:var(--hoja-clara)}
+.fuentes .pub{display:block;font-family:var(--mono);font-size:.68rem;color:var(--tiza-mute);margin-top:4px;letter-spacing:.05em}
+.bandera{display:inline-block;font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;
+  padding:1px 6px;border-radius:4px;margin-left:6px;vertical-align:middle;border:1px solid}
+.b-mx{color:var(--hoja);border-color:rgba(143,191,90,.45);background:rgba(143,191,90,.09)}
+.b-es{color:var(--oro);border-color:rgba(232,197,106,.4);background:rgba(232,197,106,.08)}
+.b-en{color:var(--tiza-mute);border-color:var(--linea);background:rgba(230,239,220,.04)}
+
+.aviso{border:1px solid rgba(232,197,106,.32);background:rgba(58,46,18,.4);border-radius:var(--radio);padding:20px 22px}
+.aviso h3{color:var(--oro-claro)}
+.aviso ul{margin:0;padding-left:20px;color:var(--tiza-mute)}
+.aviso li{margin-bottom:8px}.aviso li b{color:var(--pergamino)}
+
+.pie{margin-top:84px;padding-top:28px;border-top:1px solid var(--linea);text-align:center;
+  font-family:var(--display);font-size:.84rem;letter-spacing:.16em;text-transform:uppercase;color:var(--tiza-mute)}
+.pie b{color:var(--oro-claro)}
+
+@media (max-width:820px){
+  .claro{padding:30px 16px 28px}
+  .tabla{padding:26px 18px 24px}
+  .colgantes{gap:30px}
+  .marco{width:84px;height:84px}
+}
+@media (max-width:640px){
+  .bloque > summary{grid-template-columns:auto 1fr;gap:12px;padding:15px 16px}
+  .flecha{display:none}
+  .bl-cuerpo{padding:4px 16px 22px}
+  .envoltura{padding:0 15px 70px}
+  body{font-size:16px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  #hojas,.rayos,.luciernagas{display:none}
+  html{scroll-behavior:auto}
+}
+@media print{
+  body{background:#fff;color:#000}
+  #hojas,#hilo,.rayos,.luciernagas{display:none}
+  .bloque{break-inside:avoid;border-color:#ccc}
+}
+</style>
+</head>
+<body>
+
+<div id="hilo"></div>
+<canvas id="hojas" aria-hidden="true"></canvas>
+
+<div class="envoltura">
+
+  <!-- ===================== ENCABEZADO ===================== -->
+  <header class="hero">
+    <div class="claro">
+      <div class="rayos"></div>
+      <div class="luciernagas">
+        <i style="left:8%;top:22%;animation-delay:0s"></i>
+        <i style="left:21%;top:68%;animation-delay:1.4s"></i>
+        <i style="left:37%;top:14%;animation-delay:3.1s"></i>
+        <i style="left:63%;top:74%;animation-delay:2.2s"></i>
+        <i style="left:79%;top:28%;animation-delay:4.6s"></i>
+        <i style="left:91%;top:58%;animation-delay:5.5s"></i>
+      </div>
+
+      <div class="tabla">
+        <p class="eyebrow">Chilangamer Podcast · Episodio 191</p>
+        <h1 class="titulo">Ocarina of Time<small>El Remake</small></h1>
+        <div class="vara"></div>
+        <p class="lema">Del Árbol Deku a la máscara que viene</p>
+      </div>
+
+      <div class="colgantes">
+        <div class="colgante">
+          <div class="cuerda"></div>
+          <div class="marco"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAQDAwMDAgQDAwMEBAQFBgoGBgUFBgwICQcKDgwPDg4MDQ0PERYTDxAVEQ0NExoTFRcYGRkZDxIbHRsYHRYYGRj/2wBDAQQEBAYFBgsGBgsYEA0QGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBj/wAARCAFEASwDASIAAhEBAxEB/8QAHQABAQEAAgMBAQAAAAAAAAAAAAEGAgUDBAcICf/EAGQQAAEDAwIEAAgIBggPDAsAAAEAAgMEBREGIQcSMUEIEzJRYXGBkRQVFiI1dJPBCUJSVbG0FyMlREVys+EkJjM0N0ZTVFZkgpKhtdEYJzZDdpWkssPE0tQZKWJjZYOio6XC8P/EABsBAQEBAQEBAQEAAAAAAAAAAAABAgMEBgUH/8QAMBEBAQACAQQAAwcDBAMAAAAAAAECEQMEEiExBUFRBhMiMmFxwRSBkRUjM/BiodH/2gAMAwEAAhEDEQA/APxmiuExsvsnhTCdlU9aCbIqhQTZNkwmfQgJ1U9ivTfCLDZNk6J7EE2V2QKgIibIqmFREROyUERFAREwqCiqexNCbJsr7FPYimAiqdkNp3VROyIbJ7ERAUVU/SgFd5pmljrZrjTTNDmOopPeCCD7Cuj3x0Wj0dvc67b95SfcoMe05aD6FcZXFnkj1Lmsj3O6u6KrQm6bqqKh2U3VRNCb+ZFy7KYwoqKqoqiJuqp2QRFyCnqSBvhRX2IgiLkphBEVRBN03VVVHFFe6ndQEVRBEVTBQRE3RARO6dkBERQRaPRv0pW/UpPuWdWi0b9K1v1KT7kGNZ5A27LmCfNlcW+QO+yucrGx2BUOcp2RbBOyntTf0qilN1N+6u6BuiIgboM4URByUREDdN1M9kQVEymUBVQKqiJundFA3VU7qb+dUXdCimfWoLvnsoclE7oL2UOU6hPYgIQVMq74QPWExhFcoqJ2RRRFWi0d9KV31KT7lne3RaHRuTda3H95SfchWOZ5DfUuWCuLPIHqC5LnKr3+ynZXuodl0EV7J2REO6InZARE2QETZNkBPamAiKg9avtTZMeZVD2oiICJ7EQEROyAiIqCY7qK7ZUIm6e1NspthFPar7VFUE9qvtU2zhVQERe5abVX32+U1otUHj6ypcWxRcwbzENLjudhs0n2JtHpqKMcHsDhuHAEH0Lkgi0ejdrrW/UpPuWcK0ejB+6tdv8AvKT7kKxjPIHqC5Y9OFxb5LfUue3/APBc4097CFPXlVdEREREERO6BlERARPYioIiJoO6qiICIiC+xREQE7InpwgKexFeybDO+6dkRNghRCgd0REEU6nGFyUxvlQQj0Le8E6ejqeP2m4a2t+CQmWfMvizJg/BpcDlBHVYIhfTPB7Hi/CU0zMGscY31DhzsDx/W8g6HY9Vjl/JVnt8ugwKeMNdzNDQA7GMjGxXmGfOuU0QiqpYgAAyRzQPNhxC4rWPootLov6WrfqUn3LNdlo9GHF2rfqUn3LURjm7MHqCuVwafmD1Bclx207DKdVCUyfOurJsndNsJlA9SIiBhPUidkBE9qICJlMqgiIgJjdMooKphUEIgmCiIqHdXGe6gVz51BMDKY3QHdTJygvqTdMlTO+5QXI7opnPQqoCImRndAPL519I4EPFPxuoKwu/qFLUyD0HxZb/APsvm2RnqvofCvxVquFx1bc6umoLTT0r6P4TUSBvjKh5jc2KNvlPdyguIaPmjckZGeXN+SxZ7Yu9Q+I1Lc4f7nWTs90jh9y9ArQ62t81BrSvqDJT1FHcKietoqullbLDUwPmfyvY5vXcEEHBBBBAIWdC3jd4zQb4Wh0W79163P8AeUn3LPY2+9aPRkf7rV2/7yk+5XylYthBaMDsvKAMLgxuGD1BeUZxsVymP1ae5v5kwfQhRdmRRXupuXBrQSTsABnKKp9ARQHLcggg9CEyCSAQcdfQiKUyiICbp2RBE3RN0UCb+hFUQ39CIogqIoguU7IiCepVREFB9CndXO/RTug5xsfLK2OJjnvcQ1rWAuLiegAG5PoW7i4YVBuM1iqtRW2LUrKR9S2wRwzyzh7IjMYJHhgjZLyA/M5nHmwzAdnHWcM3BnGvR/zsON7o+XB3J8ezos7NNLFdn1MMr45o6h0jJWOIc14eSHAjcEHfPXK55W26lajR6u0c3TWndP3SCtkqvh9Mw1zHR8nwKqdGycQ+kGGaJ4Jwc84/FWSyfMtxpO7V2qb/AHnTeobtUVM2qwxjaysJmIuQeDTTPJORlxdE5w3DZjsQMLFyRSRSvilYWPY4tcx3VpBwR7CCE47l6y9l08ec+ZPWrhNl0TaYBWm1fzUen9I2SBkcdO2zxXN7GNwXz1LnOfI49SSxkLfMAwY758nDmgjreJNsnq6SOotlvk+MLiZ2gwxU8XznOk5tuXPKMHqXBuCThZ25Xi7366SXe9109bXzhplnqHZccAAD0AAAADAAGAuWXnOT6LPTRteK7ge51U2F0lpvUUFNKWgPZFUwzSPjz3aZIQ4A9CTjqVmMDqFq+Gd4dQ68pbRWV8UFkvDxRXOGqc34PNG4ODfG82wDXuBDti07gjdZiroq+1V81rulLLTV1K8wVEEow+ORuzmkefIK1hdW4pfPl4t1ptFD91q7J/eUn3LMcw8y0ui3futXfUpPuXaVmsWPJHqC5jp1968YPzB6lcrha6PfKIcpt7V0YcT1XsW25V1mvtFebbOYK2iqI6qnlAzySMcHNOD13A2XgwnLslm1foKw2jQXFSsGtLpaKW1yy1HwWtjY99PRtrJXRtY2YsIJ5jI58ZjwXgPbIQWc7vlHEO7S3DWs1vFlbZKOz5tlJa/FCM00cbjnnA6yOcXPc4k5LupABWu4NWllzpayOpvVustO2/WaZlXcXlscsscsrvERgAl0rg7IGwwDkjIXznUdxnu+srvdKhsjH1NbNLyS55mAvPKwg9OUYbjty47Ly8WOuSz5Rq+nWdlURepg7oiICIiAiIgbop3QbnGUFRaHVemRpqh0xUCpfMb1ZIbuQ5oHijJJKzkGOoHiwcnfdZ3KmOUym4omyd+yexUNkQJugnfsoXY7LsbDbW3rVlqs7pXRCurYKQyNGSwSSNYSB3I5s4Xl1PZvk9ri9afErphbbhUUQlc3BeIpXMDiO2eXOPSs9032mnd6Zu90sXC7Ud0stZJb699xoKT4ZT4bM2J8dU57GyY5mBxY3PKQTyhY9o861NvjP7CmoCPz1bv5GsWXwQMbKYzzaWuTHFjw5rnMcCC1zTgtI6EHsR51sdf8lybYdY8rY6nUFE+prY2tAaaqKZ8Esox0EhYJCOznv7YWMB9K1+qHZ4aaA3/eVw/1hKmX5pSMjjZFQoVtGvsjW0fB3Vlw5S6WsqqC1bnAYwukqXO6bnNMxvbAJO+yyLhjutjYXibgvrOmlYxzIKq2VcRI3ZIZZYiQfSx7hjp3WOJysYe8v3/iK8MrOeNzMgcwLc+vZa7iM4VWrKO9/OEl5tNFc5oyc8kkkIa4A9xmPP8AlY7ZWSlyGOcDggEg+xa3iK4jWFNQsjjjgobTbqWBjBjDBSRv3PUkukecnz46ABTKfiliz0yYWk0WcXau7/0FJ9yzZG60mjMfG1d1/rKT7l0jNvhjW+QPUFzHTouDfIb6ly3XGVvb3yAp6lVMbrsyu4Tqpv3QH52yD6pZLGbbwj03c6+jihdcdYUc8DqqojLaimDHs5hGHczGB7XhznDDstxjlOcrxIsdVY+KV7gqIpWxT1k1XTSSVEdQZoJJXujk8ZF8x/MMnLfSNsL2L6wXbhppC6wcplpPH6fkieNy9khqI3B35Lm1WMfilh868XEWWOLWvxFC/wAYyw0kFjM3Ly+OfTNLJHgdgX8+O+AM9V5+OXu3f1Wsn0Wr0pZqeO11+sL7SwG1UVNMaFlW9ojr65vKI4PF8wfKwF2XhowMAOIBK9PS9noqyWsvN8D/AIktUYmq2seWPqXuJENMxw6OkeME/isbI78ULrrxebhfa9lVcHQjxUYhp6enjEUNLECSI4mDZrQST5ySSSSSV0y3le2JPq0OqLTHctNW7XNlt9O2kngEd4ZQNayGgrRI5nL4oHMLJGCN4JHIXPcGnblGPGCvfs14uFhu4uFtkibIWOhkZNE2WKeJ2zopY3bSRu7tO3Q7EAjudU2i3CmoNT2CEQWe6h39Chxd8AqmY8dTZO5aOZr2E7mORuclrkw3je2nvyzCi02kLTZLjPeam/MrpaS2WqW4GGhmZDJK5skTA3nc1waP2zJ+aei85r+GQ2+S2rP+fKf/AMqrc9XUhpksotX8P4Z/4Lar/wCfIP8Ayqnw/hoB/wAFtV/8+Qf+VU779KaZVdxpa10d41PFSXKWeKhjhnqql1PjxnioYXyuazOwcQzlBOwJzvjC76io9BX60X5tss+o6Ctt9pnuMMtTdIaiNzoiz5rmCBpIIcdw4YXuWOKw6a4Oy6orrdXVV9vM9faLe9s/ioKeEUzWSSOaWHxuTO4bEcrmAecKXPc1J5XTx3fUVNxD0tW+Os0NsrNN29slt+DTPcwUDZY43U0gdnmczxnO2TYk84IORj58Fo9G3W0WO+VJ1BbqmvtFdSPoayGkqBBKI3PY4uY8tcAQYx2ORnGDgqa605HpbiXftPU75X09DXSxQPlaWufFzZjccgHdhac9+vQphOzLtLWfHpXLCgbj0qrqgiZ3ToMnoOqI2eifi+yWy4a7rKT4dU2ippYrdSOeWRmrkMj2Sy43LI2wudyDHM4tBOM55a1mo9Q2aj1/T05pK65Vs9LdYA8ujdVMZHJ46PO7WyNkyWEnlcHYOCAPc1pNYdM6Kt2iLZba1l1mioLtd62onPK6Z1M97YmQloMfKKnByTnlbtnJV4dTad1NbpOHd+tldJV1k1TV2mtpJ8CGrNIQxskQYTICYmAAEeUc52Xn3P8Ak/7prXydVbXE8EtQZx9NW7+Rq1k3YBwCtTa383A6/ODeUm9W04Pb9oq9lliDnou2HzZcHdNlrNTn/e00B9SuH+sJVlCDhavVO3DPh+T3orh/rCVTL3FjJglVcQ5uCSQAOpK5Hot7Rr9PZ/Yj116Dav1p6yC1unTnhHrv12r9aesl2XPD3l+/8Ra4ybQv/in9C1vEf+yJOP8AEqD9RgWRlP7RJ/FP6FruI+P2RKj6nQfqMC1fzQZQhaPRgHxtW/UpPuWdWj0Yf3VrfqUn3LcSsWzHIMeYLl2UbswepXJx0XD16ae/7CpgHsuSi7IihG65YwoUGtDizg5Zcf4T1DvdTUv+1etxBaW8X9VN6/uzWfy715at4h4MWA+e+V8v+bDSBd/frJRXbj7rKW61BpbLbrjUXC5ztaXvFP8ACGt5I2jd0j3SNY3cbuySACVwmUl/y06W9OFp4c2KwNY4S1+b9VPJ6h4MVOzH/sxse/Pnm9CyS7bUd8qNR6orLvMxsLZn4hp4xhlPC0csUTB2axga0epdUV1wmp5ZritZpqYXHRepdLSNy91OL1RnG7Z6UOMgH8eB8w9bGrKexdlp+8S6f1TQ3iFjZPg8oMkLwC2aIjlkicCCC17HPYc9nJnNwjs9GOLrbrTf+1qo/WKZdXYbLVaj1TQ2GhkhjqKyXxTJJ3FsbNi4ucQCcANJ2BO2wW4gsNBaflhW2Scz2O5aWqqy2vc0se2H4bCzxb2ncPjcwsO5B5QQSCuj4Xb8ZbCfNNL+ryrnMvw3KNaem3T+mXNDm8SLLgjIxbq/p9ivBdNOw0enDe7ZqK33ikZVMo5jTQzwuhkexz2ZErG5BEb9xnBG/ULO021JF/Eb+haykaTwRvZ81+oP1erS92Ml2GhjmLV3X/gvXf8AWiXuX2omqOEWhxM/n8Q+6QRkgZbGKiN4bnzBz3n/ACivV0I0+K1fg/2rV/6Yl7mrqQWjQmjLJNUxS1vwSe7SxxB2IY6t7HwtcSBl/JGSQMgZG6k/OX0yEhIp3kHHzT+hbPilNJNxLqGyP5mw0VBBGMABkbaKANaPQAsU480Tm4G7SP8AQt5xMo2yXe1aqpqqGot9+t0NRSlnMHxmCNlLKyQEDDhJC/oSCMHO67Wzvm/1YnphcZWhs+jbhe9KXW/U9TSxRUDSWQSl3jKtzGeMlbEAMExxAyOyRtjGScLO8wyvqmkJjFUcK6Zh/aqm43DxrO0njZW07s+fMYDfUs8uVxnhY+Vkcq8FRIW08ha7cMJGPUuTc+KaB2aBv6l7FutNVfr5RWKh5PhVwnjo4S8kN55HBjc4BOMuGdjstW+NkaPinNJUcYb9Uyu5pZpIppHYwXPdTxOc4+kkkn0letw3OOMulHYBLbvSuGRncStI/wBICvEWopazitfJLfUCpp2VDads7WlrZDFGyJzgDvgujcRkA4x0Xq6MuNHY+I9gvNzlMVFRXCCoqJGtLyyNrwXOwNzgZOAuWM/B/Zp2lHVzVPBvUtTUyulnmv8AQSySO6ve6Ksc4n0kklZcEEbErcXnTtTpPQGsNO1lTTVU9DqO3QuqKUuMUn9DVbg5vMAcEOHUArBNcQtceXhLHlwCNzgdN19S1Bomobwx0DUamudLpmljoK0kXBrjVSB1dK4eKpWjxj8tIIJDWb7uC6+53w6C+K7fpO30dBXz2mirp729nj60vngbK4RPflsDRzYHi2h22S5ejrSpqKvQGhKyqqJaiomo7g+SaZ5ke8/GEu7nOJJPpKzblnqzxCeHozah0/p+nkGjNP8AjatjSRer8xlROCB1ipxmGH0E+McPygvZ4ruml406ilmcXySVDHvcfxnGGMk+0krFyOJp5cn/AIt36CtxxU/sw38j+7R/yEaswk5Jr6X+Dfh6+nmkcI9dnHe1frT1kAVstPknhDrv12r9aesafMrh7y/f+IVxlP7TJ/FP6FreIhzxCqPqdB+owLJSf1B+34p/QtZxEH++HUfU6D9RgVv5okZcrR6M+l636lJ9yznoWi0af3WrfqUn3LpErGNPzBjzLn7VwafmD1BclxjTsB61dj61xJweq7Cz2G+ahq301itNZcJGDmk+DxlzYx53u8lg9LiAulsnmo9A4XH0jstONOWS2EnU2rqOOVvWgsjRcZ8+Z0gc2Bh/+Y71Ly0+prDbKyBmnNHUfP4xgFdfn/GM3lDcRYbAz/Md61zvJv1F09S9Et4L6cwfKrrq/b+LSj7lstRsxrPjIfPSwu99dSH716vF2mgpaUU1PFHDEy+agDI42hrWNFUxoAA2AAbjAXcaljYdTcXZAPKtlE/31NCfvXGXxL9f/sV8fzjuvdtVnu98rHUlltlZcJ2t5nR0sLpCwed2B80ek4XqRxSTzsggaHSyOEbGnu4nAHvIWq1xXOoLtU6Htcz4rHZ53UviYzytq52fMlqZQPLe57XYznlbytbgDf0ZZXeoy6O72G+WCpZBfLRW22SQc0baqF0fjB52k7OHqJXXErS6QuuLnT6WuskkunrpUMpqimc7LYHPIYypiB2ZLG5wdkYyA5pyHELP1lHUW651VtqgBUUs0lPLjpzscWux6MgpMrvVH1C3PL+FQx20Vcx/+XaszwtBPGOxgf3Sb9XlWptLAeEjjj+0u6j3XeP/AGrNcKf7MlkPmfOf+jSrjv8ABm19GHgBFJF/Eb+hbS3NDuBl9yP4et/6vVrIM/rWHH9zb+gLXW52OB19G/07b/1erXbP5fvGXl0ExgZq/wD5K1/X1xL19dY+G6eA/wAG7d/JFeTQsh5NX4H9q1f+mJeDXDi6v09/ybtv8iVi3/c8LPTMLS6qkc3R2hwT834onI9H9H1KzRIAW4qdO1+roeGenKBrmS3OifQxzOY4sY6S41LQSR2GVrPLWqSOi0/pqovNfUGslda7ZQMbPcrhPGeWkid5PzTjnkfsI4xu8kdskeS86qqazUlDXWaOS0UlpDI7RTxv5n0bGP52uLvxpS8mR7vxnuPbAHf8WNZXC+6yq7Ay9RXCx2uoENG+BjGtm8XCyEPc5u8mAwsYXFxa35oIGVgNiFnDef4si+PDYX220mpLTUa009TRwcnz71a4RgUEjjjx8bf72kcdv7k48h2LCet0vTVFLxN0/DUQSQytutGSyVpa4ZnjIyDvuCD6ivTsN7umnL7BeLRUNhq4OYNL2NkY9rgWuY9jstexzSWuY4EOBIIX1jVdtrrpxY0DrtlzF6+UrrdVTPpYHEwTQvggmY8jbIex3TGMYxsMrey9t9UfJ77H/TVdTnrXVH8q5dZNHmllGfxHfoXa35w+VV1+vVH8q5dbI4Gml7fMd+hdprSfN9Y4hxgWviAfNqq3fqVQvkZONgvsfENo+KeIG39tNt/UqhfH3AjoMrjw/lW3y1fEVw+UdnIJH9Llo/Uo15NUvDuGnD8E/vCv/wBYSr1+I+flHaDjH9Llp/Uo1y1K4fsacP8AI/eFf/rCVTC/hxL7ZGcYpZd/+Ld+hbXinI0cYL+C4f1aPv8A+4jWHqXD4JKB+Q79C+qcRNaXqh4pXijhpbE6KF8TGmey0kzyBBH5T3xFzj6SSVcsr3zt/X+D5Og069p4Q67wR1tX609ZAAnzL6tp7XF6k4X6zmdSae5ovi3lAsVGGnmqXA8zRFh3oz06hdPero698IY7lXUFpiq4b98GZNQ26CkcYzSF5afFNbzDmAO+VnDLLuu58/4KwEjP2h/8U/oWt4ijHEKo+p0H6jAsu8gwv/in9C1nEZzf2QJ8f3nQfqMC76ndEnpkT16rQ6O+la36lJ9yzxWi0b9K1v1KT7lqJWLYTyj1Ln7VwZ5A27Bc9159tvcdlaaGR44F3KLmIjk1DS87ATh2KScjI7rO8oJX2LgdaKG8aj0jbrjC2aln19bGyxuGQ8CCV2D6CQE572491SPp/CrwFdTas0tS3/XmpDpdlVG2WC2U9MJ6prCMgy8xDYyRvy4JHfB2W8un4PO1i3vfYOJtxjrmjmiFfb43Rlw6ZLCHD1jPqXe+HJxQ1noey6W07pC91dlF2dUz1lXRSGOZ7YuQNjDxu1pMhJxgnAHTK/J/DbwjuJ+gOIVBfqjVl+vtvik/ou1V9xkliqoyCC39sLuV2+Q4DII9YX53H/U82H3mOWv0db2y6sKvhPrWTwlrXwi4hV1RSXCvugifVk/CGFtS8ufURZwHh+C7tkgg4IIWx8JfgvWcEay2SQ67ud/OqIZYq11VAyFzm05hLGu5SeYZ5D2wWBdzb+Oly46eGnwuu9y03bbN8XXWOngbTPfLI9jn82JHuxzYIOAAAMu86/WnhB+DtFx4fp58mrZLCbOJx82jFR47xvJ53t5ceL9OcrWXVZ8fLhOXxNeUmEsun82OFmk26241aY0oblJbvjG4RwisjjEjoSMuDg07E5aNivs3GXwZoNDcb9D6aGtay6O1pcHR1FbUUbI3073Txtc8NacOz44nG24X3vhz4EMOgeLGn9ajiTNX/FFY2r+Cm1iLxpAI5ebxpx164K8fhVS+K8KvgGPPef8AvNMpydZ380+6vjVJx6x/E+FcYvBWo+FOteHtstut6y4O1NeBQeOno2RmkIfFiRoa752OfODjoF6PhN+DnBwXt9p1G3WdbqCpvlwnZUfCqSOAtfymUvHId8knIwOq/R/heTcnFjgQB/hV/wBpTrOfhDHE8PdED/4vUD/7CxwdRyZZce773tcsJqvwnHd7pFRGjiuNSynMD6UxNkPKYnvD3x4/JLgHEdyMr16eqqaKqZVUlRLTzszyyxOLXNyCDgjpkEj2leIdF2enrNJftQQW9nMIyeeZ4/FYOp+71lftY4911PmvS9NydVzY8HFN5ZXUabS2gYb1YRcbhVz0zZciBkTR5I25jntnoPQsxdqGustxqrLUTP5GyB5a1xDJMA8j8dOjjg9skL6FqzVJ01VW+22yNuYy2SWMdBENgz2j9AXj11Z475piDUlt/bHQxh5c0bvhO59rTv717eThw7bjj7j+jfFvs50GXR59P0PnqOCS5/8Al9f8O18HLg9Lxo4jXXTMeqKjT0MNpknqKinh8a6aMyMYYi0uA5SXAnP5IXrceOCmr+DmuILZf6qW62qaIR2q8chDJomDAixk8j2DYsz0wRkFfV/wfXOPCA1Lnp8nnfrMS/a2q6HhvxhotT8Kb7JBX1Fv8UK6j8ioo3yRiSGeMnocOy14yMgtPcL5zn6zLi6jXvF/OMcN4/q/mv4PHA6m46cQLrp2s1HUWSOgt3w4TQUzZ3SHxjWcuHEAD52crz6n0TxK0P4RdRwM4d6x1JcZ4KqOChZS1clI17pY2yucWNfysA5nFzumASV+oPBp4K6o4K+Fbquy3ljqu2VFiL7ddo48RVcYqY9j+TINuZnbqMggrseH1uo6z8KhxMrp42vmoLLE+An8Rz46ZjiP8nI9pWeTq98mVxu8ZPH/AKJh4m2N05+D1pXWyOfWXEesNweOaWG0UbPFsJ6gPly5/r5RnzJqb8Hzb47JNJo7iFX/ABk1pMUF4pY/Eyn8kvjw5nrwceZZPwq+LXEiXws5OHlg1pdrBaqV1FRxRW6ofADJO1jnSv5CC85kxgnYN26lfc9E8CuPuhbzPXUHhEfHDJYnRPo79bZ62D0PDXT5a4HoQR5jkLleXmwxmeWet/JZMd60/nJqTTt80hq24aZ1JbpKC62+YwVNNJuWOHmI2IIIII2IIIWo0BcNa1TjbrXrHUFotNLl7mUNfLE1rnHOGtDg0EnJJx6V3XhHWXVll8Jq+2rV+pW6ovrxTyS18VN8Ga/niaWRsiBPKGghoAPZeSTxeg+HQbhrq2Tb+PM4b+xo/R6V+90mM5sZnyepN19F9mPhXF1XNn1HV/8ABxTeX6/Sf3Y3WOln6fq4qiKolqaaoJxLKPnB/Uhx7k9c99112l7DLqnW9n0xDOyCS610NA2WQEtYZZAzmIHUDmzhfQ7VUQ654fS0VY4fDGDxcju7ZBuyT2/7VmOFrJ6LwitGU9TGWSxaiomPaexFQwFb6rGYY9+Hqxr7T/CuDp8+PrOin+xyzc/S/OPtnhF+DZqjhDo2LUdNrK4apstdWR/Gj6iAROiqQ0shleA48zSHOYHHoSBvzBfmcjPUL+1epbJYtV6XuGldQ08VXQXKnkp56aQj9sYdiR3yMggjocFfyz1B4PesbV4UsfBijjfPU1k4fQXB7DySURJPwp2OzGh3MPymkdwvyOg63uxuPLfMfMcnHq+Hf8AfBsvfH8XK93vUNbaLHbY46GGu8SJ3zyNaA2GMOIHJGzlye2Wgd8e9obwYH678IrWXCWu15WU9BoxhbT1baQSOkEkgdhsZdhgJe5zsE7+tf0S0Lo/T/DvQFq0Pp9jYqSgpuSNriPGSkeXK7zuc53MT53L88cDh/wCsI44/xYf+s1eS9bnn32eJ8v8ALf3cmoyH/o7bLykHildXZ2I+KYt//rWf4reBXBpXhlqfiDNxOul2rrbQyVzmVdvY34QY2j5rnh5I2AAPoC+/8SuAXELXHEy4alsXhAap0tQVLYhHaKJj/FU/LGGnl5ZWj5xBcdupK/D/AB+l4k8PeJt54W3nizqfU9vjggdKaqrlbHUNlYH8r4i9wIB26kFb6bk5eXKScnn9kzkk9Pp3ArwSIOKPASk1dNxGuNnivb3ie3U1EyRjhBO5rOYucCSHNLvRlfRT4ANtdZTaf2Wbz8DNR8K8T8WQ48bycnP5Wc8uy1/g5093m/ByU8NhFQbq+23VtGKZ3LJ44yTiPkPZ3NjB8+F+SKfSPhmt8UG0nFoPGMO+Gzjfz5MmPen3nLnnlJya1TWMk8Pa49+Cnqfgrp35UUt5i1FpsvEMtWyAwTUrnbN8bHkjlJ2DgeuAQMhfKOIZzr6U+ehoD/0GBf0a4muvtL+Dqv0fFZ8Tr+NK+LuBLmuzWFoDNxsX+M5Om3NnC/nFr4k62JPU2+3n/oMC9fRc+fLPx+dM8mMnplyVoNHE/G1bn+8pPuWf2K0ejmj40rfqUn3L9CTblWLYPmt9QXlwFwAw1vqC8gAx1XCRp7pX0fh/qgaMstn1Y+J0sdq1rb617GblzY4JHOA9PLlfNyvOK2r+KHWoTuFE6cVTodsGUMLA/wA+eVxHtW+TDvmiXT+onGng7pfwoeG2nr3p7V0VK+nD6m23SCMVEE0UoHMx7QQerW9wWlpBHUL5Nw88Aals2uqO7a+1fRX21UrvGutVLRPjbVOHRsjnOPzM7kAZOMZC/HOi+J/EPh1JIdE6wutkZK7mkgp5cwyO87o3AsJ9OMrT37wkeOepbVJbLrxLvJpZQWyR0vi6UvB6guiY12PRlfnTpOownZhn+F078b5sfcNVWDhDpP8ACEcNtNcKbZHRyUV3i+OTT1T5oGzud82Jgc4hrmtBLsHALgOoK+geHPxC1voebQzNHatu9iFU2tNQLdUmHx3L4nl5sdccxx6yvwVarxdLDf6O+WevmorjRzNqKeqhOHxSA5DgT3yu81rxJ17xGko5Nc6qr74aIPFN8KLcQ8+ObAa0deVufUF0/or95jlbuSfNO/xY+u8BuNfFu+eE3oiz3niRqavt9XdGQ1FLU1z5I5WFrstc07EdF9+8K1xd4VXAHf8Ahj/vVMvwRZrxc9Paho77Y66aguVFKJ6aqhID4njo4ZWi1JxU4j6v1Bab7qbWV0uVytD/ABtuqpXtD6V/MHczOUDB5mtOfQFrPo98szx1JomfjVfubwvBzcW+BAG/9Nn/AGlOt74SfAev47aasdrt2paSyyWutlqi+op3TCQPj5MANcMY6r+buquK3EjW9XbKrVms7tdZrXMaihfM9rTTSEg87C0DDstbv6Fpv90xx7Dcfsp37b0xf+Bef+h5cZh22bjX3k87fZL34A2qbNpi4Xf9kezT/A6aSp8ULfK0ycjC7lzznGcdcL5HwztMFNpAXZrWyVFd87c+S1pIDc+vJPrXX13hG8crlbKi31vE2+y01RG6GWPmjbzscMEZDAdwSNlhrXqa+WakNLbLhLTwE83i2gFoPnAIOF+v8Oz5OHK5c939NPofst8Y6X4V1v8AU9RhcpJZNe5b8/LW3Lhzqm6XaouFTW24yzPLz+2O28wHzegGAtfo2xXaxWaa2XeSlnpy4uiEbi7APlNOQNj95XzH5fauA+mZfs2f+FPl9q4gj45mG3ZjP9i9+HNw45d0l2+n6H7R/Z/oepvWcPHyd93vdl3v3vy/U3gS26Gz+FXrG3U7w6GKxO5N/JBqISGn0jOPYsf4ROvtS8OfwgOodV6SuDqO40oowD1ZMw0sXNHI38Zju49owQCvhOktf610LqCovmkNS11nuNTEYZ6mncC6RhcHFruYEHcA+sL0NSakv+r9T1Wo9T3aoul1qy0z1dQQXycrQ1ucADZoAGB2X42fT93UZct/LZ6fzzq+fDl5c8+LHtltsn0n0f1e4H8dNM8a9AfG1tLaK8Uoay52l78vpXno4flRuweV/focEEL830HEOz6D/Cw6vN+rI6O33qCK0mqldyxxSugp3xFxPRpczlz0BcF+NdM6s1RorUDb5pG/V1luTY3RCqopORxY7q09iDgbEHoCvSvl5vGptQVd91Bcqi53Ksf4ypq6p3O+V2AMuPqAHqC8uPw6Y5ZavixxvJuR/RPjr4IknFji2ziFp7WrdPXKWKFtTHPSGYOki2jljc17S12A0Eb+SCF9B4P8JeJmhdS1t215xuvWuIZqXxENuqYiyGJxcCZfnPcS4AYGMbOPVfzk03x74z6Ts8VpsPEi/U1DC3kip3ytnZG3sG+Ma7A9A2XvXTwjuOd5tk1vr+J19dTzNLJGwvZAXA7Ec0bWu39BXPLoefKdlyml+8x3t9N41yWPVPh06vutFWw1sVvjp4mmM5aZo4WRvGe/I7IPpHoXz3WOkb3qW7RyU9VRx0kDOWKORzs5PlOOB1P6AvltHca23VzayhqZIJ29JGHffr612/y61X3vU/8Amt/2L6HpsuLi4Jw5fJ9r8J+0Hwvj+GX4f1vFl5y3bjZN/TbZ6V0VftPX5tW+ron0z2+LmjY9xLm9iMjqD967eGywU/hHcPrrC5rX1V+omSs7ktnjw73EA+oL5r8utVg4N7n/AM1v+xem7U9+OoqS+i61IuVHIyamqWuAdC9juZpb2BBAKvPnx5cN48I38R+P/CcvheXw/o+LL3ud1l1fnp/Q3wvuIF44V3vhhrmxjxstFeKoT0/NhtTA6ECSF38Zo28xDT2X3Gxan0VqPRlBxWon0Lrc+2PqI7vLGA+ClOHysc/q0As+c3PlM9C/kzrbitxE4jUlJTa31bcL3DRvdJTx1PIGxucMFwDWjfG266aDVmrKXSM+laXU15hsU7i6a1x1kjaaQk5PNGDynJAJ23Xz3+m24SW+Y+H+88v314OvGSq40eFvxA1K7nhs9PZ4KW0Uz9jFTiodhxHZ7z893rA/FC9ngdMw/hC+Obc45Wwb/wCU1fgXRmvda8PLtU3LRGpK6x1VTEIJ5aUtzIwHmDTzAg77r3bTxU4k2LXdz1paNZ3Wiv8AdARXXCN7fGVIJBw8EYO4GNtsbK5fD7vLt9WaO/6v6J8TuC3GfV/FC5ah0j4QV00xZ6kRCC0QCbkp+WNrXY5JAN3Au6d1+fuLHge64t+ktScS9T8W4dR19von1tQ+rpJTNUNiZ5PjHSHB5RgbY6L4n/uluPuf7Kt//wA6L/wL071x74z6i09WWK+cSL5W26tidBU00j2BsrD1acNBwfWrw9L1HHZqz/v9kyyxr97+DHexpr8H3a9RfB/hHxdQ3Ku8TzcvjPFzTP5c74zy4yvl+lfD9hu2sbVb9S8P4LTaqqdkNTcIbk6U0rXbeMLDGOZoJBO/TJ7L8k2njDxQsXD52h7Rre60mnXRSwG3RuZ4vxchJkaMtyA7mdnB7lYgbDGNsYwt4/D8cssryfP0l5PWn9DvD4smqrjwKtF3s1yldp+irg660UQy2TnGIJnEdWsdtjpmRp7L8Ma+by6zaD+bbd+owLua3jhxauOgn6Kr9dXSpsD6UUTqCbxbmOhAADCS3mIwAOuduqxVbcKy51fwq4VD55/Fxxc7+vKxgYwexrWj2Lv0nT5cOPbkznlMnqLR6NcfjStH+JSfcs6T6FoNHn91a36lJ9y9sumKx4PzB6gr7cLg0/MHqXLI7g+5eeVp2KnfKY85Q+9dmV2PVFEz50D2JuiIHfoiIgIqiCJuqogIiIL61ERATCqmMoGQnQphEUzupk+hVTCBlXJREEVyfQmE2QPYE79ETsibPcntTbKepA7J3REDdQ9Ff9KiKLQ6PH7qVuw/rKT7lnlodH/Sdb9Sk+5We0rGtzyDbsFyyVwb5A9S57BeeNOxUwqc9VM+YLugM+1PWiekogqiICIiB2ROyICIiAiIgIiiCoiiBhERAx2Vwp3RARVTHfKAie1EF7IiiAqp0T2ICBQ+pXt0QMDsocedPRhEBaHSH0nWn/E5PuWeWh0h9J1u/wC85PuVntKxrfJHqXMYx0XBvkjfsuey88rT31M47K/6FCu4o3PpVUT2oKimURFRREXSp26KIiHsTsntQ+tARAnqQX2KYwmyIKphEygqKJt50DonZN06BFE9Cd+uQp1KC59iYyhwgwhpVEKFAwh6KIgo9Se5TPbJVQPYorkdlOqILQaQ+k636nJ9yz60OkPpSs+pyfcrPZWNb5A77Bcx0XFueUeoLng+dcJGnvIndMrshgjuiqIInZVERB0Tp3VTfoipsnvVUQNkVRERVEQEREBTCqIJ3RVTsge9ERFPYiqm5HmQh71MetclN0DsqiIiY3QhVEEIyETPnQoCnqVKb90VOy0OkPpSs+pyfcs8TkrQaQOLpWD/ABOT7lZ7Sse3yB6guQO24JXAH5o27Bcub0LhMmnYqHGE6JjddkEyoCr3RFREQEREAqexVN+6CdEVypuUBATnfCd9lDt0/wBKC5wmUCFF0IUzumUDr3RTuqPQgd0ymE386IqmQiboCbJum6BlERAynbKJhAB7plTorv3RQ4UO6u3mTGeyCb+daDSH0rWfU5PuWfI7dlodH/StZt+85PuVntKxjR80epc+XPZGjDW48y5exebTT3sqb+dEyu6Km3cqKqoZTqm2OyBAVyorsgiqiIHfZVQhN8dUU9iZCmN+yuEBM+cphAghPrT2q7IiJ7dlU2RARCAnZATZFEF2TIURF0EplVPagmU7ptlXZBPart51B1T3IUOc9Vc7dVE9abQyVodIfSlZ9Tk+5Z1aHSB/dWs3/ecn3Kz2X0yDfJGdtlyHRcG+QOvRVcWnvotAdJVf5ytn2ynyTq/zlbPt101WdugRd/8AJSr/ADlbPtv5k+SlX1+MrZ9uro26HtuEwu++SlZ+crZ9unyVq/zlbPt/5kHQou++SlX+cbZ9ur8k6v8AOVs+3QdAi775KVf5ytn26fJSr/OVs+3Q26Ht1Rd98lKr85Wz7dPkpV/nK1/bobdCnQLv/knV/nK2fbp8k6v85Wz7dDboN8ou/wDknV4+krZ9v/MnyUq/zlbPt/5kNug3UXfnStX+crZ9unyUq8/SNs+3UNuhRd98lavH0lbPt/5k+StV+crZ9uqOhKLvvkrVZ+krZ9unyUqsfSVt+3QdCpsu++StX+crZ9unyUqh/CNs+3Q26H2psu++StX1+MrZ9v8AzJ8k6r85Wz7b+ZDbofaruu++SlX+cbZ9unyVq/zjbft0Nug7qrvvkpVfnK2fbJ8lKv8AONt+2Q26HqeimF3/AMlKv85Wz7dPkpVn+ErZ9uht0OymT2C7/wCSdWf4Stf26fJKqx9JWz7dNG2fPRaDR/0pWE4/rOT7kOk6s/wlbPt/5l6M0h0+6phhrKWoqJ4DATTuLhECRkk4xnAIx6VPXkZ1hHIPUFzyoBj0K7rlGnAsbnyR7lOVufJHuRFkTlaR5I9yYGfJb7kRStHK38ke5Tlb+SPciIyoY38ke5A1u/zR7kRQAxufJHuTlafxR7kRWe1UMaeoHuQNbjyR7kRREDW58ke5Xlb+SPciIHK38ke5OVuPJHuREE5W58ke5ORufJHuRFaBY38ke5TDc+S33IiQMN/Jb7kwMeS33IiKoa0nyR7lQ1vNjlHuRFBOVufJHuV5G7fNHuRFUqcrfyR7ly5G46D3IignI38ke5ORvmHuRFQ5G/kj3KFjfyR7kRIKWt/Jb7k5W/kj3IiovK3Pkt9y5DqfQiLUFXLAwERaSv/Z" alt="Chilangamer Podcast"></div>
+          <p>Chilangamer</p>
+        </div>
+        <div class="colgante">
+          <div class="cuerda"></div>
+          <div class="marco redondo"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWgAAAFoCAMAAABNO5HnAAABIFBMVEWXJCgiFRNmERNjGRxgnTpkEBFlERJnnFaVWjEkCAiIkEyRalYkCAhSSzNdX1/eFTCwMUUkCAfimaf00tp7g4fIXWs7Q0Z3fYGBExWBfoCglZDEMUOvusE3PEDwucVAP0DVdoc6SiWJij2AExWAExa8wMO/wL9rER2Pi4wEAwLWEi7RERuTkpL8/PxNqTRWKRJUFQ9qFRTQDhoWFhZXVlQsBgcnJyd3dnZpaGdJSEg3NzdsCAdSCwtkKRNkMhXTDiu2GihPDA2wJDLs6OmutbeZpqxZMRelqatPsTUpBwccBQXX19eJeG/Hx8dvY1pUOCisFxqKCwwzFBKSFhZ3mmxuWEyRhXtrmlFkRzaDmHpapUTIIzaRnKJvFBahlpBnolG+uJBOAAAAYHRSTlP/6Zru/x1b//+c//9a/////zH///////8J/////////////2KJ//8A//7////////+/f////7///////7+/////wT/////////BQX//////////f/////////////P///SISkeAABOxklEQVR42u2diUMUSdL2qxV0lAEddXSd3dnZfY/PakgG6CrqorURGnqUS1EQldH//7/48s6IPKqqoRvYfbd2x3E8gP4R/eQTkZGR0Ysb/8zeuXOLPn/SZw097FfY79y5M3vzX0V00wFrrKv86ZtH/MKq/O2bDjy6mYhpABu+/f66eLrOI39jnWEXUU55z/4HdPNDo/hPRbjvZRt8OHDB+08a3f8B7cTvrI7jPwHicRh7cf95o2L7ukHPvpiVkJVOXBixxbvP9fvGwL4J0iEieXV1MohxdFPYNLL/A5qH8m0OuTulZ/2Ywr7+wL5W0LMslG83RnKSVWVa5DEho9EQPKMRIXFepGWVJQ2RzQN79v8maE65PpQ7VZqT4cHe9nLDs713MCR5Wgecava1so5uJuWsKuLRQSNgF/goTqskLCLXx/paQN/5kwpGiHJSFeRgb/kSz94jkpdJSETW/rzz7w96lnuMcCxnZTzcXp7Isz2My8zLmq+N//YRfUdIhg9yOjHIAHaa3ZCwjq5WmZlfXvfJxcQhG9h5FQjr2X9T0FIzPKFM9pan+hzErmQzy3eVChJd6QLYdzBnxWjKlOUCSdLEE9ZXpyDT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" alt="Compass Catchup"></div>
+          <p>Colaboración con</p>
+        </div>
+      </div>
+    </div>
+
+    <span class="etiqueta">Escaleta</span>
+
+    <p class="bajada">
+      Veintiocho años después, los cinco volvemos a entrar al mismo bosque — pero esta vez Link habla,
+      la orquesta suena y el sol se mueve sobre el Campo de Hyrule. Este episodio es un recorrido completo
+      del juego, etapa por etapa, con el cartucho de N64 encendido en la memoria.
+      <strong>La pregunta que nos acompaña todo el camino: ¿el remake mejoró el recuerdo, lo respetó, o lo sustituyó?</strong>
+      Y al final, lo único que todos queremos saber: <em>¿viene Majora's Mask?</em>
+    </p>
+
+    <dl class="ficha">
+      <div><dt>Formato</dt><dd>ChatCast<small>recorrido a 5 voces, en orden del juego</small></dd></div>
+      <div><dt>Duración</dt><dd>93 min<small>9 bloques + corte</small></dd></div>
+      <div><dt>El juego</dt><dd>5 nov 2026<small>exclusivo de Nintendo Switch 2</small></dd></div>
+      <div><dt>La mesa</dt><dd>Todos jugaron la de 64<small>la memoria es el otro invitado</small></dd></div>
+      <div><dt>Regla</dt><dd>Spoilers abiertos<small>se avisa al aire en el cold open</small></dd></div>
+    </dl>
+  </header>
+
+  <!-- ===================== MESA ===================== -->
+  <section id="mesa">
+    <p class="rotulo">La mesa</p>
+    <h2>Quién entra al bosque</h2>
+    <p class="intro-sec">
+      Las posturas son un andamio para que el recorrido tenga tensión y no se vuelva un desfile de nostalgia
+      compartida. Si alguien cambia de opinión a media partida, mejor: ese cambio es el episodio.
+    </p>
+    <div class="mesa">
+      <article class="silla host">
+        <div class="avatar-caja"><span class="iniciales">JW</span><img src="data:image/jpeg;base64,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" alt="Jorge Welch"></div>
+        <p class="rol">Host · guía del recorrido</p>
+        <p class="nom">Jorge Welch</p>
+        <a class="arroba" href="https://x.com/chilangamer" target="_blank" rel="noopener">@chilangamer</a>
+        <p class="postura"><b>Su chamba</b>Marcar el paso por etapas, cobrar el veredicto de cada bloque y cortar cuando la nostalgia se coma el análisis.</p>
+      </article>
+      <article class="silla">
+        <div class="avatar-caja"><span class="iniciales">CO</span><img src="https://unavatar.io/x/charliehdzojeda" alt="Charlie Ojeda" loading="lazy" onerror="this.style.display='none'"></div>
+        <p class="rol">Colaborador</p>
+        <p class="nom">Charlie Ojeda</p>
+        <a class="arroba" href="https://x.com/charliehdzojeda" target="_blank" rel="noopener">@charliehdzojeda</a>
+        <p class="postura"><b>Postura sugerida</b>El guardián del 98. Defiende que parte de lo que hacía grande al original era su aspereza, y que suavizarla cambia el juego.</p>
+      </article>
+      <article class="silla">
+        <div class="avatar-caja"><span class="iniciales">TC</span><img src="https://unavatar.io/x/Torchic204" alt="Torchic" loading="lazy" onerror="this.style.display='none'"></div>
+        <p class="rol">Colaborador</p>
+        <p class="nom">Torchic</p>
+        <a class="arroba" href="https://x.com/Torchic204" target="_blank" rel="noopener">@Torchic204</a>
+        <p class="postura"><b>Postura sugerida</b>El que celebra el presente. Si hoy se juega mejor, se ve mejor y más gente llega al final, el remake ya ganó la discusión.</p>
+      </article>
+      <article class="silla">
+        <div class="avatar-caja"><span class="iniciales">CN</span><img src="https://unavatar.io/x/NintenderoRegio" alt="Carlos" loading="lazy" onerror="this.style.display='none'"></div>
+        <p class="rol">Colaborador</p>
+        <p class="nom">Carlos</p>
+        <a class="arroba" href="https://x.com/NintenderoRegio" target="_blank" rel="noopener">@NintenderoRegio</a>
+        <p class="postura"><b>Postura sugerida</b>El archivo vivo. Aporta fechas, versiones, decisiones de desarrollo y el contexto Nintendo detrás de cada cambio.</p>
+      </article>
+      <article class="silla">
+        <div class="avatar-caja"><span class="iniciales">OM</span><img src="https://unavatar.io/bluesky/hefestomar.bsky.social" alt="Omar" loading="lazy" onerror="this.style.display='none'"></div>
+        <p class="rol">Colaborador</p>
+        <p class="nom">Omar</p>
+        <a class="arroba" href="https://bsky.app/profile/hefestomar.bsky.social" target="_blank" rel="noopener">@hefestomar.bsky.social</a>
+        <p class="postura"><b>Postura sugerida</b>El del oficio. Mira qué cambió en el diseño: ritmo, lectura del espacio, guía del jugador y qué se pierde al quitar fricción.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===================== MECÁNICA ===================== -->
+  <section id="mecanica">
+    <p class="rotulo">Mecánica</p>
+    <h2>El Contraste</h2>
+    <p class="intro-sec">Tres reglas para que el recorrido sea un análisis y no un paseo nostálgico.</p>
+    <div class="glosario">
+      <div>
+        <dt>Memoria contra pantalla</dt>
+        <dd>En cada etapa, antes de hablar del remake, cada quien dice en una frase <b>qué recordaba</b> de ese tramo. Después se compara con lo que hay. La diferencia entre las dos cosas es el verdadero contenido del episodio.</dd>
+      </div>
+      <div>
+        <dt>El veredicto de etapa</dt>
+        <dd>Cada bloque cierra con una palabra por persona: <b>MEJORÓ</b>, <b>RESPETÓ</b> o <b>TRAICIONÓ</b>. Sin matices en ese momento; los matices van antes. Jorge anota y al final se cuenta.</dd>
+      </div>
+      <div>
+        <dt>Señala el cambio</dt>
+        <dd>Nadie dice "se siente distinto" sin decir qué exactamente: el salto, la cámara, la música, el doblaje, la luz. Si no se puede nombrar, no entra como argumento.</dd>
+      </div>
+    </div>
+    <div class="ocarina" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i>
+      <em>cinco notas, cinco voces — una por etapa</em>
+    </div>
+  </section>
+
+  <!-- ===================== ESCALETA ===================== -->
+  <section id="escaleta">
+    <p class="rotulo">Escaleta</p>
+    <h2>El recorrido</h2>
+    <p class="intro-sec">Los bloques están colapsados y siguen el orden del juego. Toca cualquiera para abrirlo. Los tiempos son objetivo, no camisa de fuerza.</p>
+
+    <!-- COLD OPEN -->
+    <details class="bloque z-bosque" open>
+      <summary>
+        <svg class="em" viewBox="0 0 40 40"><g class="sway"><path class="trazo" d="M20 34V20"/><path class="relleno" d="M20 20c0-7 5-12 12-12 0 7-5 12-12 12z"/><path class="trazo" d="M20 20c0-7 5-12 12-12 0 7-5 12-12 12z"/><path class="relleno" d="M20 24c0-6-4-10-10-10 0 6 4 10 10 10z"/><path class="trazo" d="M20 24c0-6-4-10-10-10 0 6 4 10 10 10z"/></g></svg>
+        <span class="bl-tit">Cold open<span>00:00 · 3 min — la primera imagen que se te viene a la cabeza</span></span>
+        <span class="flecha"></span>
+      </summary>
+      <div class="bl-cuerpo"><div class="divisor"></div>
+        <span class="et">Arranque en frío</span>
+        <p class="pregunta">Sin pensarlo: cierra los ojos y di la primera imagen de Ocarina of Time que te aparece. No la mejor ni la más importante — la primera. Una frase cada quien.</p>
+        <ul>
+          <li>Sin música de entrada ni presentación. Las cuatro respuestas encimadas y de ahí sale el tono del episodio.</li>
+          <li><b>Aviso obligatorio de spoilers aquí</b>, antes de la rúbrica: este episodio recorre el juego completo, final incluido.</li>
+          <li><b>Gancho a rúbrica:</b> "Ninguno dijo lo mismo, y los cuatro jugamos el mismo cartucho. Hoy vamos a ver qué tanto se parece Hyrule a como la recordamos."</li>
+        </ul>
+        <div class="contraste"><b>Nota de producción</b>Mejor candidato para el clip vertical. Grabar cabeceo limpio de 5 s al inicio y al final.</div>
+      </div>
+    </details>
+
+    <!-- RÚBRICA -->
+    <details class="bloque z-oro">
+      <summary>
+        <svg class="em" viewBox="0 0 40 40"><g class="spin"><circle class="trazo" cx="20" cy="20" r="13"/><path class="trazo" d="M20 7v26M7 20h26"/></g><circle class="relleno pulse" cx="20" cy="20" r="6"/></svg>
+        <span class="bl-tit">Rúbrica y bienvenida<span>03:00 · 4 min — presentación de mesa y planteamiento</span></span>
+        <span class="flecha"></span>
+      </summary>
+      <div class="bl-cuerpo"><div class="divisor"></div>
+        <span class="et">Contenido</span>
+        <ul>
+          <li>Rúbrica, saludo y presentación de los cuatro colaboradores con arroba al aire.</li>
+          <li>Planteamiento en una frase: <em>"Hoy no reseñamos el remake: lo caminamos completo, del bosque al castillo, comparando contra lo que cada quien se acuerda."</em></li>
+          <li>Ficha rápida del juego: salió el 5 de noviembre de 2026, exclusivo de Switch 2, 59.99 dólares en digital. Las primeras unidades físicas traen portada metálica texturizada, y hubo un paquete de aniversario con consola y Pro Controller con diseños del 40 aniversario de la serie.</li>
+          <li>Anunciar la mecánica: nueve etapas, cada una cierra con MEJORÓ / RESPETÓ / TRAICIONÓ.</li>
+          <li>Sembrar el final: "y al cierre, las máscaras."</li>
+        </ul>
+        <div class="nuevo"><b>Lo que NO cambió, y conviene decirlo de entrada:</b> la historia, las mazmorras y la estructura lineal del original de 1998 se mantienen. Esto es un remake de presentación y de manejo, no una reinterpretación del diseño.<cite>Fantasymundo · The PC Enthusiast</cite></div>
+      </div>
+    </details>
+
+    <!-- ETAPA 1 -->
+    <details class="bloque z-bosque">
+      <summary>
+        <svg class="em" viewBox="0 0 40 40"><g class="sway"><path class="trazo" d="M20 36V14"/><path class="relleno" d="M20 14c-8 0-13-6-13-12 8 0 13 6 13 12z"/><path class="trazo" d="M20 14c-8 0-13-6-13-12 8 0 13 6 13 12z"/><path class="relleno" d="M20 20c8 0 13-5 13-11-8 0-13 5-13 11z"/><path class="trazo" d="M20 20c8 0 13-5 13-11-8 0-13 5-13 11z"/></g></svg>
+        <span class="bl-tit">Etapa 1 · El Bosque Kokiri y el Gran Árbol Deku<span>07:00 · 9 min — el despertar, Navi, Gohma y los primeros cinco minutos</span></span>
+        <span class="flecha"></span>
+      </summary>
+      <div class="bl-cuerpo"><div class="divisor"></div>
+        <p class="relato">Un niño sin hada despierta de una pesadilla. Mido le estorba el paso, el Árbol Deku lo llama, y lo primero que hace el juego es meterte dentro de un ser vivo que se está muriendo. Veintiocho años después seguimos entrando por la misma puerta.</p>
+
+        <span class="et">Lo que cambió</span>
+        <div class="nuevo"><b>Salto y carrera propios.</b> Ahora hay botones dedicados para saltar y para correr. En el original el salto era automático al llegar al borde, y correr era el truco de rodar en cadena; ese truco ahora es un movimiento del personaje. La cámara se mueve libre con el stick derecho.<cite>The PC Enthusiast · Fantasymundo · Nintendo Everything</cite></div>
+        <div class="nuevo"><b>Hyrule reconstruido.</b> Modelos, texturas y entornos rehechos, con cargas más rápidas, según Nintendo.<cite>The PC Enthusiast</cite></div>
+        <div class="nuevo"><b>Link ya no es el único que calla.</b> Las escenas están completamente dobladas y con diálogo ampliado, y la música de Koji Kondo viene en arreglos sinfónicos.<cite>Nintendo Everything · Fantasymundo</cite></div>
+
+        <span class="et">Dato curioso</span>
+        <div class="curioso"><b>Navi nació de un marcador.</b> El sistema de fijado de blanco empezó siendo un indicador genérico en pantalla. Yoshiaki Koizumi lo rediseñó como un hada, y de ese rediseño salió el personaje de Navi. El acompañante más famoso de la serie existe porque hacía falta señalar enemigos.<cite>Wikipedia, desarrollo de Ocarina of Time</cite></div>
+
+        <span class="et">Disparadores</span>
+        <p class="pregunta">El bosque de 1998 se sentía enorme porque la cámara y el control te lo escondían. Con cámara libre y salto propio, ¿sigue sintiéndose igual de grande o se encogió?</p>
+        <p class="pregunta">¿Un Link que habla en escenas cambia tu relación con el personaje, o el silencio nunca fue tan importante como decimos?</p>
+        <p class="pregunta">Primera prueba del Contraste: ¿cuánto tiempo creían que duraba el Árbol Deku, y cuánto dura en realidad?</p>
+
+        <span class="et">Reparto</span>
+        <p><span class="quien">Jorge abre</span> el recorrido y pide el recuerdo de cada quien antes de mostrar nada.</p>
+        <p><span class="quien rebate">Charlie</span> sobre lo que se pierde al quitar la torpeza del control original.</p>
+        <p><span class="quien">Omar</span> sobre cómo el salto y la cámara cambian la lectura del espacio.</p>
+
+        <div class="contraste"><b>Veredicto de etapa</b>El Bosque Kokiri y el Gran Árbol Deku.
+          <div class="veredictos"><span>Mejoró</span><span>Respetó</span><span>Traicionó</span></div></div>
+      </div>
+    </details>
+
+    <!-- ETAPA 2 -->
+    <details class="bloque z-noche">
+      <summary>
+        <svg class="em" viewBox="0 0 40 40"><g class="spin"><circle class="trazo" cx="20" cy="20" r="11"/><path class="relleno" d="M20 9a11 11 0 000 22z"/></g><circle class="trazo shine" cx="20" cy="20" r="15" stroke-dasharray="2 5"/></svg>
+        <span class="bl-tit">Etapa 2 · El Campo de Hyrule y la Ciudadela<span>16:00 · 9 min — la salida al mundo, Zelda, Impa y la primera canción</span></span>
+        <span class="flecha"></span>
+      </summary>
+      <div class="bl-cuerpo"><div class="divisor"></div>
+        <p class="relato">Sales del bosque y el juego se abre. El Campo de Hyrule fue, para muchos, la primera vez que un videojuego se sintió como un lugar y no como un nivel. Llega la noche, llegan los esqueletos, y en el castillo una niña te cuenta un sueño que ya tuviste tú.</p>
+
+        <span class="et">Lo que cambió</span>
+        <div class="nuevo"><b>El tiempo ya no se detiene.</b> El ciclo de día y noche ahora sigue corriendo en lugares donde antes se congelaba, incluidos los pueblos y los alrededores del castillo. Es el cambio que más altera la sensación de Hyrule como lugar habitado.<cite>The PC Enthusiast · Fantasymundo</cite></div>
+        <div class="nuevo"><b>Threads of Time.</b> Un registro de la historia en forma de tapiz vertical que se va llenando conforme avanzas: resume lo ocurrido y marca el siguiente objetivo. Solo sigue la historia principal — no rastrea coleccionables ni misiones secundarias.<cite>LOTKeys · Nintendo Everything</cite></div>
+
+        <span class="et">Dato curioso</span>
+        <div class="curioso"><b>El Campo de Hyrule casi fue en primera persona.</b> Miyamoto quería originalmente una vista subjetiva precisamente para lucir la escala del campo. Lo descartó cuando se introdujo al Link niño: sintió que el personaje tenía que verse en pantalla.<cite>Wikipedia, desarrollo de Ocarina of Time</cite></div>
+        <div class="curioso"><b>Y casi no cabe en el cartucho.</b> El juego se planeó para el 64DD y se movió a cartucho porque la unidad de disco no podía con unas 500 animaciones de captura de movimiento. Pasó de 16 MB a 32 MB, el juego más grande de Nintendo hasta entonces, y el cambio lo retrasó de 1997 a 1998.<cite>Wikipedia, desarrollo de Ocarina of Time</cite></div>
+
+        <span class="et">Disparadores</span>
+        <p class="pregunta">¿Cuántos de ustedes se quedaron parados en el campo la primera vez sin saber a dónde ir? ¿Esa desorientación era un defecto o era el juego?</p>
+        <p class="pregunta">Con un registro que te dice el siguiente objetivo, ¿se pierde la sensación de estar perdido en Hyrule? ¿O es una comodidad que agradecemos a los cuarenta y tantos?</p>
+        <p class="pregunta">El ciclo día-noche corriendo en los pueblos: ¿detalle de ambientación o cambio real en cómo se juega?</p>
+
+        <span class="et">Reparto</span>
+        <p><span class="quien">Torchic abre</span> defendiendo el registro de historia como lo mejor del paquete.</p>
+        <p><span class="quien rebate">Charlie</span> con el argumento de que perderse era parte del diseño.</p>
+        <p><span class="quien">Carlos</span> aporta el contexto del 64DD y por qué el campo existía como existía.</p>
+
+        <div class="contraste"><b>Veredicto de etapa</b>El Campo de Hyrule y la Ciudadela.
+          <div class="veredictos"><span>Mejoró</span><span>Respetó</span><span>Traicionó</span></div></div>
+      </div>
+    </details>
+
+    <!-- ETAPA 3 -->
+    <details class="bloque z-roca">
+      <summary>
+        <svg class="em" viewBox="0 0 40 40"><path class="trazo" d="M4 32l10-16 7 10 5-7 10 13z"/><g class="flick"><path class="relleno" d="M20 20c3-3 2-7 0-9-1 4-5 4-5 8a5 5 0 0010 0c0-2-1-3-2-4"/><path class="trazo" d="M20 11c2 2 3 6 0 9"/></g></svg>
+        <span class="bl-tit">Etapa 3 · La Montaña de la Muerte y el Dominio Zora<span>25:00 · 10 min — Gorons, Dodongos, Jabu-Jabu y el niño que ya cargó con todo</span></span>
+        <span class="flecha"></span>
+      </summary>
+      <div class="bl-cuerpo"><div class="divisor"></div>
+        <p class="relato">Dos pueblos, dos problemas, dos piedras. Darunia baila, King Dodongo se come una bomba, Ruto te trata como su sirviente dentro de un pez gigante. Es la parte del juego donde Link deja de ser un niño perdido y se vuelve el tipo que resuelve los problemas de todos.</p>
+
+        <span class="et">Lo que cambió</span>
+        <div class="nuevo"><b>Apuntado por giroscopio.</b> Opcional, para armas a distancia como la resortera y el arco de hadas. Quien no lo quiera puede seguir apuntando como siempre.<cite>Nintendo Everything · The PC Enthusiast</cite></div>
+        <div class="nuevo"><b>Reconstrucción visual con consecuencias de lectura.</b> Vale detenerse aquí: cavernas y el interior de Jabu-Jabu son los espacios donde el salto de texturas y de iluminación más cambia lo que entiendes del lugar. Buen punto para que la mesa describa al aire lo que ve.<cite>The PC Enthusiast</cite></div>
+
+        <span class="et">Dato curioso</span>
+        <div class="curioso"><b>El Templo del Fuego sonaba distinto.</b> Revisiones posteriores del juego quitaron de la música una muestra de un canto de oración islámica. Según la documentación, Nintendo la retiró al determinar que violaba su propia política sobre material religioso — no por la presión pública, que es la versión que circula de boca en boca.<cite>Wikipedia, Ocarina of Time</cite></div>
+
+        <span class="et">Disparadores</span>
+        <p class="pregunta">Jabu-Jabu es la mazmorra que más gente recuerda con fastidio y la que más defensores técnicos tiene. ¿De qué lado quedaron ahora que la volvieron a jugar?</p>
+        <p class="pregunta">El giroscopio: ¿comodidad real o gimmick que se apaga a los diez minutos?</p>
+        <p class="pregunta">¿Hay alguna mazmorra de esta etapa que el remake debió rediseñar y no tocó?</p>
+
+        <span class="et">Reparto</span>
+        <p><span class="quien">Omar abre</span> con las tres mazmorras de niño como escuela de diseño.</p>
+        <p><span class="quien">Carlos</span> con el dato del Templo del Fuego y las versiones del juego.</p>
+        <p><span class="quien rebate">Torchic y Charlie</span> se pelean por Jabu-Jabu.</p>
+
+        <div class="contraste"><b>Veredicto de etapa</b>Montaña de la Muerte y Dominio Zora.
+          <div class="veredictos"><span>Mejoró</span><span>Respetó</span><span>Traicionó</span></div></div>
+      </div>
+    </details>
+
+    <!-- ETAPA 4 -->
+    <details class="bloque z-oro">
+      <summary>
+        <svg class="em" viewBox="0 0 40 40"><g class="float"><path class="trazo" d="M20 4v24"/><path class="trazo" d="M13 28h14l-7 8z"/><path class="trazo" d="M12 24h16"/><circle class="relleno shine" cx="20" cy="16" r="9"/></g></svg>
+        <span class="bl-tit">Etapa 4 · La Espada Maestra y los siete años<span>35:00 · 8 min — el corte más famoso del juego</span></span>
+        <span class="flecha"></span>
+      </summary>
+      <div class="bl-cuerpo"><div class="divisor"></div>
+        <p class="relato">Tres piedras, una ocarina, una puerta que se abre. Sacas la espada y pierdes siete años de tu vida. Cuando vuelves, el mercado está lleno de muertos y el cielo está rojo. Ningún otro juego de su generación le hizo eso al jugador.</p>
+
+        <span class="et">Lo que cambió</span>
+        <div class="nuevo"><b>Puedes tararear las canciones.</b> El micrófono de Switch 2 detecta una melodía que Link ya haya aprendido si la tarareas o la tocas en un instrumento real, y la ocarina del juego responde. Los controles por botones siguen disponibles para quien prefiera no cantar.<cite>Nintendo Everything · The PC Enthusiast · Fantasymundo</cite></div>
+
+        <span class="et">Dato curioso</span>
+        <div class="curioso"><b>Lo hicieron 200 personas y costó más de 12 millones de dólares.</b> El desarrollo empezó en 1994 en Nintendo EAD, en paralelo con Super Mario 64 y Mario Kart 64. Cinco directores llevaron partes distintas bajo supervisión de Miyamoto, y Eiji Aonuma — el mismo que años después dirigiría Majora's Mask — fue quien diseñó las mazmorras.<cite>Wikipedia, desarrollo de Ocarina of Time</cite></div>
+
+        <span class="et">Disparadores</span>
+        <p class="pregunta">Este es el momento del juego que todos recuerdan. Con orquesta, doblaje y gráficos nuevos, ¿pega más fuerte o la solemnidad moderna le quita el golpe?</p>
+        <p class="pregunta">Tararearle a la consola para tocar la ocarina: ¿es el detalle más bonito del remake o el más incómodo de usar en la sala de tu casa?</p>
+        <p class="pregunta">Pregunta de mesa: ¿a qué edad jugaron esta escena por primera vez, y qué entendieron de ella entonces?</p>
+
+        <span class="et">Reparto</span>
+        <p><span class="quien">Todos</span> — ronda obligatoria de 40 segundos cada uno sobre este momento. Jorge no interrumpe.</p>
+        <p><span class="quien rebate">Carlos</span> cierra con el dato de producción para aterrizar el romanticismo.</p>
+
+        <div class="contraste"><b>Veredicto de etapa</b>El salto de siete años.
+          <div class="veredictos"><span>Mejoró</span><span>Respetó</span><span>Traicionó</span></div></div>
+      </div>
+    </details>
+
+    <!-- CORTE -->
+    <details class="bloque z-bosque">
+      <summary>
+        <svg class="em" viewBox="0 0 40 40"><circle class="trazo" cx="20" cy="20" r="12"/><path class="trazo pulse" d="M20 12v8l6 4"/></svg>
+        <span class="bl-tit">Corte y autopromo<span>43:00 · 2 min — respiro y redes</span></span>
+        <span class="flecha"></span>
+      </summary>
+      <div class="bl-cuerpo"><div class="divisor"></div>
+        <ul>
+          <li>Redes de la mesa completa y dónde se escucha el podcast.</li>
+          <li>Pregunta abierta a la audiencia: <em>"¿Cuál es el momento de Ocarina of Time que más te marcó, y a qué edad lo jugaste?"</em></li>
+          <li>Sembrar la segunda mitad: "Ahora los templos de adulto. Sí, incluido ese."</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- ETAPA 5 -->
+    <details class="bloque z-agua">
+      <summary>
+        <svg class="em" viewBox="0 0 40 40"><path class="relleno" d="M20 6c6 8 9 12 9 17a9 9 0 11-18 0c0-5 3-9 9-17z"/><path class="trazo" d="M20 6c6 8 9 12 9 17a9 9 0 11-18 0c0-5 3-9 9-17z"/><circle class="trazo ripple" cx="20" cy="24" r="12"/></svg>
+        <span class="bl-tit">Etapa 5 · Bosque, Fuego y Agua<span>45:00 · 12 min — los tres templos que definen al Link adulto</span></span>
+        <span class="flecha"></span>
+      </summary>
+      <div class="bl-cuerpo"><div class="divisor"></div>
+        <p class="relato">Saria en el bosque, Darunia en el fuego, Ruto en el agua. Tres amigos de la infancia convertidos en sabios, tres mazmorras que suben el listón, y la más odiada y defendida de toda la saga esperando al final.</p>
+
+        <span class="et">El bloque más largo, y a propósito</span>
+        <p>Aquí está el grueso de la segunda mitad del juego y la discusión más vieja del fandom. Conviene repartirlo en tres tercios de cuatro minutos y no dejar que el Templo del Agua se coma los doce.</p>
+
+        <span class="et">Lo que cambió</span>
+        <div class="nuevo"><b>Sala de los enemigos caídos.</b> Un espacio nuevo donde se exhiben estatuas de los enemigos que has derrotado. Puedes consultar información de cada uno o pelear revanchas contra los jefes.<cite>Nintendo Everything · The PC Enthusiast</cite></div>
+        <div class="nuevo"><b>Importante para la discusión:</b> las mazmorras en sí no fueron rediseñadas. Lo que cambia es cómo se ven, cómo se mueve Link dentro de ellas y qué tan claro está a dónde ir — no su estructura ni sus puzzles.<cite>Fantasymundo</cite></div>
+
+        <span class="et">Disparadores</span>
+        <p class="pregunta">El Templo del Agua: ¿era realmente tan malo, o es el recuerdo colectivo de un juego sin internet y sin guía? Ahora que lo volvieron a hacer con cámara libre y mapa moderno, ¿sigue siendo el problema?</p>
+        <p class="pregunta">Si el remake no rediseñó las mazmorras, ¿fue respeto al original o falta de valor?</p>
+        <p class="pregunta">La sala de revanchas contra jefes: ¿agrega algo al juego o es contenido de museo?</p>
+        <p class="pregunta">¿Cuál de los tres templos envejeció mejor y cuál peor? Que cada quien ordene los tres.</p>
+
+        <span class="et">Reparto</span>
+        <p><span class="quien">Charlie abre</span> con el Templo del Bosque como la mejor mazmorra del juego.</p>
+        <p><span class="quien">Carlos</span> toma el Templo del Fuego y enlaza con el dato de la música del bloque anterior.</p>
+        <p><span class="quien rebate">Torchic y Omar</span> se reparten el Templo del Agua: uno lo defiende, el otro lo acusa.</p>
+
+        <div class="contraste"><b>Veredicto de etapa</b>Los tres templos. <em>Excepción: aquí se vota uno por templo, son tres veredictos.</em>
+          <div class="veredictos"><span>Mejoró</span><span>Respetó</span><span>Traicionó</span></div></div>
+      </div>
+    </details>
+
+    <!-- ETAPA 6 -->
+    <details class="bloque z-sombra">
+      <summary>
+        <svg class="em" viewBox="0 0 40 40"><g class="float"><path class="relleno" d="M26 6a13 13 0 100 28A16 16 0 0126 6z"/><path class="trazo" d="M26 6a13 13 0 100 28A16 16 0 0126 6z"/></g><circle class="relleno pulse" cx="31" cy="12" r="2.5"/><circle class="relleno pulse" cx="34" cy="26" r="1.8"/></svg>
+        <span class="bl-tit">Etapa 6 · Las Sombras y el Espíritu<span>57:00 · 9 min — el pozo, el terror y el desierto</span></span>
+        <span class="flecha"></span>
+      </summary>
+      <div class="bl-cuerpo"><div class="divisor"></div>
+        <p class="relato">El pozo de Kakariko es el momento en que un juego para toda la familia decide darte miedo de verdad. Y después el desierto: Nabooru, las Gerudo, un templo que se juega de niño y de adulto a la vez. La parte del juego que menos gente recuerda completa y la que más vale la pena revisitar.</p>
+
+        <span class="et">Lo que conviene discutir</span>
+        <ul>
+          <li>El Templo de las Sombras sigue siendo el tramo más oscuro de la serie. Con iluminación moderna, ¿da más miedo o la claridad lo arruina?</li>
+          <li>El Templo del Espíritu es la mejor idea de diseño del juego: una mazmorra partida entre dos tiempos. Vale preguntarse por qué nadie la copió después.</li>
+          <li>Este es el tramo donde el ciclo de día y noche y la nueva iluminación deberían notarse más. Verificar al aire si realmente se nota.</li>
+        </ul>
+
+        <span class="et">Dato curioso</span>
+        <div class="curioso"><b>Existió una versión más difícil que casi nadie jugó.</b> Ura Zelda era una reinvención con puzzles y mazmorras más duras hecha para el 64DD. Nunca salió en N64 por la distribución limitada del accesorio y el costo de los cartuchos; terminó portada a GameCube como Master Quest, en Japón en 2002 y en América y Europa en 2003.<cite>Wikipedia, Ocarina of Time</cite></div>
+
+        <span class="et">Disparadores</span>
+        <p class="pregunta">¿Cuántos de ustedes se saltaron el pozo de niños porque les daba miedo, y cuántos lo admiten al aire?</p>
+        <p class="pregunta">Si el Templo del Espíritu es tan brillante, ¿por qué es el que menos se menciona cuando se habla del juego?</p>
+
+        <span class="et">Reparto</span>
+        <p><span class="quien">Jorge abre</span> con el pozo y pide confesiones de infancia.</p>
+        <p><span class="quien">Omar</span> desarma el diseño del Templo del Espíritu.</p>
+        <p><span class="quien">Carlos</span> cierra con Ura Zelda y el puente hacia el bloque final.</p>
+
+        <div class="contraste"><b>Veredicto de etapa</b>Sombras y Espíritu.
+          <div class="veredictos"><span>Mejoró</span><span>Respetó</span><span>Traicionó</span></div></div>
+      </div>
+    </details>
+
+    <!-- ETAPA 7 -->
+    <details class="bloque z-fuego">
+      <summary>
+        <svg class="em" viewBox="0 0 40 40"><path class="trazo" d="M8 34h24M11 34V16l9-9 9 9v18"/><path class="trazo" d="M17 34V24h6v10"/><g class="flick"><path class="relleno" d="M20 19c2-2 1-5 0-6-1 3-3 3-3 6a3 3 0 006 0c0-1 0-2-1-3"/></g></svg>
+        <span class="bl-tit">Etapa 7 · El Castillo de Ganon<span>66:00 · 8 min — el asedio, la torre y las dos peleas finales</span></span>
+        <span class="flecha"></span>
+      </summary>
+      <div class="bl-cuerpo"><div class="divisor"></div>
+        <p class="relato">Seis sabios, un puente de luz, una torre que se cae. Ganondorf al órgano, y después el momento en que la Espada Maestra sale volando y queda un hombre convertido en bestia y un tipo con una espada rota. El final más recordado de la generación.</p>
+
+        <span class="et">Lo que conviene discutir</span>
+        <ul>
+          <li>Con doblaje completo, la pelea contra Ganondorf cambia de registro. ¿El villano gana o pierde al darle voz?</li>
+          <li>El epílogo y el regreso al pasado: el juego termina deshaciendo su propia historia. Pregunta abierta sobre qué significa ese final y por qué sigue generando discusión de línea temporal.</li>
+          <li>La sala de revanchas permite volver a pelear jefes. Vale preguntarse si eso le quita peso al final o si es un extra honesto.</li>
+        </ul>
+
+        <span class="et">Dato curioso</span>
+        <div class="curioso"><b>El juego mejor calificado de la historia, literalmente.</b> Mantiene el promedio de crítica más alto de Metacritic, 99 sobre 100, y 98% en GameRankings. Vendió más de siete millones de copias y acumuló, entre otros, el gran premio del Japan Media Arts Festival, seis premios D.I.C.E. y cuatro BAFTA.<cite>Wikipedia, Ocarina of Time</cite></div>
+
+        <span class="et">Disparadores</span>
+        <p class="pregunta">¿El final les pegó distinto a los cuarenta que a los doce?</p>
+        <p class="pregunta">Un remake de un juego con 99 en Metacritic: ¿hay algo que ganar, o solo cosas que perder?</p>
+
+        <span class="et">Reparto</span>
+        <p><span class="quien">Charlie abre</span> con la pelea final y el doblaje.</p>
+        <p><span class="quien">Todos</span> cierran con una frase sobre el epílogo.</p>
+
+        <div class="contraste"><b>Veredicto de etapa</b>El Castillo de Ganon y el final.
+          <div class="veredictos"><span>Mejoró</span><span>Respetó</span><span>Traicionó</span></div></div>
+      </div>
+    </details>
+
+    <!-- ETAPA 8 -->
+    <details class="bloque z-oro">
+      <summary>
+        <svg class="em" viewBox="0 0 40 40"><g class="shine"><path class="trazo" d="M20 5l2.6 7.4L30 15l-7.4 2.6L20 25l-2.6-7.4L10 15l7.4-2.6z"/></g><g class="pulse"><path class="relleno" d="M30 24l1.4 4L35 29.4 31.4 31 30 35l-1.4-4L25 29.4 28.6 28z"/></g></svg>
+        <span class="bl-tit">Etapa 8 · Fuera del camino<span>74:00 · 7 min — curiosidades, secretos y lo que el remake agregó por fuera</span></span>
+        <span class="flecha"></span>
+      </summary>
+      <div class="bl-cuerpo"><div class="divisor"></div>
+        <p class="relato">Todo lo que no está en la línea principal: las gallinas, el hombre que corre y nunca puedes alcanzar, el molino y su paradoja temporal, las máscaras que vendes para nadie, los rumores que circularon durante años en los patios de escuela.</p>
+
+        <span class="et">Lo nuevo por fuera del juego</span>
+        <div class="nuevo"><b>Zelda Notes.</b> Un servicio acompañante dentro de la app de Nintendo Switch para teléfono. Incluye resumen de la partida, logros diarios, estadísticas, pistas de ubicación basadas en imagen, una ocarina virtual y un cuestionario.<cite>Nintendo Everything · The PC Enthusiast</cite></div>
+        <div class="nuevo"><b>amiibo.</b> Dos figuras nuevas de Ocarina of Time — Link niño y Zelda niña — llegan en 2027 y desbloquean máscaras especiales dentro del juego. Los amiibo de Zelda que ya existen también dan recompensas al escanearlos.<cite>Nintendo Everything · Fantasymundo</cite></div>
+
+        <span class="et">Municiones de conversación</span>
+        <ul>
+          <li>La leyenda de la Trifuerza obtenible: el rumor más grande de los noventa, alimentado por revistas y patios de escuela. Pregunta de mesa: ¿a quién le juraron que era cierto?</li>
+          <li>El hombre que corre y las carreras imposibles de ganar.</li>
+          <li>La paradoja del molino y la Canción de las Tormentas: aprendes una canción de alguien que la aprendió de ti.</li>
+          <li>Las gallinas. No hace falta explicar más.</li>
+          <li><b>Para la mesa:</b> cada quien lleva un secreto o detalle que crea que los demás no conocen. Se vale que sea falso y que los demás lo caten.</li>
+        </ul>
+
+        <span class="et">Disparadores</span>
+        <p class="pregunta">¿Cuál es el secreto que ustedes creían real de niños y resultó ser mentira de patio?</p>
+        <p class="pregunta">Las máscaras desbloqueadas por amiibo: ¿detalle simpático o contenido guardado detrás de un juguete de 2027?</p>
+
+        <div class="contraste"><b>Veredicto de etapa</b>Los extras y lo de fuera del camino.
+          <div class="veredictos"><span>Mejoró</span><span>Respetó</span><span>Traicionó</span></div></div>
+      </div>
+    </details>
+
+    <!-- ETAPA 9 - MÁSCARAS -->
+    <details class="bloque z-espiritu">
+      <summary>
+        <svg class="em" viewBox="0 0 40 40"><g class="float"><path class="trazo" d="M20 5c8 0 13 5 13 13 0 9-6 17-13 17S7 27 7 18C7 10 12 5 20 5z"/><path class="relleno" d="M20 5c8 0 13 5 13 13 0 9-6 17-13 17S7 27 7 18C7 10 12 5 20 5z"/></g><g class="pulse"><ellipse class="trazo" cx="14.5" cy="17" rx="3.2" ry="2.3"/><ellipse class="trazo" cx="25.5" cy="17" rx="3.2" ry="2.3"/></g><path class="trazo" d="M15 26c3 2 7 2 10 0"/></svg>
+        <span class="bl-tit">Etapa 9 · La máscara que viene<span>81:00 · 9 min — todo lo que se sabe y lo que solo se rumora de Majora's Mask</span></span>
+        <span class="flecha"></span>
+      </summary>
+      <div class="bl-cuerpo"><div class="divisor"></div>
+        <p class="relato">Cerramos donde el juego original terminó: con un niño volviendo al bosque a buscar a un hada. Esa búsqueda fue, literalmente, el principio de Majora's Mask. Y ahora medio internet está convencido de que el remake de Ocarina dejó pistas de que la historia se va a repetir.</p>
+
+        <span class="et">Por qué el rumor tiene base histórica</span>
+        <div class="curioso"><b>Majora's Mask ya se hizo así una vez.</b> Se terminó en unos quince meses, después de que Miyamoto retara al equipo a construirlo en un año usando el motor y los gráficos que ya existían. Reutilizó el motor, los assets y los modelos de personaje de Ocarina of Time sobre una versión mejorada de ese mismo motor. Lo dirigieron Eiji Aonuma y Yoshiaki Koizumi, con Miyamoto supervisando.<cite>Wikipedia, Majora's Mask</cite></div>
+        <div class="curioso"><b>Y nació de la misma semilla que Ura Zelda.</b> El proyecto empezó como una edición remezclada de Ocarina of Time para el 64DD antes de convertirse en un juego propio. Su ciclo de tres días son 72 horas de juego equivalentes a unos 54 minutos reales; el diseño original retrocedía una semana entera y se acortó. Tiene 24 máscaras, de las cuales las tres de transformación son el centro del juego.<cite>Wikipedia, Majora's Mask</cite></div>
+
+        <span class="et">Las pistas que encontró la comunidad</span>
+        <div class="nuevo"><b>Lo que salió de los datamines y del propio juego:</b> referencias a tres máscaras con funcionalidad amiibo, halladas por el youtuber Austin John Plays. Las dos primeras corresponden a los amiibo de Link niño y Zelda niña que llegan en 2027. La tercera, identificada como Mask_103, tiene diálogo extenso que sugiere que protegería al jugador de los enemigos — justo como Link evadía monstruos en Majora's Mask. Además, el Vendedor de Máscaras Felices aparece con brazaletes dorados, un detalle que viene de Majora's Mask y no del original de 1998. Súmale el ciclo de día y noche nuevo.<cite>Notebookcheck, sobre los hallazgos de Austin John Plays</cite></div>
+
+        <span class="et">Y el balde de agua fría</span>
+        <div class="nuevo"><b>El desmentido:</b> el filtrador Shpeshal Nick afirma que Majora's Mask "no está actualmente en ninguna forma de producción", y que el siguiente amiibo no será Skull Kid sino Ganondorf. Su historial es irregular, pero es la misma fuente que adelantó el alcance de gran presupuesto del remake de Ocarina y la existencia de Switch 2 antes de que Nintendo la confirmara. Por su parte, el filtrador NateTheHate, hablando como predicción y no como información, no espera un remake de Majora's Mask antes de 2030.<cite>Notebookcheck · Nintenderos · Nintenduo</cite></div>
+        <div class="nuevo"><b>La voz de la industria:</b> Kit Ellis y Krysta Yang, ex ejecutivos de marketing de Nintendo, dijeron en su podcast que lo ven muy probable justamente por la reutilización de tecnología y assets. Yang llegó a decir que Nintendo "no podía estar indecisa porque probablemente ya empezaron a hacerlo"; Ellis matizó que puede no ser el siguiente juego. Nintendo no ha anunciado absolutamente nada.<cite>Kit &amp; Krysta Podcast, vía OtakuKart</cite></div>
+
+        <span class="et">Advertencia para el aire</span>
+        <p>Todo lo de esta sección son filtraciones, datamines y predicciones. <b>Nada está confirmado por Nintendo.</b> Conviene decirlo tal cual y distinguir en voz alta entre las tres categorías: lo que está en el código del juego, lo que dice un filtrador, y lo que alguien cree que va a pasar. Verificar el estado de los rumores el mismo día de la grabación.</p>
+
+        <span class="et">Disparadores</span>
+        <p class="pregunta">Si Majora's Mask se hizo en quince meses reutilizando Ocarina, y ahora existe un Ocarina nuevo completo, ¿hay una sola razón técnica para que Nintendo no lo haga?</p>
+        <p class="pregunta">¿Qué pesa más: una máscara escondida en el código del juego o un filtrador diciendo que no existe el proyecto?</p>
+        <p class="pregunta">Majora's Mask es el Zelda más raro, más oscuro y más querido por una minoría intensa. ¿Un remake grande y orquestado le haría bien o le quitaría exactamente lo que lo hace especial?</p>
+        <p class="pregunta">Pregunta final de la mesa: si pudieras pedir una sola cosa del eventual remake, ¿qué pides y qué suplicas que no toquen?</p>
+
+        <span class="et">Reparto</span>
+        <p><span class="quien">Carlos abre</span> con el historial de desarrollo y por qué el rumor es verosímil.</p>
+        <p><span class="quien">Omar</span> presenta las pistas del datamine con la advertencia de rigor.</p>
+        <p><span class="quien rebate">Torchic</span> trae el desmentido y pide calma.</p>
+        <p><span class="quien rebate">Charlie</span> con la pregunta incómoda: ¿queremos un Majora's Mask así?</p>
+
+        <div class="contraste"><b>Veredicto final de la noche</b>Ya no es por etapa. Cada quien contesta en una frase:
+          <em>"Si Majora's Mask llega con este tratamiento, yo ___."</em></div>
+      </div>
+    </details>
+
+    <!-- DESPEDIDA -->
+    <details class="bloque z-bosque">
+      <summary>
+        <svg class="em" viewBox="0 0 40 40"><g class="sway"><path class="trazo" d="M20 34V18"/><path class="relleno" d="M20 18c0-8 6-13 13-13 0 8-6 13-13 13z"/><path class="trazo" d="M20 18c0-8 6-13 13-13 0 8-6 13-13 13z"/></g></svg>
+        <span class="bl-tit">Veredicto y despedida<span>90:00 · 3 min — conteo final, redes y salida</span></span>
+        <span class="flecha"></span>
+      </summary>
+      <div class="bl-cuerpo"><div class="divisor"></div>
+        <span class="et">Cierre</span>
+        <ul>
+          <li>Jorge lee el conteo: cuántos MEJORÓ, cuántos RESPETÓ y cuántos TRAICIONÓ dio cada quien a lo largo de las nueve etapas. El que dio más "traicionó" es el purista de la mesa y hay que decírselo.</li>
+          <li>Ronda de despedidas con arroba al aire.</li>
+          <li>Pregunta abierta para la audiencia como semilla en redes.</li>
+          <li>Adelanto del siguiente episodio y salida con rúbrica.</li>
+        </ul>
+        <span class="et">Cierre editorial sugerido para Jorge</span>
+        <p>Una idea para rematar: un remake no compite contra el juego original, compite contra el recuerdo del juego original — y ese recuerdo lleva veintiocho años mejorándose solo. Lo interesante no es si el remake le gana a esa versión imposible, sino que por primera vez en casi tres décadas tenemos un Hyrule nuevo al que llevar a alguien que nunca lo había pisado.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===================== VIDEOGRAFÍA ===================== -->
+  <section id="videografia">
+    <p class="rotulo">Anexo A</p>
+    <h2>Videografía</h2>
+    <p class="intro-sec">Enlaces directos verificados al armar este documento. Pocos y oficiales: al cierre de este borrador no se localizaron análisis comparativos en español que valiera la pena citar, así que este anexo está corto a propósito.</p>
+    <ul class="fuentes">
+      <li><a href="https://www.youtube.com/watch?v=6dwfZwIzUaA" target="_blank" rel="noopener">Tráiler "What's New" — todas las novedades del remake</a><span class="bandera b-en">EN</span><span class="pub">YouTube · material de referencia para los bloques 1 a 5 · es el video que enumera los cambios uno por uno</span></li>
+      <li><a href="https://www.youtube.com/watch?v=nya8RnEvbik" target="_blank" rel="noopener">Tráiler con estilo de los anuncios de N64 de los noventa</a><span class="bandera b-en">EN</span><span class="pub">YouTube · sin gameplay nuevo; funciona como guiño nostálgico para abrir el episodio</span></li>
+      <li><a href="https://www.youtube.com/watch?v=vRPt4OHJSq8" target="_blank" rel="noopener">Kit &amp; Krysta Podcast — por qué Majora's Mask sería el siguiente</a><span class="bandera b-en">EN</span><span class="pub">YouTube · ex ejecutivos de marketing de Nintendo · fuente del argumento de reutilización de assets, bloque 9</span></li>
+    </ul>
+  </section>
+
+  <!-- ===================== BIBLIOGRAFÍA ===================== -->
+  <section id="bibliografia">
+    <p class="rotulo">Anexo B</p>
+    <h2>Bibliografía</h2>
+    <p class="intro-sec">Fuentes de cada dato citado, ordenadas por bloque y no alfabéticamente.</p>
+    <ul class="fuentes">
+      <li><a href="https://www.videogameschronicle.com/news/zelda-ocarina-of-time-remake-officially-announced-for-nintendo-switch-2/" target="_blank" rel="noopener">El remake de Ocarina of Time, anunciado oficialmente para Switch 2</a><span class="pub">Video Games Chronicle · el anuncio</span></li>
+      <li><a href="https://nintendoeverything.com/zelda-ocarina-of-time-nintendo-switch-2-remake-whats-new-trailer/" target="_blank" rel="noopener">Tráiler "What's New": la lista completa de novedades</a><span class="pub">Nintendo Everything · salto, dash, giroscopio, orquesta, doblaje, Threads of Time, sala de enemigos, Zelda Notes, amiibo</span></li>
+      <li><a href="https://thepcenthusiast.com/zelda-ocarina-of-time-switch-2-remake-changes/" target="_blank" rel="noopener">Remake vs original: qué es nuevo</a><span class="pub">The PC Enthusiast · desglose de cambios de control, cámara, ciclo día-noche y ocarina por micrófono</span></li>
+      <li><a href="https://www.fantasymundo.com/zelda-ocarina-of-time/" target="_blank" rel="noopener">Ocarina of Time remake: novedades, precio y ediciones</a><span class="bandera b-es">ES</span><span class="pub">Fantasymundo · precios, edición física metálica, bundle de aniversario y qué se mantuvo del original</span></li>
+      <li><a href="https://www.lotkeys.com/en/blog/detail/ocarina-of-time-remake-new-feature-revealed" target="_blank" rel="noopener">Qué es exactamente Threads of Time</a><span class="pub">LOTKeys · el tapiz de progreso y sus límites</span></li>
+      <li><a href="https://www.nintendoreporters.com/en/news/nintendo-switch-2/the-legend-of-zelda-ocarina-of-time-remake-arrives-november-5-2026/" target="_blank" rel="noopener">Fecha de lanzamiento: 5 de noviembre de 2026</a><span class="pub">Nintendo Reporters</span></li>
+      <li><a href="https://allthings.how/ocarina-of-time-remake-every-new-gameplay-change-on-switch-2/" target="_blank" rel="noopener">Todos los cambios de jugabilidad en Switch 2</a><span class="pub">All Things How · repaso alternativo para contrastar</span></li>
+      <li><a href="https://www.keengamer.com/articles/features/ocarina-of-time-remake-vs-original-biggest-changes-and-new-player-tips/" target="_blank" rel="noopener">Remake vs original: los cambios más grandes</a><span class="pub">KeenGamer · incluye consejos para quien llega por primera vez</span></li>
+      <li><a href="https://zeldawiki.wiki/wiki/The_Legend_of_Zelda:_Ocarina_of_Time_(Nintendo_Switch_2)" target="_blank" rel="noopener">Ocarina of Time (Nintendo Switch 2)</a><span class="pub">Zelda Wiki · ficha de la versión de Switch 2</span></li>
+      <li><a href="https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Ocarina_of_Time" target="_blank" rel="noopener">The Legend of Zelda: Ocarina of Time</a><span class="pub">Wikipedia · desarrollo, 64DD, origen de Navi, música del Templo del Fuego, Ura Zelda, ventas y premios</span></li>
+      <li><a href="https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Majora%27s_Mask" target="_blank" rel="noopener">The Legend of Zelda: Majora's Mask</a><span class="pub">Wikipedia · los quince meses de desarrollo, la reutilización del motor, el ciclo de tres días y las 24 máscaras</span></li>
+      <li><a href="https://www.notebookcheck.net/Leak-says-Zelda-Majora-s-Mask-remake-not-in-production-despite-Ocarina-of-Time-hints.1447254.0.html" target="_blank" rel="noopener">Filtración: el remake de Majora's Mask no estaría en producción pese a las pistas</a><span class="pub">Notebookcheck · las tres máscaras del datamine, Mask_103, los brazaletes dorados y el desmentido de Shpeshal Nick</span></li>
+      <li><a href="https://www.nintenderos.com/nintendo-switch-2/zelda-majoras-mask-remake-no-estaria-en-desarrollo-y-el-tercer-amiibo-de-ocarina-of-time-seria-ganondorf-segun-un-rumor/" target="_blank" rel="noopener">Majora's Mask no estaría en desarrollo y el tercer amiibo sería Ganondorf</a><span class="bandera b-es">ES</span><span class="pub">Nintenderos · el rumor contado en español</span></li>
+      <li><a href="https://nintenduo.com/remake-zelda-majoras-mask-no-esta-en-produccion/" target="_blank" rel="noopener">El remake de Majora's Mask "no está en producción"</a><span class="bandera b-es">ES</span><span class="pub">Nintenduo · seguimiento del desmentido</span></li>
+      <li><a href="https://gamersrd.com/remake-de-zelda-majoras-mask-llegaria-a-switch-2-tras-ocarina-of-time-segun-rumores/" target="_blank" rel="noopener">Majora's Mask llegaría a Switch 2 tras Ocarina of Time, según rumores</a><span class="bandera b-es">ES</span><span class="pub">GamersRD · la versión optimista del rumor, desde medio latinoamericano</span></li>
+      <li><a href="https://otakukart.com/former-nintendo-marketing-lead-says-majoras-mask-remake-is-likely-after-ocarina-of-time-citing-reusable-development-assets/" target="_blank" rel="noopener">Ex ejecutivos de Nintendo: un remake de Majora's Mask es probable por los assets reutilizables</a><span class="pub">OtakuKart · las declaraciones de Kit Ellis y Krysta Yang</span></li>
+      <li><a href="https://www.nintendolife.com/news/2026/10/new-zelda-ocarina-of-time-trailer-is-a-throwback-to-the-90s-n64-ads" target="_blank" rel="noopener">El tráiler que homenajea los anuncios de N64</a><span class="pub">Nintendo Life · contexto del tráiler nostálgico</span></li>
+    </ul>
+  </section>
+
+  <!-- ===================== PENDIENTES ===================== -->
+  <section id="pendientes">
+    <p class="rotulo">Anexo C</p>
+    <h2>Antes de grabar</h2>
+    <div class="aviso">
+      <h3>Lo que hay que revisar el día de la grabación</h3>
+      <ul>
+        <li><b>Los rumores de Majora's Mask se mueven rápido.</b> El bloque 9 se armó con la información disponible al cierre de este documento. Verificar si hubo anuncio, desmentido nuevo o Direct de por medio.</li>
+        <li><b>Faltan referencias de video en español.</b> Solo se localizaron materiales oficiales en inglés. Si la mesa conoce canales mexicanos o latinoamericanos que hayan analizado el remake, hay que sumarlos al Anexo A y desplazar el material en inglés.</li>
+        <li><b>Los datos del juego nuevo salieron de notas de prensa y coberturas, no de la mano.</b> Conviene que al menos uno de la mesa haya llegado al final del remake antes de grabar, para poder contradecir al documento donde haga falta.</li>
+        <li><b>Spoilers.</b> El aviso va en el cold open, antes de la rúbrica. Si el episodio se recorta en clips, cada clip necesita su propio aviso.</li>
+      </ul>
+    </div>
+  </section>
+
+  <p class="pie">Escaleta · <b>Ep. 191 "Ocarina of Time: El Remake"</b><br>Chilangamer Podcast × Compass Catchup</p>
+</div>
+
+<script>
+(function(){
+  /* ---------- hilo del tiempo ---------- */
+  var hilo = document.getElementById('hilo');
+  function avance(){
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    hilo.style.width = (max > 0 ? (h.scrollTop || document.body.scrollTop) / max * 100 : 0) + '%';
+  }
+  document.addEventListener('scroll', avance, {passive:true});
+  window.addEventListener('resize', avance);
+  avance();
+
+  /* ---------- hojas cayendo ---------- */
+  var lienzo = document.getElementById('hojas');
+  if(!lienzo) return;
+  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    lienzo.style.display = 'none'; return;
+  }
+  var ctx = lienzo.getContext('2d');
+  var dpr = Math.min(window.devicePixelRatio || 1, 2);
+  var W = 0, H = 0, hojas = [];
+  var TONOS = ['#8FBF5A','#6E9E44','#C6E39A','#A8CC6E','#5C8A38'];
+
+  function medir(){
+    W = window.innerWidth; H = window.innerHeight;
+    lienzo.width = W * dpr; lienzo.height = H * dpr;
+    lienzo.style.width = W + 'px'; lienzo.style.height = H + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function crear(n){
+    hojas = [];
+    for(var i = 0; i < n; i++){
+      hojas.push({
+        x: Math.random() * W,
+        y: Math.random() * -H,
+        L: 11 + Math.random() * 16,
+        vy: 0.32 + Math.random() * 0.75,
+        fase: Math.random() * Math.PI * 2,
+        amp: 18 + Math.random() * 42,
+        giro: Math.random() * Math.PI * 2,
+        vgiro: (Math.random() - 0.5) * 0.028,
+        alfa: 0.3 + Math.random() * 0.45,
+        tono: TONOS[(Math.random() * TONOS.length) | 0]
+      });
+    }
+  }
+  function dibujar(h){
+    ctx.save();
+    ctx.translate(h.x + Math.sin(h.fase) * h.amp, h.y);
+    ctx.rotate(h.giro);
+    ctx.globalAlpha = h.alfa;
+    var L = h.L, A = L * 0.38;
+    ctx.beginPath();
+    ctx.moveTo(-L / 2, 0);
+    ctx.quadraticCurveTo(0, -A, L / 2, 0);
+    ctx.quadraticCurveTo(0, A, -L / 2, 0);
+    ctx.fillStyle = h.tono;
+    ctx.fill();
+    ctx.beginPath();
+    ctx.moveTo(-L / 2, 0); ctx.lineTo(L / 2, 0);
+    ctx.strokeStyle = 'rgba(24,52,26,.6)';
+    ctx.lineWidth = Math.max(0.7, L / 18);
+    ctx.stroke();
+    ctx.restore();
+  }
+  function paso(){
+    ctx.clearRect(0, 0, W, H);
+    for(var i = 0; i < hojas.length; i++){
+      var h = hojas[i];
+      h.y += h.vy;
+      h.fase += 0.011;
+      h.giro += h.vgiro;
+      if(h.y > H + 40){ h.y = -40; h.x = Math.random() * W; }
+      dibujar(h);
+    }
+    requestAnimationFrame(paso);
+  }
+  function arrancar(){ medir(); crear(W < 700 ? 14 : 30); }
+  arrancar();
+  var t;
+  window.addEventListener('resize', function(){ clearTimeout(t); t = setTimeout(arrancar, 220); });
+  requestAnimationFrame(paso);
+})();
+</script>
+</body>
+</html>
